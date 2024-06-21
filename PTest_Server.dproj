@@ -5,10 +5,11 @@
         <FrameworkType>None</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Linux64</Platform>
-        <TargetedPlatforms>129</TargetedPlatforms>
+        <Platform Condition="'$(Platform)'==''">Win64</Platform>
+        <TargetedPlatforms>131</TargetedPlatforms>
         <AppType>Console</AppType>
         <MainSource>PTest_Server.dpr</MainSource>
+        <ProjectName Condition="'$(ProjectName)'==''">PTest_Server</ProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -133,11 +134,19 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <DCC_UsePackage>vclwinx;DataSnapServer;fs29;fmx;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;fsTee29;appanalytics;IndyProtocols;vclx;Skia.Package.RTL;dbxcds;vcledge;frLanguageSlovak29;FMXTeeDB929;frLanguageHungarian29;DBXFirebirdDriver;FireDACSqliteDriver;DbxClientDriver;soapmidas;frLanguageArabic29;frCoreLibrary29;dbexpress;frLanguageCatalon29;frLanguageBrazil29;frLanguageCzech29;inet;vcltouch;Tee929;FireDACDBXDriver;fmxdae;CustomIPTransport;FireDACMSSQLDriver;frxIBX29;frLanguageItalian29;frxPDF29;frLanguageSwiss29;IndySystem;frxe29;frLanguageSwedish29;ibxbindings;frLanguageUkrainian29;fsDB29;vclFireDAC;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;frLanguageDanish29;bindcompdbx;frxTee29;rtl;FireDACMySQLDriver;frLanguageLithuanian29;DBXSqliteDriver;frLanguageFrench29;frLanguageRussian29;DBXSybaseASEDriver;vclimg;DataSnapFireDAC;inetdbxpress;FireDAC;xmlrtl;ibxpress;dsnap;frLanguageSerbian29;FireDACDb2Driver;DBXOracleDriver;DBXInformixDriver;vclib;frLanguageFarsi29;fmxobj;bindcompvclsmp;DataSnapNativeClient;frx29;frLanguageChinese29;DatasnapConnectorsFreePascal;frControlsLibrary29;frxIntIOIndy29;frLanguageHebrew29;emshosting;frxDB29;frLocalizationLibrary29;FireDACCommonDriver;IndyIPClient;frxHTML29;bindcompvclwinx;frLanguageTaiwan29;emsedge;bindcompfmx;TeeDB929;frLanguageRomanian29;frLanguageGerman29;inetdb;ibmonitor;frLanguageIndonesian29;FireDACASADriver;VCLTeeGrid;frLanguageBrazil229;vclactnband;fmxFireDAC;FireDACInfxDriver;frLanguageCroatian29;DBXMySQLDriver;fsADO29;VclSmp;DataSnapCommon;fmxase;DBXOdbcDriver;FMXTee929;dbrtl;FireDACOracleDriver;Skia.Package.FMX;FireDACMSAccDriver;FMXTeeGrid;frLanguageSlovene29;DataSnapIndy10ServerTransport;DataSnapConnectors;frLanguageTurkish29;vcldsnap;DBXInterBaseDriver;frLanguageGreek29;FireDACMongoDBDriver;TeeUI929;FireDACTDataDriver;Skia.Package.VCL;frLanguageBrazil129;vcldb;bindcomp;frLanguageLatvian29;IndyCore;RESTBackendComponents;frLanguageSpanish29;frxIntIO29;fsIBX29;frLanguageJapanese29;FireDACADSDriver;frxFD29;RESTComponents;IndyIPServer;vcl;dsnapxml;adortl;dsnapcon;DataSnapClient;DataSnapProviderClient;fsFD29;frxADO29;DBXDb2Driver;FmxTeeUI929;frLanguageDutch29;emsclientfiredac;FireDACPgDriver;FireDACDSDriver;frLanguagePortuguese29;tethering;frLanguageBulgarian29;frLanguagePolish29;bindcompvcl;frxDBX29;CloudService;DBXSybaseASADriver;frGraphicsLibrary29;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Eu.Consulting;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
+        <Manifest_File>(None)</Manifest_File>
+        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <DCC_UsePackage>vclwinx;DataSnapServer;fs29;fmx;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;fsTee29;appanalytics;IndyProtocols;vclx;dbxcds;vcledge;frLanguageSlovak29;frLanguageHungarian29;DBXFirebirdDriver;FireDACSqliteDriver;DbxClientDriver;soapmidas;frLanguageArabic29;frCoreLibrary29;dbexpress;frLanguageCatalon29;frLanguageBrazil29;frLanguageCzech29;inet;vcltouch;FireDACDBXDriver;fmxdae;CustomIPTransport;FireDACMSSQLDriver;frxIBX29;frLanguageItalian29;frxPDF29;frLanguageSwiss29;IndySystem;frxe29;frLanguageSwedish29;ibxbindings;frLanguageUkrainian29;fsDB29;vclFireDAC;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;frLanguageDanish29;bindcompdbx;frxTee29;rtl;FireDACMySQLDriver;frLanguageLithuanian29;DBXSqliteDriver;frLanguageFrench29;frLanguageRussian29;DBXSybaseASEDriver;vclimg;DataSnapFireDAC;inetdbxpress;FireDAC;xmlrtl;ibxpress;dsnap;frLanguageSerbian29;FireDACDb2Driver;DBXOracleDriver;DBXInformixDriver;vclib;frLanguageFarsi29;fmxobj;bindcompvclsmp;DataSnapNativeClient;frx29;frLanguageChinese29;DatasnapConnectorsFreePascal;frControlsLibrary29;frxIntIOIndy29;frLanguageHebrew29;emshosting;frxDB29;frLocalizationLibrary29;FireDACCommonDriver;IndyIPClient;frxHTML29;bindcompvclwinx;frLanguageTaiwan29;emsedge;bindcompfmx;frLanguageRomanian29;frLanguageGerman29;inetdb;ibmonitor;frLanguageIndonesian29;FireDACASADriver;VCLTeeGrid;frLanguageBrazil229;vclactnband;fmxFireDAC;FireDACInfxDriver;frLanguageCroatian29;DBXMySQLDriver;fsADO29;VclSmp;DataSnapCommon;fmxase;DBXOdbcDriver;dbrtl;FireDACOracleDriver;FireDACMSAccDriver;FMXTeeGrid;frLanguageSlovene29;DataSnapIndy10ServerTransport;DataSnapConnectors;frLanguageTurkish29;vcldsnap;DBXInterBaseDriver;frLanguageGreek29;FireDACMongoDBDriver;FireDACTDataDriver;Skia.Package.VCL;frLanguageBrazil129;vcldb;bindcomp;frLanguageLatvian29;IndyCore;RESTBackendComponents;frLanguageSpanish29;frxIntIO29;fsIBX29;frLanguageJapanese29;FireDACADSDriver;frxFD29;RESTComponents;IndyIPServer;vcl;dsnapxml;adortl;dsnapcon;DataSnapClient;DataSnapProviderClient;fsFD29;frxADO29;DBXDb2Driver;frLanguageDutch29;emsclientfiredac;FireDACPgDriver;FireDACDSDriver;frLanguagePortuguese29;tethering;frLanguageBulgarian29;frLanguagePolish29;bindcompvcl;frxDBX29;CloudService;DBXSybaseASADriver;frGraphicsLibrary29;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -160,6 +169,8 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <Manifest_File>(None)</Manifest_File>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
         <DCC_ExeOutput>Z:\Exe_Aggiornamenti\</DCC_ExeOutput>
+        <VerInfo_Build>1</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Eu.Consulting;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.1;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -1241,7 +1252,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
                 <Platform value="OSX64">False</Platform>
                 <Platform value="OSXARM64">False</Platform>
                 <Platform value="Win32">True</Platform>
-                <Platform value="Win64">False</Platform>
+                <Platform value="Win64">True</Platform>
             </Platforms>
             <DataSnapProxyLookup/>
             <ModelSupport>False</ModelSupport>
