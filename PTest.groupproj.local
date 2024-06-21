@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2024/06/18 15:37:02.000.240,Z:\Sviluppo\ProjectGroup1.groupproj=Z:\Sviluppo\Linux_Test_Project\Params_Test\PTest.groupproj</Transaction>
+    <Transaction>2024/06/18 15:37:02.000.240,Z:\Sviluppo\Linux_Test_Project\Params_Test\PTest.groupproj=Z:\Sviluppo\ProjectGroup1.groupproj</Transaction>
   </Transactions>
 	<Default.Personality>
-		<Projects ActiveProject="Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\PTest_Client.dproj"/>
+		<Projects ActiveProject="Z:\Sviluppo\Linux_Test_Project\Params_Test\PTest_Server.dproj"/>
 	</Default.Personality>
 </BorlandProject>

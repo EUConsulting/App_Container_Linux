@@ -27,13 +27,18 @@ resourcestring
     '   - "set port -s" to change the HTTPS default port' + slineBreak +
     '   - "status" for Server status' + slineBreak +
     '   - "help" to show commands' + slineBreak +
-    '   - "IB" Connetti DB Interbase' + slineBreak +
-    '   - "W_MYSQL" Connetti DB MySQL Windows' + slineBreak +
-    '   - "C_MYSQL" Connetti DB MySQL Container' + slineBreak +
-    '   - "TRACEON" Abilita Trace' + slineBreak +
-    '   - "TRACEOFF" Disabilita Trace' + slineBreak +
-    '   - "NCON" N. di connessioni attive' + slineBreak +
-    '   - "exit" to close the application';
+    '   - "IB" Connect DB Interbase' + slineBreak +
+    '   - "W_MYSQL" Connect DB MySQL Windows' + slineBreak +
+    '   - "C_MYSQL" Connect DB MySQL Container' + slineBreak +
+    '   - "TRACEON" Enable Trace ' + slineBreak +
+    '   - "TRACEOFF" Disable Trace ' + slineBreak +
+    '   - "NCON" Active Connection N. ' + slineBreak +
+    '   - "DST" Enable DataSnap Compatibility ' + slineBreak +
+    '   - "DSF" Disable DataSnap Compatibility ' + slineBreak +
+    '   - "EXT" Enable Direct Execute  ' + slineBreak +
+    '   - "EXF" Disable Direct Execute  ' + slineBreak +
+    '   - "exit" to close the application'  + slineBreak +
+    '   - "bye" to stop server and close the application';
 
 const
   cArrow = '->';
@@ -51,8 +56,13 @@ const
   cCommandTrace_False = 'TRACEOFF';
   cCommandConn_Attive = 'NCON';
   cCommandExit = 'exit';
+  cCommandbye = 'bye';
   cCommandStartFD = 'startfd';
   cCommandStopFD = 'stopfd';
+  cDataSnap_True = 'DST';
+  cDataSnap_False = 'DSF';
+  cExecDirect_True = 'EXT';
+  cExecDirect_False = 'EXF';
   cclosedss1 = 'Close dss1';
   cclosedss2 = 'Close dss2';
   cclosedss3 = 'Close dss3';
@@ -77,15 +87,14 @@ const
   cErrorLost_method = 'Error Lost Metodi';
   cErrorRecover = 'Error Recover Principale';
   cErrorRecover_method = 'Error Recover Metodi';
-  cDatabase_IB = 'Connesso a un Database Interbase';
-  cDatabase_MySQL = 'Connesso a un Database MySql Windows';
-  cDatabase_MySQL_Container = 'Connesso a un Database MySql Container';
-  cTrace_on = 'Trace attivata';
-  cTrace_off = 'Trace disattivata';
-  cconn_attive = 'Connessioni Attive';
+  cconn_attive = 'Active Connect';
+  cDatabase_IB = 'Connect to Database Interbase';
+  cDatabase_MySQL = 'Connect to Database MySql Windows';
+  cDatabase_MySQL_Container = 'Connect to Database MySql Container';
+  cTrace_on = 'Trace enable';
+  cTrace_off = 'Trace disable';
   sConnOK = ' Connesione attiva SERVER QNC';
   sConnKO = ' Connesione NON attiva SERVER QNC';
-
 {$SCOPEDENUMS ON}
 
 type

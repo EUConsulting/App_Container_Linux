@@ -6,8 +6,8 @@ object ServerMethods1: TServerMethods1
     DataSet = FDQuery1
     Options = [poAllowCommandText, poUseQuoteChar]
     UpdateMode = upWhereKeyOnly
-    Left = 32
-    Top = 136
+    Left = 56
+    Top = 144
   end
   object FDQuery1: TFDQuery
     Connection = DM_Connection.FDConn_Sql
@@ -44,7 +44,7 @@ object ServerMethods1: TServerMethods1
   object FDGUIxAsyncExecuteDialog1: TFDGUIxAsyncExecuteDialog
     Provider = 'Console'
     Left = 480
-    Top = 392
+    Top = 248
   end
   object FDGUIxScriptDialog1: TFDGUIxScriptDialog
     Provider = 'Console'

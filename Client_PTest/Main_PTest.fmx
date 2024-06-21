@@ -124,7 +124,6 @@ object Form1: TForm1
   end
   object DSP_PTest: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
-    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 312
     Top = 368
@@ -137,141 +136,141 @@ object Form1: TForm1
       'VO) AS TOTALE_PROROGHE '#13#10'FROM NC_MASTER A, SYS_TIPO_PRATICA B'#13#10'W' +
       'HERE A.K_TIPO_PRATICA = B.PK_PROGRESSIVO '#13#10
     Params = <>
-    ProviderName = 'DataSetProvider2'
+    ProviderName = 'DataSetProvider1'
     RemoteServer = DSP_PTest
     Left = 352
     Top = 256
     object Cds_PTEstPK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
-      Origin = 'PK_PROGRESSIVO'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Origin = 'pk_progressivo'
+      ProviderFlags = [pfInWhere, pfInKey]
       Required = True
     end
     object Cds_PTEstK_TIPO_PRATICA: TSmallintField
       FieldName = 'K_TIPO_PRATICA'
-      Origin = 'K_TIPO_PRATICA'
+      Origin = 'k_tipo_pratica'
     end
     object Cds_PTEstKEY_ANNO: TSmallintField
       FieldName = 'KEY_ANNO'
-      Origin = 'KEY_ANNO'
+      Origin = 'key_anno'
       Required = True
     end
     object Cds_PTEstKEY_PROGRESSIVO: TIntegerField
       FieldName = 'KEY_PROGRESSIVO'
-      Origin = 'KEY_PROGRESSIVO'
+      Origin = 'key_progressivo'
       Required = True
     end
     object Cds_PTEstDATA_OP: TDateField
       FieldName = 'DATA_OP'
-      Origin = 'DATA_OP'
+      Origin = 'data_op'
       Required = True
     end
     object Cds_PTEstUTENTE: TStringField
       FieldName = 'UTENTE'
-      Origin = 'UTENTE'
+      Origin = 'utente'
       Size = 30
     end
     object Cds_PTEstFIRMA_UTENTE: TStringField
       FieldName = 'FIRMA_UTENTE'
-      Origin = 'FIRMA_UTENTE'
+      Origin = 'firma_utente'
       Required = True
       Size = 3
     end
     object Cds_PTEstFIRMA_DIRIGENTE: TStringField
       FieldName = 'FIRMA_DIRIGENTE'
-      Origin = 'FIRMA_DIRIGENTE'
+      Origin = 'firma_dirigente'
       Required = True
       Size = 3
     end
     object Cds_PTEstFIRMA_SUPERVISORE: TStringField
       FieldName = 'FIRMA_SUPERVISORE'
-      Origin = 'FIRMA_SUPERVISORE'
+      Origin = 'firma_supervisore'
       Required = True
       Size = 3
     end
     object Cds_PTEstFK_UTENTE_RILEVATORE: TIntegerField
       FieldName = 'FK_UTENTE_RILEVATORE'
-      Origin = 'FK_UTENTE_RILEVATORE'
+      Origin = 'fk_utente_rilevatore'
       Required = True
     end
     object Cds_PTEstDATA_FIRMA_UTENTE: TSQLTimeStampField
       FieldName = 'DATA_FIRMA_UTENTE'
-      Origin = 'DATA_FIRMA_UTENTE'
+      Origin = 'data_firma_utente'
     end
     object Cds_PTEstDATA_FIRMA_DIRIGENTE: TSQLTimeStampField
       FieldName = 'DATA_FIRMA_DIRIGENTE'
-      Origin = 'DATA_FIRMA_DIRIGENTE'
+      Origin = 'data_firma_dirigente'
     end
     object Cds_PTEstDATA_FIRMA_SUPERVISORE: TSQLTimeStampField
       FieldName = 'DATA_FIRMA_SUPERVISORE'
-      Origin = 'DATA_FIRMA_SUPERVISORE'
+      Origin = 'data_firma_supervisore'
     end
     object Cds_PTEstQUALIFICA_TABELLA_VIEW: TStringField
       FieldName = 'QUALIFICA_TABELLA_VIEW'
-      Origin = 'QUALIFICA_TABELLA_VIEW'
+      Origin = 'qualifica_tabella_view'
       Required = True
       Size = 6
     end
     object Cds_PTEstFK_MOTIVI_NC: TIntegerField
       FieldName = 'FK_MOTIVI_NC'
-      Origin = 'FK_MOTIVI_NC'
+      Origin = 'fk_motivi_nc'
       Required = True
     end
     object Cds_PTEstFK_SMASTER: TIntegerField
       FieldName = 'FK_SMASTER'
-      Origin = 'FK_SMASTER'
+      Origin = 'fk_smaster'
       Required = True
     end
     object Cds_PTEstFK_UOC: TIntegerField
       FieldName = 'FK_UOC'
-      Origin = 'FK_UOC'
+      Origin = 'fk_uoc'
       Required = True
     end
     object Cds_PTEstFK_UOS: TIntegerField
       FieldName = 'FK_UOS'
-      Origin = 'FK_UOS'
+      Origin = 'fk_uos'
       Required = True
     end
     object Cds_PTEstFK_STATO_NC: TIntegerField
       FieldName = 'FK_STATO_NC'
-      Origin = 'FK_STATO_NC'
+      Origin = 'fk_stato_nc'
       Required = True
     end
     object Cds_PTEstFK_DIRIGENTE_RESP: TIntegerField
       FieldName = 'FK_DIRIGENTE_RESP'
-      Origin = 'FK_DIRIGENTE_RESP'
+      Origin = 'fk_dirigente_resp'
       Required = True
     end
     object Cds_PTEstFK_SUPERVISORE: TIntegerField
       FieldName = 'FK_SUPERVISORE'
-      Origin = 'FK_SUPERVISORE'
+      Origin = 'fk_supervisore'
       Required = True
     end
     object Cds_PTEstFK_REFQUAL: TIntegerField
       FieldName = 'FK_REFQUAL'
-      Origin = 'FK_REFQUAL'
+      Origin = 'fk_refqual'
       Required = True
     end
     object Cds_PTEstFIRMA_REFQUAL: TStringField
       FieldName = 'FIRMA_REFQUAL'
-      Origin = 'FIRMA_REFQUAL'
+      Origin = 'firma_refqual'
       Required = True
       Size = 3
     end
     object Cds_PTEstDATA_FIRMA_REFQUAL: TSQLTimeStampField
       FieldName = 'DATA_FIRMA_REFQUAL'
-      Origin = 'DATA_FIRMA_REFQUAL'
+      Origin = 'data_firma_refqual'
     end
     object Cds_PTEstTIPO_PRATICA: TStringField
       FieldName = 'TIPO_PRATICA'
-      Origin = 'TIPO_PRATICA'
+      Origin = 'tipo_pratica'
       ProviderFlags = []
       ReadOnly = True
       Size = 6
     end
     object Cds_PTEstDESCRIZIONE: TStringField
       FieldName = 'DESCRIZIONE'
-      Origin = 'DESCRIZIONE'
+      Origin = 'descrizione'
       ProviderFlags = []
       ReadOnly = True
       Size = 750

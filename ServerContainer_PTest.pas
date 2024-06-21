@@ -55,7 +55,7 @@ end;
 procedure TServerContainer1.DSServer1Error(DSErrorEventObject
   : TDSErrorEventObject);
 begin
-  writeln('Errore su DSServer');
+  writeln('DSServer Error');
   writeln(DSErrorEventObject.Error.Message);
 end;
 
@@ -177,7 +177,7 @@ begin
       try
         DM_Connection.FDConn_Sql.Connected := False;
       except
-        writeln('Non riesco a disconnettere il db');
+        writeln('Disconnect DB failed');
       end;
     end;
 
@@ -214,14 +214,14 @@ begin
   DM_Connection.FDConn_Sql.Connected := True;
   if DM_Connection.FDConn_Sql.Connected = True then
   begin
-    writeln('----Cambio  DataBase ----');
-    writeln('----Connesso a IB    ----');
+    writeln('----Change DataBase ----');
+    writeln('----Connect to IB    ----');
     writeln('----Driver         ----> ' +
       DM_Connection.FDConn_Sql.ConnectionDefName);
   end
   else
   begin
-    writeln('----Connessione a IB non riuscita ----');
+    writeln('----Connect to IB error ----');
   end;
 end;
 
@@ -233,8 +233,8 @@ begin
   DM_Connection.FDConn_Sql.Connected := True;
   if DM_Connection.FDConn_Sql.Connected = True then
   begin
-    writeln('----Cambio  DataBase ----');
-    writeln('----Connesso a MySQL ----');
+    writeln('----Change DataBase ----');
+    writeln('----Connect to MySQL ----');
     writeln('----Driver         ----> ' +
       DM_Connection.FDConn_Sql.ConnectionDefName);
   end
@@ -253,15 +253,15 @@ begin
   DM_Connection.FDConn_Sql.Connected := True;
   if DM_Connection.FDConn_Sql.Connected = True then
   begin
-    writeln('----Cambio  DataBase ----');
-    writeln('----Connesso a MySQL ----');
+    writeln('----Change DataBase ----');
+    writeln('----Connect to MySQL ----');
     writeln('----Driver         ----> ' +
       DM_Connection.FDConn_Sql.ConnectionDefName);
 
   end
   else
   begin
-    writeln('----Connessione a MySQL non riuscita ----');
+    writeln('----Connect to MySQL error ----');
   end;
 
 end;
@@ -272,16 +272,44 @@ begin
   DM_Connection.FDMoniFlatFileClientLink1.Tracing := interruttore;
   DM_Connection.FDConn_Sql.Connected := True;
   if interruttore then
-    writeln('Trace attivata')
+    writeln('Trace enabled')
   else
-    writeln('Trace disattivata');
+    writeln('Trace disabled');
 
+end;
+
+function datasnap_compatibility(interruttore: Boolean): Boolean;
+begin
+  DM_Connection.FDConn_Sql.Connected := False;
+  DM_Connection.FDManager1.FormatOptions.DataSnapCompatibility := interruttore;
+  DM_Connection.FDConn_Sql.Connected := True;
+  if interruttore then
+    writeln('FDManager DataSnap Compatibility enable')
+  else
+    writeln('FdManager DataSnap Compatibility disable');
+
+  writeln('Result FDConnection DataSnap Compatibility := ' +
+    BoolToStr(DM_Connection.FDConn_Sql.FormatOptions.DataSnapCompatibility));
+end;
+
+function ExecDirect_compatibility(interruttore: Boolean): Boolean;
+begin
+  DM_Connection.FDConn_Sql.Connected := False;
+  DM_Connection.FDManager1.ResourceOptions.DirectExecute := interruttore;
+  DM_Connection.FDConn_Sql.Connected := True;
+  if interruttore then
+    writeln('FDManager Direct Execute enable')
+  else
+    writeln('FdManager Direct Execute disable');
+
+  writeln('Result FDConnection Direct Execute  := ' +
+    BoolToStr(DM_Connection.FDConn_Sql.ResourceOptions.DirectExecute));
 end;
 
 function nconnessioni(fdmanager: TFDManager): Integer;
 begin
   Result := fdmanager.ConnectionCount;
-  writeln('Connessioni attive comprensiva del Server : ' + inttostr(Result));
+  writeln('Active Connect included APP Server : ' + inttostr(Result));
 end;
 
 procedure RunDSServer;
@@ -304,6 +332,7 @@ begin
     writeln(cDatabase_MySQL);
 
   trace_onoff(False);
+  writeln('HttpServer is active ? ' + BoolToStr(LModule.DSHTTPService1.Active));
 
   try
     if LModule.DSServer1.Started then
@@ -339,19 +368,34 @@ begin
         trace_onoff(False)
       else if sametext(LResponse, cCommandConn_Attive) then
         nconnessioni(DM_Connection.FDManager1)
-      else if sametext(LResponse, cCommandExit) then
+      else if sametext(LResponse, cDataSnap_True) then
+        datasnap_compatibility(True)
+      else if sametext(LResponse, cDataSnap_false) then
+        datasnap_compatibility(False)
+      else if sametext(LResponse, cExecDirect_True) then
+        ExecDirect_compatibility(True)
+      else if sametext(LResponse, cExecDirect_False) then
+        ExecDirect_compatibility(false)
+      else if sametext(LResponse, cCommandbye) then
+      begin
         if LModule.DSServer1.Started then
         begin
-
           StopServer(LModule);
-
-//          FreeAndNil(DM_Connection);
-
           break
         end
         else
         begin
-//          FreeAndNil(DM_Connection);
+          break
+        end
+      end
+      else if sametext(LResponse, cCommandExit) then
+        if LModule.DSServer1.Started then
+        begin
+          StopServer(LModule);
+          break
+        end
+        else
+        begin
           break
         end
       else

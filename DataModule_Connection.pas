@@ -13,11 +13,11 @@ uses
 
 type
   TDM_Connection = class(TDataModule)
-    FDConn_Sql: TFDConnection;
-    FDManager1: TFDManager;
     FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
     FDPhysIBDriverLink1: TFDPhysIBDriverLink;
     FDMoniFlatFileClientLink1: TFDMoniFlatFileClientLink;
+    FDManager1: TFDManager;
+    FDConn_Sql: TFDConnection;
     procedure DataModuleCreate(Sender: TObject);
     procedure FDConn_SqlError(ASender, AInitiator: TObject;
       var AException: Exception);
