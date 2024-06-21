@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{68F76F6B-FE11-451A-AF39-18F7519C8ABE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PTest_Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Client_PTest\PTest_Client.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PTest_Server">
+        <MSBuild Projects="PTest_Server.dproj"/>
+    </Target>
+    <Target Name="PTest_Server:Clean">
+        <MSBuild Projects="PTest_Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTest_Server:Make">
+        <MSBuild Projects="PTest_Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTest_Client">
+        <MSBuild Projects="Client_PTest\PTest_Client.dproj"/>
+    </Target>
+    <Target Name="PTest_Client:Clean">
+        <MSBuild Projects="Client_PTest\PTest_Client.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTest_Client:Make">
+        <MSBuild Projects="Client_PTest\PTest_Client.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PTest_Server;PTest_Client"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PTest_Server:Clean;PTest_Client:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PTest_Server:Make;PTest_Client:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

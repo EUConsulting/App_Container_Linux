@@ -1,0 +1,306 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 1118
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 112.000000000000000000
+    Text = 'Start'
+    TabOrder = 4
+    object Label2: TLabel
+      Position.Y = 48.000000000000000000
+      Text = 'End'
+      TabOrder = 4
+    end
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 232.000000000000000000
+    Size.Width = 1118.000000000000000000
+    Size.Height = 248.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object StringGrid1: TStringGrid
+      Align = Client
+      CanFocus = True
+      ClipChildren = True
+      Size.Width = 1118.000000000000000000
+      Size.Height = 248.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      RowCount = 0
+      Viewport.Width = 1114.000000000000000000
+      Viewport.Height = 223.000000000000000000
+    end
+  end
+  object Splitter1: TSplitter
+    Align = Bottom
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 225.000000000000000000
+    Size.Width = 1118.000000000000000000
+    Size.Height = 7.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 1118.000000000000000000
+    Size.Height = 64.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+    object Btn_Close: TButton
+      Position.X = 128.000000000000000000
+      Position.Y = 14.000000000000000000
+      Size.Width = 90.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Close Query'
+      TextSettings.Trimming = None
+      OnClick = Btn_CloseClick
+    end
+    object Btn_Open: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 14.000000000000000000
+      Size.Width = 90.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Open Query'
+      TextSettings.Trimming = None
+      OnClick = Btn_OpenClick
+    end
+    object BindNavigator1: TBindNavigator
+      Position.X = 392.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 225.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      DataSource = BindSourceDB1
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
+      xRadius = 4.000000000000000000
+      yRadius = 4.000000000000000000
+    end
+  end
+  object TEd_Start: TTimeEdit
+    ShowClearButton = True
+    Time = 0.763256400462962900
+    TimeFormatKind = Long
+    Position.X = 80.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 172.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+  end
+  object TEd_Stop: TTimeEdit
+    ShowClearButton = True
+    Time = 0.763256400462962900
+    TimeFormatKind = Long
+    Position.X = 80.000000000000000000
+    Position.Y = 145.000000000000000000
+    Size.Width = 172.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Position.X = 432.000000000000000000
+    Position.Y = 103.000000000000000000
+    Size.Width = 633.000000000000000000
+    Size.Height = 121.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 15
+    Viewport.Width = 629.000000000000000000
+    Viewport.Height = 117.000000000000000000
+  end
+  object DSP_PTest: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = ClientModule1.SQLConnection1
+    Left = 312
+    Top = 368
+  end
+  object Cds_PTEst: TClientDataSet
+    Aggregates = <>
+    CommandText = 
+      'SELECT A.*, B.TIPO_PRATICA, B.DESCRIZIONE , (SELECT CAST(COUNT(*' +
+      ') AS CHAR(10)) FROM NC_PROROGHE D WHERE D.FK_NC = A.PK_PROGRESSI' +
+      'VO) AS TOTALE_PROROGHE '#13#10'FROM NC_MASTER A, SYS_TIPO_PRATICA B'#13#10'W' +
+      'HERE A.K_TIPO_PRATICA = B.PK_PROGRESSIVO '#13#10
+    Params = <>
+    ProviderName = 'DataSetProvider2'
+    RemoteServer = DSP_PTest
+    Left = 352
+    Top = 256
+    object Cds_PTEstPK_PROGRESSIVO: TIntegerField
+      FieldName = 'PK_PROGRESSIVO'
+      Origin = 'PK_PROGRESSIVO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object Cds_PTEstK_TIPO_PRATICA: TSmallintField
+      FieldName = 'K_TIPO_PRATICA'
+      Origin = 'K_TIPO_PRATICA'
+    end
+    object Cds_PTEstKEY_ANNO: TSmallintField
+      FieldName = 'KEY_ANNO'
+      Origin = 'KEY_ANNO'
+      Required = True
+    end
+    object Cds_PTEstKEY_PROGRESSIVO: TIntegerField
+      FieldName = 'KEY_PROGRESSIVO'
+      Origin = 'KEY_PROGRESSIVO'
+      Required = True
+    end
+    object Cds_PTEstDATA_OP: TDateField
+      FieldName = 'DATA_OP'
+      Origin = 'DATA_OP'
+      Required = True
+    end
+    object Cds_PTEstUTENTE: TStringField
+      FieldName = 'UTENTE'
+      Origin = 'UTENTE'
+      Size = 30
+    end
+    object Cds_PTEstFIRMA_UTENTE: TStringField
+      FieldName = 'FIRMA_UTENTE'
+      Origin = 'FIRMA_UTENTE'
+      Required = True
+      Size = 3
+    end
+    object Cds_PTEstFIRMA_DIRIGENTE: TStringField
+      FieldName = 'FIRMA_DIRIGENTE'
+      Origin = 'FIRMA_DIRIGENTE'
+      Required = True
+      Size = 3
+    end
+    object Cds_PTEstFIRMA_SUPERVISORE: TStringField
+      FieldName = 'FIRMA_SUPERVISORE'
+      Origin = 'FIRMA_SUPERVISORE'
+      Required = True
+      Size = 3
+    end
+    object Cds_PTEstFK_UTENTE_RILEVATORE: TIntegerField
+      FieldName = 'FK_UTENTE_RILEVATORE'
+      Origin = 'FK_UTENTE_RILEVATORE'
+      Required = True
+    end
+    object Cds_PTEstDATA_FIRMA_UTENTE: TSQLTimeStampField
+      FieldName = 'DATA_FIRMA_UTENTE'
+      Origin = 'DATA_FIRMA_UTENTE'
+    end
+    object Cds_PTEstDATA_FIRMA_DIRIGENTE: TSQLTimeStampField
+      FieldName = 'DATA_FIRMA_DIRIGENTE'
+      Origin = 'DATA_FIRMA_DIRIGENTE'
+    end
+    object Cds_PTEstDATA_FIRMA_SUPERVISORE: TSQLTimeStampField
+      FieldName = 'DATA_FIRMA_SUPERVISORE'
+      Origin = 'DATA_FIRMA_SUPERVISORE'
+    end
+    object Cds_PTEstQUALIFICA_TABELLA_VIEW: TStringField
+      FieldName = 'QUALIFICA_TABELLA_VIEW'
+      Origin = 'QUALIFICA_TABELLA_VIEW'
+      Required = True
+      Size = 6
+    end
+    object Cds_PTEstFK_MOTIVI_NC: TIntegerField
+      FieldName = 'FK_MOTIVI_NC'
+      Origin = 'FK_MOTIVI_NC'
+      Required = True
+    end
+    object Cds_PTEstFK_SMASTER: TIntegerField
+      FieldName = 'FK_SMASTER'
+      Origin = 'FK_SMASTER'
+      Required = True
+    end
+    object Cds_PTEstFK_UOC: TIntegerField
+      FieldName = 'FK_UOC'
+      Origin = 'FK_UOC'
+      Required = True
+    end
+    object Cds_PTEstFK_UOS: TIntegerField
+      FieldName = 'FK_UOS'
+      Origin = 'FK_UOS'
+      Required = True
+    end
+    object Cds_PTEstFK_STATO_NC: TIntegerField
+      FieldName = 'FK_STATO_NC'
+      Origin = 'FK_STATO_NC'
+      Required = True
+    end
+    object Cds_PTEstFK_DIRIGENTE_RESP: TIntegerField
+      FieldName = 'FK_DIRIGENTE_RESP'
+      Origin = 'FK_DIRIGENTE_RESP'
+      Required = True
+    end
+    object Cds_PTEstFK_SUPERVISORE: TIntegerField
+      FieldName = 'FK_SUPERVISORE'
+      Origin = 'FK_SUPERVISORE'
+      Required = True
+    end
+    object Cds_PTEstFK_REFQUAL: TIntegerField
+      FieldName = 'FK_REFQUAL'
+      Origin = 'FK_REFQUAL'
+      Required = True
+    end
+    object Cds_PTEstFIRMA_REFQUAL: TStringField
+      FieldName = 'FIRMA_REFQUAL'
+      Origin = 'FIRMA_REFQUAL'
+      Required = True
+      Size = 3
+    end
+    object Cds_PTEstDATA_FIRMA_REFQUAL: TSQLTimeStampField
+      FieldName = 'DATA_FIRMA_REFQUAL'
+      Origin = 'DATA_FIRMA_REFQUAL'
+    end
+    object Cds_PTEstTIPO_PRATICA: TStringField
+      FieldName = 'TIPO_PRATICA'
+      Origin = 'TIPO_PRATICA'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 6
+    end
+    object Cds_PTEstDESCRIZIONE: TStringField
+      FieldName = 'DESCRIZIONE'
+      Origin = 'DESCRIZIONE'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 750
+    end
+    object Cds_PTEstTOTALE_PROROGHE: TStringField
+      FieldName = 'TOTALE_PROROGHE'
+      Origin = 'TOTALE_PROROGHE'
+      ProviderFlags = []
+      ReadOnly = True
+      FixedChar = True
+      Size = 30
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = Cds_PTEst
+    ScopeMappings = <>
+    Left = 528
+    Top = 368
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 572
+    Top = 277
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid1
+      Columns = <>
+    end
+  end
+end
