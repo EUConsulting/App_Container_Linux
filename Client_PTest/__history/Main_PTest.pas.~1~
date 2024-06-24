@@ -31,6 +31,7 @@ type
     TEd_Start: TTimeEdit;
     TEd_Stop: TTimeEdit;
     Label2: TLabel;
+    Memo1: TMemo;
     LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
     Cds_PTEstPK_PROGRESSIVO: TIntegerField;
     Cds_PTEstK_TIPO_PRATICA: TSmallintField;

@@ -110,6 +110,18 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 8
   end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Position.X = 432.000000000000000000
+    Position.Y = 103.000000000000000000
+    Size.Width = 633.000000000000000000
+    Size.Height = 121.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 15
+    Viewport.Width = 629.000000000000000000
+    Viewport.Height = 117.000000000000000000
+  end
   object DSP_PTest: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
     SQLConnection = ClientModule1.SQLConnection1
