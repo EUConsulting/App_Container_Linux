@@ -93,8 +93,8 @@ const
   cDatabase_MySQL_Container = 'Connect to Database MySql Container';
   cTrace_on = 'Trace enable';
   cTrace_off = 'Trace disable';
-  sConnOK = ' Connect OK';
-  sConnKO = ' Connect Error';
+  sConnOK = ' Connesione attiva SERVER QNC';
+  sConnKO = ' Connesione NON attiva SERVER QNC';
 {$SCOPEDENUMS ON}
 
 type

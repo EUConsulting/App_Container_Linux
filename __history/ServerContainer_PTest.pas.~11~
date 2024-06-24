@@ -8,7 +8,7 @@ uses System.SysUtils, System.Classes,
   Datasnap.DSServer, Datasnap.DSCommonServer,
   Datasnap.DSClientMetadata, Datasnap.DSProxyJavaScript,
   IPPeerServer, IPPeerAPI, Datasnap.DSAuth, Datasnap.DSMetadata,
-  FireDAC.Comp.Client,
+  FireDAC.Comp.Client, Crt,
   Datasnap.DSServerMetadata;
 
 type
@@ -135,7 +135,6 @@ begin
   else
     writeln(sServerRunning);
   Write(cArrow);
-
 end;
 
 procedure StartServer(const Aserver: TServerContainer1);
