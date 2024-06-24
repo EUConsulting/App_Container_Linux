@@ -3,7 +3,7 @@
 #please read "readme Issue English Version.txt" or "readme Issue Italian Version.txt"
 #Params_Test root project (please read "readme folder.txt")
 #DB_IB folder database Interbase
-#DB_MySQL folder database MySQL
+#DB_MySQL folder database MySQL (dump format)
 #Dll&So&ini folder with library to connect Database
 	-Linux (please read readme.txt)
 	-Windows (please read readme.txt)
