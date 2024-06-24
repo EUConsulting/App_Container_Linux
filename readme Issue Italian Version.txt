@@ -33,7 +33,7 @@ Ambiente di distribuzione Container Linux64
 		- lo stop del server non riesce 
 		- Interbase server 2020 su windows non da segnali di problemi e continua a runnare tranquillamente
 		- la kill del processo dell'application server e il suo riavvio da shell riportano il sistema ad una condizione ottimale ma ovviamente se si prova a rieterare i passaggi, si blocca di nuovo
-		- La query interessa due tabelle la prima con 1094 record la seconda con 7 record collegati alla prima attraverso una FK
+		- La query interessa tre tabelle la prima con 1094 record la seconda con 7 record la terza con 72 record collegati alla prima attraverso delle FK
 		- La query non esegue update/insert o delete, legge e basta
 		- Il risultato della query viene inviato ad una stringgrid posta su una Form/FMX
 PS 
@@ -55,4 +55,5 @@ FetchOptions.AutoClose
 TxOptions.AutoCommit
 ResourceOptions.AutoReconnect
 Isolation xiReadCommitted
+
 
