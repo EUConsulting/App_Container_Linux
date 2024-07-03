@@ -16,31 +16,37 @@ File_13=TSourceModule,'Z:\Sviluppo\Server_Report\Altri_Report\FR_Report_Riepilog
 
 [Modules]
 Module0=Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerContainer_PTest.pas
-Module1=Z:\Sviluppo\Linux_Test_Project\Params_Test\PTest_Server.dproj
-Module2=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\ClientModule_PTest.pas
-Module3=Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerMethods_PTest.pas
-Count=4
+Module1=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\ClientModule_PTest.pas
+Module2=Z:\Sviluppo\Linux_Test_Project\Params_Test\PTest_Server.dproj
+Module3=Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerConst_PTest.pas
+Module4=Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerMethods_PTest.pas
+Count=5
 EditWindowCount=1
 
 [Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerContainer_PTest.pas]
 ModuleType=TSourceModule
 
+[Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\ClientModule_PTest.pas]
+ModuleType=TSourceModule
+
 [Z:\Sviluppo\Linux_Test_Project\Params_Test\PTest_Server.dproj]
 ModuleType=TBaseProject
 
-[Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\ClientModule_PTest.pas]
+[Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerConst_PTest.pas]
 ModuleType=TSourceModule
 
 [Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerMethods_PTest.pas]
 ModuleType=TSourceModule
 
 [EditWindow0]
-ViewCount=4
-CurrentEditView=Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerContainer_PTest.pas
+ViewCount=6
+CurrentView=2
 View0=0
 View1=1
 View2=2
 View3=3
+View4=4
+View5=5
 PercentageSizes=1
 Create=1
 Visible=1
@@ -88,15 +94,29 @@ EditViewName=Z:\Sviluppo\Linux_Test_Project\Params_Test\PTest_Server.dpr
 [View1]
 CustomEditViewType=TEditView
 Module=Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerContainer_PTest.pas
-CursorX=41
-CursorY=189
-TopLine=182
+CursorX=64
+CursorY=417
+TopLine=408
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerContainer_PTest.pas
 
 [View2]
+CustomEditViewType=TOTACustomEditView
+
+[View3]
+CustomEditViewType=TEditView
+Module=Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerConst_PTest.pas
+CursorX=1
+CursorY=48
+TopLine=18
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerConst_PTest.pas
+
+[View4]
 CustomEditViewType=TEditView
 Module=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\ClientModule_PTest.pas
 CursorX=1
@@ -107,7 +127,7 @@ Elisions=
 Bookmarks=
 EditViewName=Borland.FormDesignerView
 
-[View3]
+[View5]
 CustomEditViewType=TEditView
 Module=Z:\Sviluppo\Linux_Test_Project\Params_Test\ServerMethods_PTest.pas
 CursorX=1
@@ -264,7 +284,7 @@ TBDockHeight=8769
 LRDockWidth=1896
 Dockable=1
 StayOnTop=0
-SplitPos=116
+SplitPos=111
 
 [frmDesignPreview]
 PercentageSizes=1
@@ -773,5 +793,5 @@ ActiveTabID=ToolForm
 TabDockClients=ToolForm,TemplateView
 
 [ActiveProject]
-ActiveProject=1
+ActiveProject=2
 
