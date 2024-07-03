@@ -22,9 +22,7 @@ resourcestring
   sCommands = 'Enter a Command: ' + slineBreak +
     '   - "start" to start the server' + slineBreak +
     '   - "stop" to stop the server' + slineBreak +
-    '   - "set port -t" to change the TCP/IP default port' + slineBreak +
     '   - "set port -h" to change the HTTP default port' + slineBreak +
-    '   - "set port -s" to change the HTTPS default port' + slineBreak +
     '   - "status" for Server status' + slineBreak +
     '   - "help" to show commands' + slineBreak +
     '   - "IB" Connect DB Interbase' + slineBreak +
@@ -46,9 +44,7 @@ const
   cCommandStop = 'stop';
   cCommandStatus = 'status';
   cCommandHelp = 'help';
-  cCommandSetTCPIPPort = 'set port -t';
   cCommandSetHTTPPort = 'set port -h';
-  cCommandSetHTTPSPort = 'set port -s';
   cCommandIb = 'IB';
   cCommandMySQl = 'W_MYSQL';
   cCommandMySQl_Container = 'C_MYSQL';

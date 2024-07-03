@@ -7,13 +7,6 @@ object ServerContainer1: TServerContainer1
     Left = 96
     Top = 11
   end
-  object DSTCPServerTransport1: TDSTCPServerTransport
-    Server = DSServer1
-    Filters = <>
-    AuthenticationManager = DSAuthenticationManager1
-    Left = 96
-    Top = 73
-  end
   object DSHTTPService1: TDSHTTPService
     HttpPort = 8100
     Server = DSServer1
@@ -39,15 +32,15 @@ object ServerContainer1: TServerContainer1
   object DSServerMetaDataProvider1: TDSServerMetaDataProvider
     Server = DSServer1
     Left = 272
-    Top = 88
+    Top = 80
   end
   object DSProxyGenerator1: TDSProxyGenerator
     MetaDataProvider = DSServerMetaDataProvider1
     TargetUnitName = 'ServerFunctions.js'
     TargetDirectory = 'js'
     Writer = 'Java Script REST'
-    Left = 256
-    Top = 168
+    Left = 272
+    Top = 144
   end
   object DSHTTPServiceFileDispatcher1: TDSHTTPServiceFileDispatcher
     Service = DSHTTPService1
@@ -81,7 +74,7 @@ object ServerContainer1: TServerContainer1
         DirectoryAction = dirExclude
         DirectoryMask = '/templates/*'
       end>
-    Left = 312
+    Left = 272
     Top = 216
   end
 end
