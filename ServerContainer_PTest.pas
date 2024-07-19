@@ -115,8 +115,8 @@ begin
     if CheckPort(Aport.ToInteger) > 0 then
     begin
       case AProtocol of
-//        DSProtocol.TCPIP:
-//          Aserver.DSTCPServerTransport1.Port := Aport.ToInteger;
+        // DSProtocol.TCPIP:
+        // Aserver.DSTCPServerTransport1.Port := Aport.ToInteger;
         DSProtocol.HTTP:
           Aserver.DSHTTPService1.HttpPort := Aport.ToInteger;
 
@@ -144,13 +144,13 @@ begin
   LStart := True;
   if not(Aserver.DSServer1.Started) then
   begin
-  {
-    if CheckPort(Aserver.DSTCPServerTransport1.Port) <= 0 then
-    begin
+    {
+      if CheckPort(Aserver.DSTCPServerTransport1.Port) <= 0 then
+      begin
       writeln(Format(sPortInUse,
-        [Aserver.DSTCPServerTransport1.Port.ToString]));
+      [Aserver.DSTCPServerTransport1.Port.ToString]));
       LStart := False;
-    end;
+      end;
     }
     if CheckPort(Aserver.DSHTTPService1.HttpPort) <= 0 then
     begin
@@ -202,7 +202,7 @@ end;
 procedure WriteStatus(const Aserver: TServerContainer1);
 begin
   writeln(sActive + Aserver.DSServer1.Started.ToString(TUseBoolStrs.True));
-//  writeln(sTCPIPPort + Aserver.DSTCPServerTransport1.Port.ToString);
+  // writeln(sTCPIPPort + Aserver.DSTCPServerTransport1.Port.ToString);
   writeln(sHTTPPort + Aserver.DSHTTPService1.HttpPort.ToString);
 
   Write(cArrow);
@@ -319,9 +319,9 @@ var
   LModule: TServerContainer1;
   LResponse: string;
 begin
-  DM_Connection := TDM_Connection.Create(nil);
-
+    DM_Connection := TDM_Connection.Create(nil);
   try
+
     if DM_Connection.FDConn_Sql.Connected = True then
       writeln(sConnOK)
     else
@@ -337,7 +337,8 @@ begin
     LModule := TServerContainer1.Create(nil);
 
     try
-      writeln('HttpServer is active ? ' + BoolToStr(LModule.DSHTTPService1.Active));
+      writeln('HttpServer is active ? ' +
+        BoolToStr(LModule.DSHTTPService1.Active));
 
       if LModule.DSServer1.Started then
         writeln(sServerIsRunning);
@@ -376,7 +377,7 @@ begin
         else if sametext(LResponse, cExecDirect_True) then
           ExecDirect_compatibility(True)
         else if sametext(LResponse, cExecDirect_False) then
-          ExecDirect_compatibility(false)
+          ExecDirect_compatibility(False)
         else if sametext(LResponse, cCommandbye) then
         begin
           if LModule.DSServer1.Started then
@@ -409,8 +410,8 @@ begin
       LModule.Free;
     end;
   finally
-//  FreeAndNil(DM_Connection);
-//    DM_Connection.Free;
+    // FreeAndNil(DM_Connection);
+    // DM_Connection.Free;
   end;
 end;
 

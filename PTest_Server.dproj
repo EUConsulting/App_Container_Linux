@@ -5,10 +5,11 @@
         <FrameworkType>None</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Linux64</Platform>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>131</TargetedPlatforms>
         <AppType>Console</AppType>
         <MainSource>PTest_Server.dpr</MainSource>
+        <ProjectName Condition="'$(ProjectName)'==''">PTest_Server</ProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -166,8 +167,8 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_ExeOutput>C:\Exe_PTest\</DCC_ExeOutput>
-        <VerInfo_Build>5</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=Eu.Consulting;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.5;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Build>9</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Eu.Consulting;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.9;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
     </PropertyGroup>
@@ -276,8 +277,20 @@ $(PostBuildEvent)]]></PostBuildEvent>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="C:\Exe_PTest\PTest_Server.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>PTest_Server.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\FireDAC\FDConnectionDefs.ini" Configuration="Debug" Class="File">
                     <Platform Name="Linux64">
+                        <RemoteName>FDConnectionDefs.ini</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\FireDAC\FDConnectionDefs.ini" Configuration="Debug" Class="File">
+                    <Platform Name="Win32">
                         <RemoteName>FDConnectionDefs.ini</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
@@ -285,12 +298,6 @@ $(PostBuildEvent)]]></PostBuildEvent>
                 <DeployFile LocalName="Linux64\Debug\PTest_Server" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Linux64">
                         <RemoteName>PTest_Server</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Z:\Exe_Aggiornamenti\PTest_Server.exe" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>PTest_Server.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

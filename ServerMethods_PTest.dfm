@@ -6,8 +6,8 @@ object ServerMethods1: TServerMethods1
     DataSet = FDQuery1
     Options = [poAllowCommandText, poUseQuoteChar]
     UpdateMode = upWhereKeyOnly
-    Left = 56
-    Top = 144
+    Left = 32
+    Top = 128
   end
   object FDQuery1: TFDQuery
     Connection = DM_Connection.FDConn_Sql
@@ -55,5 +55,212 @@ object ServerMethods1: TServerMethods1
     Provider = 'Console'
     Left = 456
     Top = 88
+  end
+  object FDQuery2: TFDQuery
+    Connection = DM_Connection.FDConn_Sql
+    SQL.Strings = (
+      'select * from TS1_RICLASSIFICA_PROGETTO')
+    Left = 96
+    Top = 248
+    object FDQuery2PK_PROGRESSIVO: TIntegerField
+      FieldName = 'PK_PROGRESSIVO'
+      Origin = 'PK_PROGRESSIVO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQuery2FK_MACROGRUPPO: TIntegerField
+      FieldName = 'FK_MACROGRUPPO'
+      Origin = 'FK_MACROGRUPPO'
+      Required = True
+    end
+    object FDQuery2FLAG_ATTIVO: TStringField
+      FieldName = 'FLAG_ATTIVO'
+      Origin = 'FLAG_ATTIVO'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object FDQuery2NOTE: TStringField
+      FieldName = 'NOTE'
+      Origin = 'NOTE'
+      Size = 300
+    end
+    object FDQuery2DEFINIZIONE_RICLASSIFICATO: TStringField
+      FieldName = 'DEFINIZIONE_RICLASSIFICATO'
+      Origin = 'DEFINIZIONE_RICLASSIFICATO'
+      Required = True
+      Size = 250
+    end
+    object FDQuery2NSAL_UFFICIALI: TSmallintField
+      FieldName = 'NSAL_UFFICIALI'
+      Origin = 'NSAL_UFFICIALI'
+      Required = True
+    end
+    object FDQuery2NSAL_INTERNI: TSmallintField
+      FieldName = 'NSAL_INTERNI'
+      Origin = 'NSAL_INTERNI'
+      Required = True
+    end
+  end
+  object FDQuery3: TFDQuery
+    Connection = DM_Connection.FDConn_Sql
+    SQL.Strings = (
+      'select * from TS1_RICLASSIFICA_PROGETTO_DETAIL')
+    Left = 88
+    Top = 368
+    object FDQuery3PK_PROGRESSIVO: TIntegerField
+      FieldName = 'PK_PROGRESSIVO'
+      Origin = 'PK_PROGRESSIVO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQuery3FK_PARAM_PROGETTO: TIntegerField
+      FieldName = 'FK_PARAM_PROGETTO'
+      Origin = 'FK_PARAM_PROGETTO'
+      Required = True
+    end
+    object FDQuery3FK_TIPO_COSTO: TIntegerField
+      FieldName = 'FK_TIPO_COSTO'
+      Origin = 'FK_TIPO_COSTO'
+      Required = True
+    end
+    object FDQuery3FLAG_ATTIVO: TStringField
+      FieldName = 'FLAG_ATTIVO'
+      Origin = 'FLAG_ATTIVO'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object FDQuery3DATA_IN: TDateField
+      FieldName = 'DATA_IN'
+      Origin = 'DATA_IN'
+      Required = True
+    end
+    object FDQuery3DATA_FI: TDateField
+      FieldName = 'DATA_FI'
+      Origin = 'DATA_FI'
+      Required = True
+    end
+    object FDQuery3BUDGET: TFloatField
+      FieldName = 'BUDGET'
+      Origin = 'BUDGET'
+      Required = True
+    end
+    object FDQuery3BUDGET_UTILIZZATO: TFloatField
+      FieldName = 'BUDGET_UTILIZZATO'
+      Origin = 'BUDGET_UTILIZZATO'
+      Required = True
+    end
+    object FDQuery3QUOTA_DETRAIBILE: TSingleField
+      FieldName = 'QUOTA_DETRAIBILE'
+      Origin = 'QUOTA_DETRAIBILE'
+      Required = True
+    end
+    object FDQuery3BUDGET_TMP_CALCOLI: TFloatField
+      FieldName = 'BUDGET_TMP_CALCOLI'
+      Origin = 'BUDGET_TMP_CALCOLI'
+      Required = True
+    end
+    object FDQuery3GG_TMP: TIntegerField
+      FieldName = 'GG_TMP'
+      Origin = 'GG_TMP'
+    end
+    object FDQuery3BUDGET_GG_TMP: TFloatField
+      FieldName = 'BUDGET_GG_TMP'
+      Origin = 'BUDGET_GG_TMP'
+    end
+    object FDQuery3DATA_IN_TMP: TDateField
+      FieldName = 'DATA_IN_TMP'
+      Origin = 'DATA_IN_TMP'
+      Required = True
+    end
+    object FDQuery3FK_ANAG: TIntegerField
+      FieldName = 'FK_ANAG'
+      Origin = 'FK_ANAG'
+      Required = True
+    end
+  end
+  object FDQuery4: TFDQuery
+    Connection = DM_Connection.FDConn_Sql
+    SQL.Strings = (
+      'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT')
+    Left = 232
+    Top = 272
+    object FDQuery4PK_PROGRESSIVO: TIntegerField
+      FieldName = 'PK_PROGRESSIVO'
+      Origin = 'PK_PROGRESSIVO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQuery4FK_PARAM_PROGETTO_DETAIL: TIntegerField
+      FieldName = 'FK_PARAM_PROGETTO_DETAIL'
+      Origin = 'FK_PARAM_PROGETTO_DETAIL'
+      Required = True
+    end
+    object FDQuery4FLAG_ATTIVO: TStringField
+      FieldName = 'FLAG_ATTIVO'
+      Origin = 'FLAG_ATTIVO'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object FDQuery4DATA_IN: TDateField
+      FieldName = 'DATA_IN'
+      Origin = 'DATA_IN'
+      Required = True
+    end
+    object FDQuery4DATA_FI: TDateField
+      FieldName = 'DATA_FI'
+      Origin = 'DATA_FI'
+      Required = True
+    end
+    object FDQuery4BUDGET: TFloatField
+      FieldName = 'BUDGET'
+      Origin = 'BUDGET'
+      Required = True
+    end
+    object FDQuery4BUDGET_UTILIZZATO: TFloatField
+      FieldName = 'BUDGET_UTILIZZATO'
+      Origin = 'BUDGET_UTILIZZATO'
+      Required = True
+    end
+    object FDQuery4FK_ANAG: TIntegerField
+      FieldName = 'FK_ANAG'
+      Origin = 'FK_ANAG'
+      Required = True
+    end
+    object FDQuery4FLAG_EMAIL: TStringField
+      FieldName = 'FLAG_EMAIL'
+      Origin = 'FLAG_EMAIL'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object FDQuery4GG_ALLERT: TSmallintField
+      FieldName = 'GG_ALLERT'
+      Origin = 'GG_ALLERT'
+      Required = True
+    end
+  end
+  object DataSetProvider2: TDataSetProvider
+    DataSet = FDQuery2
+    Options = [poAllowCommandText, poUseQuoteChar]
+    UpdateMode = upWhereKeyOnly
+    Left = 96
+    Top = 304
+  end
+  object DataSetProvider3: TDataSetProvider
+    DataSet = FDQuery3
+    Options = [poAllowCommandText, poUseQuoteChar]
+    UpdateMode = upWhereKeyOnly
+    Left = 88
+    Top = 424
+  end
+  object DataSetProvider4: TDataSetProvider
+    DataSet = FDQuery4
+    Options = [poAllowCommandText, poUseQuoteChar]
+    UpdateMode = upWhereKeyOnly
+    Left = 232
+    Top = 352
   end
 end

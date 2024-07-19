@@ -20,6 +20,43 @@ type
     FDGUIxAsyncExecuteDialog1: TFDGUIxAsyncExecuteDialog;
     FDGUIxScriptDialog1: TFDGUIxScriptDialog;
     FDGUIxLoginDialog1: TFDGUIxLoginDialog;
+    FDQuery2: TFDQuery;
+    FDQuery3: TFDQuery;
+    FDQuery4: TFDQuery;
+    DataSetProvider2: TDataSetProvider;
+    DataSetProvider3: TDataSetProvider;
+    DataSetProvider4: TDataSetProvider;
+    FDQuery2PK_PROGRESSIVO: TIntegerField;
+    FDQuery2FK_MACROGRUPPO: TIntegerField;
+    FDQuery2FLAG_ATTIVO: TStringField;
+    FDQuery2NOTE: TStringField;
+    FDQuery2DEFINIZIONE_RICLASSIFICATO: TStringField;
+    FDQuery2NSAL_UFFICIALI: TSmallintField;
+    FDQuery2NSAL_INTERNI: TSmallintField;
+    FDQuery3PK_PROGRESSIVO: TIntegerField;
+    FDQuery3FK_PARAM_PROGETTO: TIntegerField;
+    FDQuery3FK_TIPO_COSTO: TIntegerField;
+    FDQuery3FLAG_ATTIVO: TStringField;
+    FDQuery3DATA_IN: TDateField;
+    FDQuery3DATA_FI: TDateField;
+    FDQuery3BUDGET: TFloatField;
+    FDQuery3BUDGET_UTILIZZATO: TFloatField;
+    FDQuery3QUOTA_DETRAIBILE: TSingleField;
+    FDQuery3BUDGET_TMP_CALCOLI: TFloatField;
+    FDQuery3GG_TMP: TIntegerField;
+    FDQuery3BUDGET_GG_TMP: TFloatField;
+    FDQuery3DATA_IN_TMP: TDateField;
+    FDQuery3FK_ANAG: TIntegerField;
+    FDQuery4PK_PROGRESSIVO: TIntegerField;
+    FDQuery4FK_PARAM_PROGETTO_DETAIL: TIntegerField;
+    FDQuery4FLAG_ATTIVO: TStringField;
+    FDQuery4DATA_IN: TDateField;
+    FDQuery4DATA_FI: TDateField;
+    FDQuery4BUDGET: TFloatField;
+    FDQuery4BUDGET_UTILIZZATO: TFloatField;
+    FDQuery4FK_ANAG: TIntegerField;
+    FDQuery4FLAG_EMAIL: TStringField;
+    FDQuery4GG_ALLERT: TSmallintField;
     procedure DSServerModuleCreate(Sender: TObject);
     procedure FDQuery1Error(ASender, AInitiator: TObject;
       var AException: Exception);
@@ -48,6 +85,9 @@ procedure TServerMethods1.DSServerModuleCreate(Sender: TObject);
 begin
   // imposta la connection a runtime
   FDQuery1.Connection := DM_Connection.FDConn_Sql;
+  FDQuery2.Connection := DM_Connection.FDConn_Sql;
+  FDQuery3.Connection := DM_Connection.FDConn_Sql;
+  FDQuery4.Connection := DM_Connection.FDConn_Sql;
 
 end;
 

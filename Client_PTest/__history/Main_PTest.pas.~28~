@@ -1,0 +1,251 @@
+unit Main_PTest;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.DialogService,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, Data.DB,
+  Datasnap.DBClient, Datasnap.DSConnect, FMX.Controls.Presentation,
+  FMX.StdCtrls,
+  System.Rtti, FMX.Grid.Style, Data.Bind.EngExt, FMX.Bind.DBEngExt,
+  FMX.Bind.Grid, System.Bindings.Outputs, FMX.Bind.Editors,
+  Data.Bind.Components, Data.Bind.Grid, Data.Bind.DBScope, FMX.ScrollBox,
+  FMX.Grid, FMX.DateTimeCtrls, Data.Bind.Controls, FMX.Layouts,
+  FMX.Bind.Navigator, FMX.Memo.Types, FMX.Memo, FMX.Edit;
+
+type
+  TForm1 = class(TForm)
+    Btn_Open: TButton;
+    DSP_PTest: TDSProviderConnection;
+    Cds_PTEst: TClientDataSet;
+    StringGrid1: TStringGrid;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    Splitter1: TSplitter;
+    Btn_Close: TButton;
+    Label1: TLabel;
+    Panel1: TPanel;
+    BindNavigator1: TBindNavigator;
+    ToolBar1: TToolBar;
+    TEd_Start: TTimeEdit;
+    TEd_Stop: TTimeEdit;
+    Label2: TLabel;
+    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
+    Cds_PTEstPK_PROGRESSIVO: TIntegerField;
+    Cds_PTEstK_TIPO_PRATICA: TSmallintField;
+    Cds_PTEstKEY_ANNO: TSmallintField;
+    Cds_PTEstKEY_PROGRESSIVO: TIntegerField;
+    Cds_PTEstDATA_OP: TDateField;
+    Cds_PTEstUTENTE: TStringField;
+    Cds_PTEstFIRMA_UTENTE: TStringField;
+    Cds_PTEstFIRMA_DIRIGENTE: TStringField;
+    Cds_PTEstFIRMA_SUPERVISORE: TStringField;
+    Cds_PTEstFK_UTENTE_RILEVATORE: TIntegerField;
+    Cds_PTEstDATA_FIRMA_UTENTE: TSQLTimeStampField;
+    Cds_PTEstDATA_FIRMA_DIRIGENTE: TSQLTimeStampField;
+    Cds_PTEstDATA_FIRMA_SUPERVISORE: TSQLTimeStampField;
+    Cds_PTEstQUALIFICA_TABELLA_VIEW: TStringField;
+    Cds_PTEstFK_MOTIVI_NC: TIntegerField;
+    Cds_PTEstFK_SMASTER: TIntegerField;
+    Cds_PTEstFK_UOC: TIntegerField;
+    Cds_PTEstFK_UOS: TIntegerField;
+    Cds_PTEstFK_STATO_NC: TIntegerField;
+    Cds_PTEstFK_DIRIGENTE_RESP: TIntegerField;
+    Cds_PTEstFK_SUPERVISORE: TIntegerField;
+    Cds_PTEstFK_REFQUAL: TIntegerField;
+    Cds_PTEstFIRMA_REFQUAL: TStringField;
+    Cds_PTEstDATA_FIRMA_REFQUAL: TSQLTimeStampField;
+    Cds_PTEstTIPO_PRATICA: TStringField;
+    Cds_PTEstDESCRIZIONE: TStringField;
+    Cds_PTEstTOTALE_PROROGHE: TStringField;
+    Button1: TButton;
+    Panel2: TPanel;
+    StringGrid2: TStringGrid;
+    StringGrid3: TStringGrid;
+    StringGrid4: TStringGrid;
+    ClientDataSet1: TClientDataSet;
+    ClientDataSet2: TClientDataSet;
+    ClientDataSet3: TClientDataSet;
+    DataSource1: TDataSource;
+    DataSource2: TDataSource;
+    DSProviderConnection1: TDSProviderConnection;
+    DSProviderConnection2: TDSProviderConnection;
+    DSProviderConnection3: TDSProviderConnection;
+    ClientDataSet1PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet1FK_MACROGRUPPO: TIntegerField;
+    ClientDataSet1FLAG_ATTIVO: TStringField;
+    ClientDataSet1NOTE: TStringField;
+    ClientDataSet1DEFINIZIONE_RICLASSIFICATO: TStringField;
+    ClientDataSet1NSAL_UFFICIALI: TSmallintField;
+    ClientDataSet1NSAL_INTERNI: TSmallintField;
+    ClientDataSet2PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet2FK_PARAM_PROGETTO: TIntegerField;
+    ClientDataSet2FK_TIPO_COSTO: TIntegerField;
+    ClientDataSet2FLAG_ATTIVO: TStringField;
+    ClientDataSet2DATA_IN: TDateField;
+    ClientDataSet2DATA_FI: TDateField;
+    ClientDataSet2BUDGET: TFloatField;
+    ClientDataSet2BUDGET_UTILIZZATO: TFloatField;
+    ClientDataSet2QUOTA_DETRAIBILE: TSingleField;
+    ClientDataSet2BUDGET_TMP_CALCOLI: TFloatField;
+    ClientDataSet2GG_TMP: TIntegerField;
+    ClientDataSet2BUDGET_GG_TMP: TFloatField;
+    ClientDataSet2DATA_IN_TMP: TDateField;
+    ClientDataSet2FK_ANAG: TIntegerField;
+    ClientDataSet3PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet3FK_PARAM_PROGETTO_DETAIL: TIntegerField;
+    ClientDataSet3FLAG_ATTIVO: TStringField;
+    ClientDataSet3DATA_IN: TDateField;
+    ClientDataSet3DATA_FI: TDateField;
+    ClientDataSet3BUDGET: TFloatField;
+    ClientDataSet3BUDGET_UTILIZZATO: TFloatField;
+    ClientDataSet3FK_ANAG: TIntegerField;
+    ClientDataSet3FLAG_EMAIL: TStringField;
+    ClientDataSet3GG_ALLERT: TSmallintField;
+    BindSourceDB2: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
+    BindSourceDB3: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource;
+    BindSourceDB4: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource;
+    Button2: TButton;
+    Button3: TButton;
+    procedure Btn_CloseClick(Sender: TObject);
+    procedure Btn_OpenClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure LinkGridToDataSourceBindSourceDB4EvalError(Sender: TObject;
+      AException: Exception);
+    procedure LinkGridToDataSourceBindSourceDB3EvalError(Sender: TObject;
+      AException: Exception);
+    procedure LinkGridToDataSourceBindSourceDB2EvalError(Sender: TObject;
+      AException: Exception);
+    procedure Button3Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure DataSource2DataChange(Sender: TObject; Field: TField);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  cds_param: boolean;
+
+implementation
+
+{$R *.fmx}
+
+uses ClientModule_PTest;
+
+procedure TForm1.Btn_CloseClick(Sender: TObject);
+begin
+  Cds_PTEst.Active := false;
+
+end;
+
+procedure TForm1.Btn_OpenClick(Sender: TObject);
+begin
+  Cds_PTEst.Active := false;
+  TEd_Start.Time := now;
+  Cds_PTEst.Active := true;
+  TEd_Stop.Time := now;
+
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  if Cds_PTEst.Active then
+    if Cds_PTEst.RecordCount > 0 then
+    begin
+      Cds_PTEst.Delete;
+      Cds_PTEst.ApplyUpdates(-1);
+
+    end;
+
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  ClientDataSet1.Active := true;
+  ClientDataSet2.Active := true;
+
+{  if cds_param then
+  begin
+    ClientDataSet3.CommandText :=
+      'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT where fk_param_progetto_detail = :fk_value';
+    ClientDataSet3.ParamByName('fk_value').AsInteger :=
+      ClientDataSet2PK_PROGRESSIVO.Value;
+  end;
+}
+  ClientDataSet3.Active := true;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  cds_param := true;
+  ClientDataSet3.Active := false;
+  ClientDataSet2.Active := false;
+  ClientDataSet1.Active := false;
+
+  ClientDataSet3.MasterSource := nil;
+  ClientDataSet3.MasterFields.Empty;
+  ClientDataSet3.IndexFieldNames.Empty;
+
+{  ClientDataSet3.Params.AddParameter;
+  ClientDataSet3.Params[0].Name := 'fk_value';
+  ClientDataSet3.Params[0].DataType := ftInteger;
+  ClientDataSet3.Params[0].ParamType := ptInput;
+}
+end;
+
+procedure TForm1.DataSource2DataChange(Sender: TObject; Field: TField);
+begin
+  if cds_param then
+  begin
+    ClientDataSet3.Active := False;
+    ClientDataSet3.CommandText := '';
+ {
+    ClientDataSet3.CommandText :=
+      'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT where fk_param_progetto_detail = :fk_value';
+    ClientDataSet3.ParamByName('fk_value').AsInteger :=
+      ClientDataSet2PK_PROGRESSIVO.Value;
+    ClientDataSet3.CommandText :=
+      'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT where fk_param_progetto_detail = ' + inttostr(ClientDataSet2PK_PROGRESSIVO.Value);
+
+  }
+
+    ClientDataSet3.Active := True;
+  end;
+
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  cds_param := false;
+end;
+
+procedure TForm1.LinkGridToDataSourceBindSourceDB2EvalError(Sender: TObject;
+  AException: Exception);
+begin
+  TDialogService.ShowMessage(Format(AException.Message, ['']));
+
+end;
+
+procedure TForm1.LinkGridToDataSourceBindSourceDB3EvalError(Sender: TObject;
+  AException: Exception);
+begin
+  TDialogService.ShowMessage(Format(AException.Message, ['']));
+
+end;
+
+procedure TForm1.LinkGridToDataSourceBindSourceDB4EvalError(Sender: TObject;
+  AException: Exception);
+begin
+  TDialogService.ShowMessage(Format(AException.Message, ['']));
+end;
+
+end.

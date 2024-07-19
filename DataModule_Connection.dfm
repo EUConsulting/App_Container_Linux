@@ -31,7 +31,7 @@ object DM_Connection: TDM_Connection
   end
   object FDConn_Sql: TFDConnection
     Params.Strings = (
-      'ConnectionDef=MySql_PTest')
+      'ConnectionDef=IB_PTest')
     FetchOptions.AssignedValues = [evDetailCascade]
     FetchOptions.DetailCascade = True
     FormatOptions.AssignedValues = [fvMapRules]
@@ -52,6 +52,7 @@ object DM_Connection: TDM_Connection
     ResourceOptions.AssignedValues = [rvAutoReconnect]
     ResourceOptions.AutoReconnect = True
     TxOptions.Isolation = xiReadCommitted
+    Connected = True
     LoginPrompt = False
     OnError = FDConn_SqlError
     Left = 104
