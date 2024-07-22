@@ -3,7 +3,7 @@ Visible=False
 Coordinates=594,826,68,33
 
 [StringGrid4]
-Coordinates=10,984,70,51
+Coordinates=1016,131,70,51
 Visible=True
 
 [Cds_PTEstFK_UOC]
@@ -19,14 +19,11 @@ Coordinates=564,1,117,33
 Coordinates=564,56,162,33
 
 [Splitter1]
-Coordinates=103,1068,55,33
+Coordinates=941,1050,55,33
 
 [ClientDataSet1]
 Coordinates=307,724,87,33
 Visible=False
-
-[Label2]
-Coordinates=378,984,46,51
 
 [ClientDataSet2]
 Coordinates=400,10,87,33
@@ -41,23 +38,14 @@ Coordinates=564,111,109,33
 [Cds_PTEstFK_MOTIVI_NC]
 Coordinates=564,166,144,33
 
-[ToolBar1]
-Coordinates=10,1068,58,33
-
 [Cds_PTEstPK_PROGRESSIVO]
 Coordinates=564,221,164,33
 
 [Panel2]
-Coordinates=868,984,47,33
+Coordinates=1029,1050,47,33
 
 [Cds_PTEstFIRMA_UTENTE]
 Coordinates=564,276,148,33
-
-[Label1]
-Coordinates=389,724,46,51
-
-[TEd_Start]
-Coordinates=214,984,115,51
 
 [Cds_PTEstFIRMA_DIRIGENTE]
 Coordinates=564,331,163,33
@@ -84,42 +72,36 @@ Coordinates=564,551,156,33
 Coordinates=672,984,77,33
 
 [Btn_Open]
-Coordinates=116,984,63,51
+Coordinates=280,1050,63,51
 
 [Cds_PTEstFIRMA_SUPERVISORE]
 Coordinates=564,606,181,33
 
 [StringGrid1]
-Coordinates=282,384,70,51
+Coordinates=282,266,70,537
 
 [Cds_PTEstKEY_ANNO]
 Coordinates=564,661,125,33
 
 [StringGrid2]
-Coordinates=283,812,70,51
+Coordinates=508,812,70,177
 Visible=True
 
 [StringGrid3]
-Coordinates=553,724,70,51
+Coordinates=631,175,70,303
 Visible=True
-
-[Button1]
-Coordinates=468,724,53,51
 
 [Cds_PTEstDATA_FIRMA_REFQUAL]
 Coordinates=564,716,191,33
 
 [BindSourceDB1]
-Coordinates=10,10,151,573
+Coordinates=10,10,151,555
 
 [Cds_PTEstTOTALE_PROROGHE]
 Coordinates=564,771,175,33
 
 [Cds_PTEstTIPO_PRATICA]
 Coordinates=385,803,144,33
-
-[TEd_Stop]
-Coordinates=659,724,115,51
 
 [Cds_PTEstQUALIFICA_TABELLA_VIEW]
 Coordinates=126,803,210,33
@@ -138,7 +120,7 @@ Coordinates=829,56,137,33
 Coordinates=829,111,215,33
 
 [Panel1]
-Coordinates=787,984,47,33
+Coordinates=1110,1050,47,33
 
 [Cds_PTEstK_TIPO_PRATICA]
 Coordinates=829,166,157,33
@@ -147,7 +129,7 @@ Coordinates=829,166,157,33
 Coordinates=829,221,197,33
 
 [Btn_Close]
-Coordinates=457,984,65,51
+Coordinates=95,1050,65,51
 
 [Cds_PTEstFK_DIRIGENTE_RESP]
 Coordinates=829,276,178,33
@@ -261,22 +243,19 @@ Coordinates=1126,936,130,33
 Coordinates=1107,974,136,33
 
 [BindSourceDB2]
-Coordinates=10,724,161,195
+Coordinates=235,724,161,195
 
 [BindSourceDB3]
-Coordinates=560,0,126,321
+Coordinates=400,10,126,321
 
 [BindSourceDB4]
-Coordinates=900,20,167,249
-
-[BindNavigator1]
-Coordinates=180,1,90,51
+Coordinates=737,10,167,249
 
 [Button2]
-Coordinates=180,71,53,51
+Coordinates=195,1050,53,51
 
 [Button3]
-Coordinates=180,141,53,51
+Coordinates=10,1050,53,51
 
 [ClientDataSet3_NoDs]
 Coordinates=180,211,119,33
@@ -313,8 +292,42 @@ Coordinates=180,558,164,33
 Coordinates=161,602,185,33
 
 [BindSourceDB4_NoDs]
-Coordinates=180,211,167,249
+Coordinates=10,724,167,249
 
 [Button4]
-Coordinates=180,479,53,51
+Coordinates=901,724,53,51
+
+[]
+Coordinates=468,724,53,51
+
+[StatusBar1]
+Coordinates=837,1050,68,33
+
+[ToolBar3]
+Coordinates=744,1050,58,33
+
+[Splitter2]
+Coordinates=656,1050,55,33
+
+[ToolBar2]
+Coordinates=563,1050,58,33
+
+[Label2]
+Coordinates=693,724,46,51
+
+[StatusBar2]
+Coordinates=459,1050,68,33
+
+[Label1]
+Coordinates=614,724,46,51
+
+[Panel3]
+Coordinates=378,1050,47,33
+
+[BindNavigator2]
+Coordinates=772,724,90,51
+Visible=True
+
+[BindNavigator1]
+Coordinates=180,1,90,51
 

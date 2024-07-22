@@ -9,24 +9,13 @@ object Form1: TForm1
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
   DesignerMasterStyle = 0
-  object Label1: TLabel
-    Position.X = 8.000000000000000000
-    Position.Y = 112.000000000000000000
-    Text = 'Start'
-    TabOrder = 4
-    object Label2: TLabel
-      Position.Y = 48.000000000000000000
-      Text = 'End'
-      TabOrder = 4
-    end
-  end
   object Panel1: TPanel
     Align = Bottom
     Position.Y = 521.000000000000000000
     Size.Width = 1118.000000000000000000
     Size.Height = 248.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 5
+    TabOrder = 4
     object StringGrid1: TStringGrid
       Align = Client
       CanFocus = True
@@ -53,7 +42,7 @@ object Form1: TForm1
     Size.Width = 1118.000000000000000000
     Size.Height = 64.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 13
+    TabOrder = 10
     object Btn_Close: TButton
       Position.X = 128.000000000000000000
       Position.Y = 14.000000000000000000
@@ -77,8 +66,8 @@ object Form1: TForm1
       OnClick = Btn_OpenClick
     end
     object BindNavigator1: TBindNavigator
-      Position.X = 392.000000000000000000
-      Position.Y = 24.000000000000000000
+      Position.X = 240.000000000000000000
+      Position.Y = 21.000000000000000000
       Size.Width = 222.000000000000000000
       Size.Height = 25.000000000000000000
       Size.PlatformDefault = False
@@ -91,36 +80,25 @@ object Form1: TForm1
     object Button2: TButton
       Position.X = 632.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 161.000000000000000000
+      Size.Width = 121.000000000000000000
       Size.Height = 38.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
-      Text = 'opens the grid tables'
+      Text = 'Opens the grid tables'
       TextSettings.Trimming = None
       OnClick = Button2Click
     end
-  end
-  object TEd_Start: TTimeEdit
-    ShowClearButton = True
-    Time = 0.763256400462962900
-    TimeFormatKind = Long
-    Position.X = 80.000000000000000000
-    Position.Y = 96.000000000000000000
-    Size.Width = 172.000000000000000000
-    Size.Height = 33.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 9
-  end
-  object TEd_Stop: TTimeEdit
-    ShowClearButton = True
-    Time = 0.763256400462962900
-    TimeFormatKind = Long
-    Position.X = 80.000000000000000000
-    Position.Y = 145.000000000000000000
-    Size.Width = 172.000000000000000000
-    Size.Height = 33.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 8
+    object Button4: TButton
+      Position.X = 937.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 144.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Reconnect DataSource 2'
+      TextSettings.Trimming = None
+      OnClick = Button4Click
+    end
   end
   object Button1: TButton
     Position.X = 56.000000000000000000
@@ -128,7 +106,7 @@ object Form1: TForm1
     Size.Width = 121.000000000000000000
     Size.Height = 41.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 19
+    TabOrder = 16
     Text = 'Delete Record'
     TextSettings.Trimming = None
     OnClick = Button1Click
@@ -140,7 +118,7 @@ object Form1: TForm1
     Size.Width = 518.000000000000000000
     Size.Height = 450.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 25
+    TabOrder = 22
     object StringGrid2: TStringGrid
       Align = Client
       CanFocus = True
@@ -149,8 +127,8 @@ object Form1: TForm1
       Size.Height = 152.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      Viewport.Width = 498.000000000000000000
-      Viewport.Height = 111.000000000000000000
+      Viewport.Width = 514.000000000000000000
+      Viewport.Height = 127.000000000000000000
     end
     object StringGrid3: TStringGrid
       Align = Bottom
@@ -161,8 +139,8 @@ object Form1: TForm1
       Size.Height = 160.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
-      Viewport.Width = 498.000000000000000000
-      Viewport.Height = 119.000000000000000000
+      Viewport.Width = 514.000000000000000000
+      Viewport.Height = 135.000000000000000000
     end
     object StringGrid4: TStringGrid
       Align = Bottom
@@ -173,24 +151,23 @@ object Form1: TForm1
       Size.Height = 138.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
-      Viewport.Width = 498.000000000000000000
-      Viewport.Height = 97.000000000000000000
+      Viewport.Width = 514.000000000000000000
+      Viewport.Height = 113.000000000000000000
     end
   end
   object Button3: TButton
-    Position.X = 816.000000000000000000
-    Position.Y = 7.000000000000000000
-    Size.Width = 177.000000000000000000
+    Position.X = 776.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 145.000000000000000000
     Size.Height = 39.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 41
+    TabOrder = 38
     Text = 'Close and disconnect ds2'
     TextSettings.Trimming = None
     OnClick = Button3Click
   end
   object DSP_PTest: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
-    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 176
     Top = 352
@@ -603,21 +580,18 @@ object Form1: TForm1
   end
   object DSProviderConnection1: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
-    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 416
     Top = 152
   end
   object DSProviderConnection2: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
-    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 448
     Top = 248
   end
   object DSProviderConnection3: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
-    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 344
     Top = 432
@@ -642,7 +616,15 @@ object Form1: TForm1
   end
   object ClientDataSet3_NoDs: TClientDataSet
     Aggregates = <>
-    Params = <>
+    CommandText = 
+      'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT where '#13#10'FK_P' +
+      'ARAM_PROGETTO_DETAIL = :fk_value'
+    Params = <
+      item
+        DataType = ftInteger
+        Name = 'fk_value'
+        ParamType = ptInput
+      end>
     ProviderName = 'DataSetProvider4'
     RemoteServer = DSProviderConnection3
     Left = 488

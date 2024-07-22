@@ -91,13 +91,24 @@ object Form1: TForm1
     object Button2: TButton
       Position.X = 632.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 161.000000000000000000
+      Size.Width = 121.000000000000000000
       Size.Height = 38.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
-      Text = 'opens the grid tables'
+      Text = 'Opens the grid tables'
       TextSettings.Trimming = None
       OnClick = Button2Click
+    end
+    object Button4: TButton
+      Position.X = 937.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 144.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Reconnect DataSource 2'
+      TextSettings.Trimming = None
+      OnClick = Button4Click
     end
   end
   object TEd_Start: TTimeEdit
@@ -178,9 +189,9 @@ object Form1: TForm1
     end
   end
   object Button3: TButton
-    Position.X = 816.000000000000000000
-    Position.Y = 7.000000000000000000
-    Size.Width = 177.000000000000000000
+    Position.X = 776.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 145.000000000000000000
     Size.Height = 39.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 41
@@ -529,11 +540,7 @@ object Form1: TForm1
     MasterFields = 'PK_PROGRESSIVO'
     MasterSource = DataSource2
     PacketRecords = 0
-    Params = <
-      item
-        DataType = ftUnknown
-        ParamType = ptUnknown
-      end>
+    Params = <>
     ProviderName = 'DataSetProvider4'
     RemoteServer = DSProviderConnection3
     Left = 344
@@ -643,5 +650,71 @@ object Form1: TForm1
     ScopeMappings = <>
     Left = 528
     Top = 328
+  end
+  object ClientDataSet3_NoDs: TClientDataSet
+    Aggregates = <>
+    CommandText = 
+      'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT where '#13#10'FK_P' +
+      'ARAM_PROGETTO_DETAIL = :fk_value'
+    Params = <
+      item
+        DataType = ftInteger
+        Name = 'fk_value'
+        ParamType = ptInput
+      end>
+    ProviderName = 'DataSetProvider4'
+    RemoteServer = DSProviderConnection3
+    Left = 488
+    Top = 392
+    object ClientDataSet3_NoDsPK_PROGRESSIVO: TIntegerField
+      FieldName = 'PK_PROGRESSIVO'
+      Required = True
+    end
+    object ClientDataSet3_NoDsFK_PARAM_PROGETTO_DETAIL: TIntegerField
+      FieldName = 'FK_PARAM_PROGETTO_DETAIL'
+      Required = True
+    end
+    object ClientDataSet3_NoDsFLAG_ATTIVO: TStringField
+      FieldName = 'FLAG_ATTIVO'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object ClientDataSet3_NoDsDATA_IN: TDateField
+      FieldName = 'DATA_IN'
+      Required = True
+    end
+    object ClientDataSet3_NoDsDATA_FI: TDateField
+      FieldName = 'DATA_FI'
+      Required = True
+    end
+    object ClientDataSet3_NoDsBUDGET: TFloatField
+      FieldName = 'BUDGET'
+      Required = True
+    end
+    object ClientDataSet3_NoDsBUDGET_UTILIZZATO: TFloatField
+      FieldName = 'BUDGET_UTILIZZATO'
+      Required = True
+    end
+    object ClientDataSet3_NoDsFK_ANAG: TIntegerField
+      FieldName = 'FK_ANAG'
+      Required = True
+    end
+    object ClientDataSet3_NoDsFLAG_EMAIL: TStringField
+      FieldName = 'FLAG_EMAIL'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object ClientDataSet3_NoDsGG_ALLERT: TSmallintField
+      FieldName = 'GG_ALLERT'
+      Required = True
+    end
+  end
+  object BindSourceDB4_NoDs: TBindSourceDB
+    DataSet = ClientDataSet3_NoDs
+    ScopeMappings = <>
+    Left = 488
+    Top = 456
   end
 end
