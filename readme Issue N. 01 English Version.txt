@@ -1,4 +1,4 @@
-We have a serious multi-user problem with presumably blocking of the intebase 2020 update 6 driver on linux64
+We have a serious multi-user problem with presumably blocking of the intebase 2020 update 4 e 6 driver on linux64
 Scenario:
 
 1) Multitiered Application

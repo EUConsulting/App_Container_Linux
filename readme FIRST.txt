@@ -1,6 +1,7 @@
 											EXPLANATION OF THE FOLDERS
 
-#please read "readme Issue English Version.txt" or "readme Issue Italian Version.txt"
+#please read "readme Issue N. 01 English Version.txt" or "readme Issue N. 01 Italian Version.txt"
+#please read "readme Issue N. 02 English Version.txt" or "readme Issue N. 02 Italian Version.txt"
 #Params_Test root project (please read "readme folder.txt")
 #DB_IB folder database Interbase
 #DB_MySQL folder database MySQL (dump format)

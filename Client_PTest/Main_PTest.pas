@@ -199,8 +199,7 @@ begin
     ClientDataSet3.MasterFields.Empty;
     ClientDataSet3.IndexFieldNames.Empty;
     ClientDataSet3.CommandText := '';
-  }
-  { ClientDataSet3.Params.AddParameter;
+    ClientDataSet3.Params.AddParameter;
     ClientDataSet3.Params[0].Name := 'fk_value';
     ClientDataSet3.Params[0].DataType := ftInteger;
     ClientDataSet3.Params[0].ParamType := ptInput;
@@ -221,17 +220,6 @@ procedure TForm1.DataSource2DataChange(Sender: TObject; Field: TField);
 begin
   if cds_param then
   begin
-    {
-      ClientDataSet3.Active := false;
-      ClientDataSet3.CommandText :=
-      'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT where fk_param_progetto_detail = :fk_value';
-      ClientDataSet3.ParamByName('fk_value').AsInteger :=
-      ClientDataSet2PK_PROGRESSIVO.Value;
-      ClientDataSet3.CommandText :=
-      'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT where fk_param_progetto_detail = ' + inttostr(ClientDataSet2PK_PROGRESSIVO.Value);
-      ClientDataSet3.Active := true;
-
-    }
 
     ClientDataSet3_NoDs.Active := false;
     ClientDataSet3_NoDs.ParamByName('fk_value').AsInteger :=

@@ -1,4 +1,4 @@
-Abbiamo un serio problema di multiutenza con blocco presumibilmente del driver di intebase 2020 update 6 su linux64
+Abbiamo un serio problema di multiutenza con blocco presumibilmente del driver di intebase 2020 update 4 e 6 su linux64
 Scenario:
 
 1) Applicazione Multitiered
