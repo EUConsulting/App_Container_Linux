@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   Caption = 'Form1'
   ClientHeight = 769
-  ClientWidth = 1255
+  ClientWidth = 1309
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -14,189 +14,342 @@ object Form1: TForm1
     Cursor = crVSplit
     MinSize = 20.000000000000000000
     Position.Y = 762.000000000000000000
-    Size.Width = 1255.000000000000000000
+    Size.Width = 1309.000000000000000000
     Size.Height = 7.000000000000000000
     Size.PlatformDefault = False
   end
-  object ToolBar1: TToolBar
-    Size.Width = 1255.000000000000000000
-    Size.Height = 64.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 9
-    object Button1: TButton
-      Position.X = 48.000000000000000000
-      Position.Y = 8.000000000000000000
-      Size.Width = 121.000000000000000000
-      Size.Height = 41.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 17
-      Text = 'Delete Record'
-      TextSettings.Trimming = None
-    end
-  end
   object Panel3: TPanel
     Align = Client
-    Size.Width = 1255.000000000000000000
-    Size.Height = 698.000000000000000000
+    Size.Width = 1309.000000000000000000
+    Size.Height = 762.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 53
+    TabOrder = 51
     object Panel2: TPanel
       Align = Right
-      Position.X = 737.000000000000000000
+      Position.X = 791.000000000000000000
       Size.Width = 518.000000000000000000
-      Size.Height = 698.000000000000000000
+      Size.Height = 762.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 25
+      TabOrder = 24
       object StringGrid2: TStringGrid
+        Align = Top
+        CanFocus = True
+        ClipChildren = True
+        Position.Y = 57.000000000000000000
+        Size.Width = 518.000000000000000000
+        Size.Height = 133.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 514.000000000000000000
+        Viewport.Height = 108.000000000000000000
+      end
+      object StringGrid3: TStringGrid
         Align = Client
         CanFocus = True
         ClipChildren = True
         Size.Width = 518.000000000000000000
-        Size.Height = 143.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 1
-        Viewport.Width = 498.000000000000000000
-        Viewport.Height = 102.000000000000000000
-      end
-      object StringGrid3: TStringGrid
-        Align = Bottom
-        CanFocus = True
-        ClipChildren = True
-        Position.Y = 200.000000000000000000
-        Size.Width = 518.000000000000000000
-        Size.Height = 256.000000000000000000
+        Size.Height = 250.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
-        Viewport.Width = 498.000000000000000000
-        Viewport.Height = 215.000000000000000000
+        Viewport.Width = 514.000000000000000000
+        Viewport.Height = 225.000000000000000000
       end
       object StringGrid4: TStringGrid
         Align = Bottom
         CanFocus = True
         ClipChildren = True
-        Position.Y = 456.000000000000000000
+        Position.Y = 440.000000000000000000
         Size.Width = 518.000000000000000000
-        Size.Height = 242.000000000000000000
+        Size.Height = 248.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
         Viewport.Width = 514.000000000000000000
-        Viewport.Height = 217.000000000000000000
+        Viewport.Height = 223.000000000000000000
       end
       object ToolBar3: TToolBar
         Size.Width = 518.000000000000000000
         Size.Height = 57.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 5
+        TabOrder = 4
         object Button3: TButton
-          Position.X = 153.000000000000000000
+          Position.X = 112.000000000000000000
           Position.Y = 8.000000000000000000
-          Size.Width = 145.000000000000000000
+          Size.Width = 94.000000000000000000
           Size.Height = 39.000000000000000000
           Size.PlatformDefault = False
-          TabOrder = 41
+          TabOrder = 40
           Text = 'Close and disconnect ds2'
+          TextSettings.WordWrap = True
           TextSettings.Trimming = None
           OnClick = Button3Click
         end
         object Button4: TButton
-          Position.X = 318.000000000000000000
+          Position.X = 216.000000000000000000
           Position.Y = 8.000000000000000000
-          Size.Width = 144.000000000000000000
+          Size.Width = 91.000000000000000000
           Size.Height = 38.000000000000000000
           Size.PlatformDefault = False
-          TabOrder = 4
+          TabOrder = 3
           Text = 'Reconnect DataSource 2'
+          TextSettings.WordWrap = True
           TextSettings.Trimming = None
           OnClick = Button4Click
         end
         object Button2: TButton
           Position.X = 8.000000000000000000
           Position.Y = 8.000000000000000000
-          Size.Width = 121.000000000000000000
+          Size.Width = 97.000000000000000000
           Size.Height = 38.000000000000000000
           Size.PlatformDefault = False
-          TabOrder = 3
+          TabOrder = 2
           Text = 'Opens the grid tables'
+          TextSettings.WordWrap = True
           TextSettings.Trimming = None
           OnClick = Button2Click
+        end
+        object BindNavigator2: TBindNavigator
+          Position.X = 336.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 160.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 42
+          DataSource = BindSourceDB2
+          VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+          xRadius = 4.000000000000000000
+          yRadius = 4.000000000000000000
+        end
+      end
+      object StatusBar2: TStatusBar
+        Position.Y = 688.000000000000000000
+        ShowSizeGrip = True
+        Size.Width = 518.000000000000000000
+        Size.Height = 74.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        object Label2: TLabel
+          Align = Client
+          StyledSettings = [Family, FontColor]
+          Size.Width = 518.000000000000000000
+          Size.Height = 74.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 
+            'Key Violation issue using Master / Detail connected with DataSou' +
+            'rce in case of missing records in a detail table'
+          TabOrder = 1
         end
       end
     end
     object Panel1: TPanel
       Align = Client
-      Size.Width = 737.000000000000000000
-      Size.Height = 698.000000000000000000
+      Size.Width = 427.000000000000000000
+      Size.Height = 762.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 5
+      TabOrder = 4
       object StringGrid1: TStringGrid
         Align = Client
         CanFocus = True
         ClipChildren = True
-        Size.Width = 728.000000000000000000
-        Size.Height = 641.000000000000000000
+        Size.Width = 427.000000000000000000
+        Size.Height = 631.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         RowCount = 0
-        Viewport.Width = 724.000000000000000000
-        Viewport.Height = 616.000000000000000000
-      end
-      object Splitter2: TSplitter
-        Align = Right
-        Cursor = crHSplit
-        MinSize = 20.000000000000000000
-        Position.X = 728.000000000000000000
-        Position.Y = 57.000000000000000000
-        Size.Width = 9.000000000000000000
-        Size.Height = 641.000000000000000000
-        Size.PlatformDefault = False
+        Viewport.Width = 423.000000000000000000
+        Viewport.Height = 606.000000000000000000
       end
       object ToolBar2: TToolBar
-        Size.Width = 737.000000000000000000
+        Size.Width = 427.000000000000000000
         Size.Height = 57.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 4
+        TabOrder = 2
         object BindNavigator1: TBindNavigator
-          Position.X = 240.000000000000000000
-          Position.Y = 15.000000000000000000
+          Position.X = 169.000000000000000000
+          Position.Y = 24.000000000000000000
           Size.Width = 222.000000000000000000
           Size.Height = 25.000000000000000000
           Size.PlatformDefault = False
-          TabOrder = 3
+          TabOrder = 2
           DataSource = BindSourceDB1
           VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbDelete, nbRefresh]
           xRadius = 4.000000000000000000
           yRadius = 4.000000000000000000
         end
         object Btn_Close: TButton
-          Position.X = 128.000000000000000000
-          Position.Y = 5.000000000000000000
-          Size.Width = 90.000000000000000000
+          Position.X = 96.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 57.000000000000000000
           Size.Height = 35.000000000000000000
           Size.PlatformDefault = False
-          TabOrder = 2
+          TabOrder = 1
           Text = 'Close Query'
+          TextSettings.WordWrap = True
           TextSettings.Trimming = None
           OnClick = Btn_CloseClick
         end
         object Btn_Open: TButton
-          Position.X = 16.000000000000000000
-          Position.Y = 5.000000000000000000
-          Size.Width = 90.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 65.000000000000000000
           Size.Height = 35.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
           Text = 'Open Query'
+          TextSettings.WordWrap = True
           TextSettings.Trimming = None
           OnClick = Btn_OpenClick
         end
       end
+      object StatusBar1: TStatusBar
+        Position.Y = 688.000000000000000000
+        ShowSizeGrip = True
+        Size.Width = 427.000000000000000000
+        Size.Height = 74.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object Label1: TLabel
+          Align = Client
+          StyledSettings = [Family, FontColor]
+          Size.Width = 427.000000000000000000
+          Size.Height = 74.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 
+            'Concurrency problem with sql queries Interbase Engine update 4 a' +
+            'nd 6 S.O. Windows 10/64 bit Application Server Firedac docker co' +
+            'ntainer Linux DataSnap/DbExpress client Windows 10/64 bit'
+          TabOrder = 1
+        end
+      end
+    end
+    object Panel4: TPanel
+      Align = Left
+      Size.Width = 346.000000000000000000
+      Size.Height = 762.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 25
+      object ComboBox1: TComboBox
+        Position.X = 8.000000000000000000
+        Position.Y = 224.000000000000000000
+        Size.Width = 321.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+      object ComboBox2: TComboBox
+        Position.X = 8.000000000000000000
+        Position.Y = 288.000000000000000000
+        Size.Width = 321.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+      object ComboBox3: TComboBox
+        Position.X = 8.000000000000000000
+        Position.Y = 352.000000000000000000
+        Size.Width = 321.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+      end
+      object StatusBar3: TStatusBar
+        Position.Y = 704.000000000000000000
+        ShowSizeGrip = True
+        Size.Width = 346.000000000000000000
+        Size.Height = 58.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object Label3: TLabel
+          Align = Client
+          StyledSettings = [Family, FontColor]
+          Size.Width = 346.000000000000000000
+          Size.Height = 58.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 
+            'Key Violation issue using Master / Detail connected with DataSou' +
+            'rce in case of missing records in a detail table'
+          TabOrder = 0
+        end
+      end
+      object ToolBar1: TToolBar
+        Size.Width = 346.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object Button1: TButton
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 96.000000000000000000
+          Size.Height = 38.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Open comboboxs'
+          TextSettings.WordWrap = True
+          TextSettings.Trimming = None
+          OnClick = Button1Click
+        end
+        object Button5: TButton
+          Position.X = 112.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 94.000000000000000000
+          Size.Height = 39.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 39
+          Text = 'Close comboboxs'
+          TextSettings.WordWrap = True
+          TextSettings.Trimming = None
+          OnClick = Button5Click
+        end
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 5
+        Position.X = 8.000000000000000000
+        Position.Y = 194.000000000000000000
+      end
+      object Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 6
+        Position.X = 8.000000000000000000
+        Position.Y = 258.000000000000000000
+      end
+      object Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 7
+        Position.X = 8.000000000000000000
+        Position.Y = 322.000000000000000000
+      end
+    end
+    object Splitter3: TSplitter
+      Align = Right
+      Cursor = crHSplit
+      MinSize = 20.000000000000000000
+      Position.X = 782.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 762.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Splitter2: TSplitter
+      Align = Left
+      Cursor = crHSplit
+      MinSize = 20.000000000000000000
+      Position.X = 346.000000000000000000
+      Size.Width = 9.000000000000000000
+      Size.Height = 762.000000000000000000
+      Size.PlatformDefault = False
     end
   end
   object DSP_PTest: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
-    Left = 176
-    Top = 352
+    Left = 560
+    Top = 232
   end
   object Cds_PTEst: TClientDataSet
     Aggregates = <>
@@ -208,8 +361,8 @@ object Form1: TForm1
     Params = <>
     ProviderName = 'DataSetProvider1'
     RemoteServer = DSP_PTest
-    Left = 200
-    Top = 272
+    Left = 552
+    Top = 112
     object Cds_PTEstPK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
       Origin = 'pk_progressivo'
@@ -357,14 +510,14 @@ object Form1: TForm1
   object BindSourceDB1: TBindSourceDB
     DataSet = Cds_PTEst
     ScopeMappings = <>
-    Left = 152
-    Top = 440
+    Left = 640
+    Top = 120
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 28
-    Top = 397
+    Left = 452
+    Top = 629
     object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
@@ -465,12 +618,15 @@ object Form1: TForm1
         end
         item
           MemberName = 'FLAG_ATTIVO'
-        end
-        item
-          MemberName = 'NOTE'
+          Visible = False
         end
         item
           MemberName = 'DEFINIZIONE_RICLASSIFICATO'
+          TextWidth = 100
+        end
+        item
+          MemberName = 'NOTE'
+          TextWidth = 100
         end
         item
           MemberName = 'NSAL_UFFICIALI'
@@ -536,6 +692,36 @@ object Form1: TForm1
       Columns = <>
       OnEvalError = LinkGridToDataSourceBindSourceDB4EvalError
     end
+    object LinkListControlToField2: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'PK_PROGRESSIVO'
+      Control = ComboBox2
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField3: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB7
+      FieldName = 'PK_PROGRESSIVO'
+      Control = ComboBox3
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ComboBox1
+      Track = False
+      FillDataSource = BindSourceDB5
+      FillValueFieldName = 'PK_PROGRESSIVO'
+      FillDisplayFieldName = 'DEFINIZIONE_RICLASSIFICATO'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
   end
   object ClientDataSet1: TClientDataSet
     Aggregates = <>
@@ -543,8 +729,8 @@ object Form1: TForm1
     Params = <>
     ProviderName = 'DataSetProvider2'
     RemoteServer = DSProviderConnection1
-    Left = 328
-    Top = 120
+    Left = 872
+    Top = 88
     object ClientDataSet1PK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
       Origin = 'PK_PROGRESSIVO'
@@ -595,8 +781,8 @@ object Form1: TForm1
     Params = <>
     ProviderName = 'DataSetProvider3'
     RemoteServer = DSProviderConnection2
-    Left = 344
-    Top = 240
+    Left = 872
+    Top = 232
     object ClientDataSet2PK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
       Origin = 'PK_PROGRESSIVO'
@@ -679,8 +865,8 @@ object Form1: TForm1
     Params = <>
     ProviderName = 'DataSetProvider4'
     RemoteServer = DSProviderConnection3
-    Left = 344
-    Top = 360
+    Left = 888
+    Top = 464
     object ClientDataSet3PK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
       Origin = 'PK_PROGRESSIVO'
@@ -739,50 +925,53 @@ object Form1: TForm1
   end
   object DataSource1: TDataSource
     DataSet = ClientDataSet1
-    Left = 328
-    Top = 176
+    Left = 976
+    Top = 120
   end
   object DataSource2: TDataSource
     DataSet = ClientDataSet2
     OnDataChange = DataSource2DataChange
-    Left = 384
-    Top = 304
+    Left = 976
+    Top = 256
   end
   object DSProviderConnection1: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
-    Left = 416
-    Top = 152
+    Left = 592
+    Top = 336
   end
   object DSProviderConnection2: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
-    Left = 448
-    Top = 248
+    Left = 592
+    Top = 408
   end
   object DSProviderConnection3: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
-    Left = 344
-    Top = 432
+    Left = 608
+    Top = 496
   end
   object BindSourceDB2: TBindSourceDB
     DataSet = ClientDataSet1
     ScopeMappings = <>
-    Left = 536
-    Top = 200
+    Left = 1056
+    Top = 104
   end
   object BindSourceDB3: TBindSourceDB
     DataSet = ClientDataSet2
     ScopeMappings = <>
-    Left = 544
-    Top = 264
+    Left = 984
+    Top = 328
   end
   object BindSourceDB4: TBindSourceDB
     DataSet = ClientDataSet3
     ScopeMappings = <>
-    Left = 528
-    Top = 328
+    Left = 896
+    Top = 520
   end
   object ClientDataSet3_NoDs: TClientDataSet
     Aggregates = <>
@@ -797,8 +986,8 @@ object Form1: TForm1
       end>
     ProviderName = 'DataSetProvider4'
     RemoteServer = DSProviderConnection3
-    Left = 488
-    Top = 392
+    Left = 904
+    Top = 584
     object ClientDataSet3_NoDsPK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
       Required = True
@@ -847,7 +1036,217 @@ object Form1: TForm1
   object BindSourceDB4_NoDs: TBindSourceDB
     DataSet = ClientDataSet3_NoDs
     ScopeMappings = <>
-    Left = 488
-    Top = 456
+    Left = 904
+    Top = 640
+  end
+  object BindSourceDB5: TBindSourceDB
+    DataSet = ClientDataSet4
+    ScopeMappings = <>
+    Left = 176
+    Top = 216
+  end
+  object BindSourceDB6: TBindSourceDB
+    DataSet = ClientDataSet5
+    ScopeMappings = <>
+    Left = 176
+    Top = 296
+  end
+  object BindSourceDB7: TBindSourceDB
+    DataSet = ClientDataSet6
+    ScopeMappings = <>
+    Left = 192
+    Top = 384
+  end
+  object ClientDataSet4: TClientDataSet
+    Aggregates = <>
+    CommandText = 'select * from TS1_RICLASSIFICA_PROGETTO'
+    Params = <>
+    ProviderName = 'DataSetProvider2'
+    RemoteServer = DSProviderConnection1
+    Left = 227
+    Top = 161
+    object ClientDataSet4PK_PROGRESSIVO: TIntegerField
+      FieldName = 'PK_PROGRESSIVO'
+      Required = True
+    end
+    object ClientDataSet4FK_MACROGRUPPO: TIntegerField
+      FieldName = 'FK_MACROGRUPPO'
+      Required = True
+    end
+    object ClientDataSet4FLAG_ATTIVO: TStringField
+      FieldName = 'FLAG_ATTIVO'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object ClientDataSet4NOTE: TStringField
+      FieldName = 'NOTE'
+      Size = 300
+    end
+    object ClientDataSet4DEFINIZIONE_RICLASSIFICATO: TStringField
+      FieldName = 'DEFINIZIONE_RICLASSIFICATO'
+      Required = True
+      Size = 250
+    end
+    object ClientDataSet4NSAL_UFFICIALI: TSmallintField
+      FieldName = 'NSAL_UFFICIALI'
+      Required = True
+    end
+    object ClientDataSet4NSAL_INTERNI: TSmallintField
+      FieldName = 'NSAL_INTERNI'
+      Required = True
+    end
+  end
+  object ClientDataSet5: TClientDataSet
+    Aggregates = <>
+    CommandText = 'select * from TS1_RICLASSIFICA_PROGETTO_DETAIL'
+    IndexFieldNames = 'FK_PARAM_PROGETTO'
+    MasterFields = 'PK_PROGRESSIVO'
+    MasterSource = DataSource3
+    PacketRecords = 0
+    Params = <>
+    ProviderName = 'DataSetProvider3'
+    RemoteServer = DSProviderConnection2
+    Left = 227
+    Top = 265
+    object ClientDataSet5PK_PROGRESSIVO: TIntegerField
+      FieldName = 'PK_PROGRESSIVO'
+      Required = True
+    end
+    object ClientDataSet5FK_PARAM_PROGETTO: TIntegerField
+      FieldName = 'FK_PARAM_PROGETTO'
+      Required = True
+    end
+    object ClientDataSet5FK_TIPO_COSTO: TIntegerField
+      FieldName = 'FK_TIPO_COSTO'
+      Required = True
+    end
+    object ClientDataSet5FLAG_ATTIVO: TStringField
+      FieldName = 'FLAG_ATTIVO'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object ClientDataSet5DATA_IN: TDateField
+      FieldName = 'DATA_IN'
+      Required = True
+    end
+    object ClientDataSet5DATA_FI: TDateField
+      FieldName = 'DATA_FI'
+      Required = True
+    end
+    object ClientDataSet5BUDGET: TFloatField
+      FieldName = 'BUDGET'
+      Required = True
+    end
+    object ClientDataSet5BUDGET_UTILIZZATO: TFloatField
+      FieldName = 'BUDGET_UTILIZZATO'
+      Required = True
+    end
+    object ClientDataSet5QUOTA_DETRAIBILE: TSingleField
+      FieldName = 'QUOTA_DETRAIBILE'
+      Required = True
+    end
+    object ClientDataSet5BUDGET_TMP_CALCOLI: TFloatField
+      FieldName = 'BUDGET_TMP_CALCOLI'
+      Required = True
+    end
+    object ClientDataSet5GG_TMP: TIntegerField
+      FieldName = 'GG_TMP'
+    end
+    object ClientDataSet5BUDGET_GG_TMP: TFloatField
+      FieldName = 'BUDGET_GG_TMP'
+    end
+    object ClientDataSet5DATA_IN_TMP: TDateField
+      FieldName = 'DATA_IN_TMP'
+      Required = True
+    end
+    object ClientDataSet5FK_ANAG: TIntegerField
+      FieldName = 'FK_ANAG'
+      Required = True
+    end
+  end
+  object ClientDataSet6: TClientDataSet
+    Aggregates = <>
+    CommandText = 'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT'
+    IndexFieldNames = 'FK_PARAM_PROGETTO_DETAIL'
+    MasterFields = 'PK_PROGRESSIVO'
+    MasterSource = DataSource4
+    PacketRecords = 0
+    Params = <>
+    ProviderName = 'DataSetProvider4'
+    RemoteServer = DSProviderConnection3
+    Left = 243
+    Top = 345
+    object ClientDataSet6PK_PROGRESSIVO: TIntegerField
+      FieldName = 'PK_PROGRESSIVO'
+      Required = True
+    end
+    object ClientDataSet6FK_PARAM_PROGETTO_DETAIL: TIntegerField
+      FieldName = 'FK_PARAM_PROGETTO_DETAIL'
+      Required = True
+    end
+    object ClientDataSet6FLAG_ATTIVO: TStringField
+      FieldName = 'FLAG_ATTIVO'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object ClientDataSet6DATA_IN: TDateField
+      FieldName = 'DATA_IN'
+      Required = True
+    end
+    object ClientDataSet6DATA_FI: TDateField
+      FieldName = 'DATA_FI'
+      Required = True
+    end
+    object ClientDataSet6BUDGET: TFloatField
+      FieldName = 'BUDGET'
+      Required = True
+    end
+    object ClientDataSet6BUDGET_UTILIZZATO: TFloatField
+      FieldName = 'BUDGET_UTILIZZATO'
+      Required = True
+    end
+    object ClientDataSet6FK_ANAG: TIntegerField
+      FieldName = 'FK_ANAG'
+      Required = True
+    end
+    object ClientDataSet6FLAG_EMAIL: TStringField
+      FieldName = 'FLAG_EMAIL'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object ClientDataSet6GG_ALLERT: TSmallintField
+      FieldName = 'GG_ALLERT'
+      Required = True
+    end
+  end
+  object DataSource3: TDataSource
+    DataSet = ClientDataSet4
+    Left = 291
+    Top = 209
+  end
+  object DataSource4: TDataSource
+    DataSet = ClientDataSet5
+    Left = 299
+    Top = 297
+  end
+  object DSProviderConnection4: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = ClientModule1.SQLConnection1
+    Left = 571
+    Top = 577
+  end
+  object ClientDataSet7: TClientDataSet
+    Aggregates = <>
+    CommandText = 'select * from combobox_test'
+    Params = <>
+    ProviderName = 'DataSetProvider5'
+    RemoteServer = DSProviderConnection4
+    Left = 112
+    Top = 520
   end
 end

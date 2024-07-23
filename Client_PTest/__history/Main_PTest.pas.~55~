@@ -13,7 +13,7 @@ uses
   FMX.Bind.Grid, System.Bindings.Outputs, FMX.Bind.Editors,
   Data.Bind.Components, Data.Bind.Grid, Data.Bind.DBScope, FMX.ScrollBox,
   FMX.Grid, FMX.DateTimeCtrls, Data.Bind.Controls, FMX.Layouts,
-  FMX.Bind.Navigator, FMX.Memo.Types, FMX.Memo, FMX.Edit;
+  FMX.Bind.Navigator, FMX.Memo.Types, FMX.Memo, FMX.Edit, FMX.ListBox;
 
 type
   TForm1 = class(TForm)
@@ -27,7 +27,6 @@ type
     Btn_Close: TButton;
     Panel1: TPanel;
     BindNavigator1: TBindNavigator;
-    ToolBar1: TToolBar;
     LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
     Cds_PTEstPK_PROGRESSIVO: TIntegerField;
     Cds_PTEstK_TIPO_PRATICA: TSmallintField;
@@ -56,7 +55,6 @@ type
     Cds_PTEstTIPO_PRATICA: TStringField;
     Cds_PTEstDESCRIZIONE: TStringField;
     Cds_PTEstTOTALE_PROROGHE: TStringField;
-    Button1: TButton;
     Panel2: TPanel;
     StringGrid2: TStringGrid;
     StringGrid3: TStringGrid;
@@ -122,9 +120,65 @@ type
     BindSourceDB4_NoDs: TBindSourceDB;
     Button4: TButton;
     Panel3: TPanel;
-    Splitter2: TSplitter;
     ToolBar2: TToolBar;
     ToolBar3: TToolBar;
+    StatusBar1: TStatusBar;
+    StatusBar2: TStatusBar;
+    Label1: TLabel;
+    Label2: TLabel;
+    BindNavigator2: TBindNavigator;
+    Panel4: TPanel;
+    Splitter3: TSplitter;
+    Splitter2: TSplitter;
+    ComboBox1: TComboBox;
+    ComboBox2: TComboBox;
+    ComboBox3: TComboBox;
+    LinkListControlToField1: TLinkListControlToField;
+    LinkListControlToField2: TLinkListControlToField;
+    LinkListControlToField3: TLinkListControlToField;
+    StatusBar3: TStatusBar;
+    ToolBar1: TToolBar;
+    Button1: TButton;
+    Button5: TButton;
+    BindSourceDB5: TBindSourceDB;
+    BindSourceDB6: TBindSourceDB;
+    BindSourceDB7: TBindSourceDB;
+    ClientDataSet4: TClientDataSet;
+    ClientDataSet5: TClientDataSet;
+    ClientDataSet6: TClientDataSet;
+    DataSource3: TDataSource;
+    DataSource4: TDataSource;
+    ClientDataSet4PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet4FK_MACROGRUPPO: TIntegerField;
+    ClientDataSet4FLAG_ATTIVO: TStringField;
+    ClientDataSet4NOTE: TStringField;
+    ClientDataSet4DEFINIZIONE_RICLASSIFICATO: TStringField;
+    ClientDataSet4NSAL_UFFICIALI: TSmallintField;
+    ClientDataSet4NSAL_INTERNI: TSmallintField;
+    ClientDataSet5PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet5FK_PARAM_PROGETTO: TIntegerField;
+    ClientDataSet5FK_TIPO_COSTO: TIntegerField;
+    ClientDataSet5FLAG_ATTIVO: TStringField;
+    ClientDataSet5DATA_IN: TDateField;
+    ClientDataSet5DATA_FI: TDateField;
+    ClientDataSet5BUDGET: TFloatField;
+    ClientDataSet5BUDGET_UTILIZZATO: TFloatField;
+    ClientDataSet5QUOTA_DETRAIBILE: TSingleField;
+    ClientDataSet5BUDGET_TMP_CALCOLI: TFloatField;
+    ClientDataSet5GG_TMP: TIntegerField;
+    ClientDataSet5BUDGET_GG_TMP: TFloatField;
+    ClientDataSet5DATA_IN_TMP: TDateField;
+    ClientDataSet5FK_ANAG: TIntegerField;
+    ClientDataSet6PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet6FK_PARAM_PROGETTO_DETAIL: TIntegerField;
+    ClientDataSet6FLAG_ATTIVO: TStringField;
+    ClientDataSet6DATA_IN: TDateField;
+    ClientDataSet6DATA_FI: TDateField;
+    ClientDataSet6BUDGET: TFloatField;
+    ClientDataSet6BUDGET_UTILIZZATO: TFloatField;
+    ClientDataSet6FK_ANAG: TIntegerField;
+    ClientDataSet6FLAG_EMAIL: TStringField;
+    ClientDataSet6GG_ALLERT: TSmallintField;
     procedure Btn_CloseClick(Sender: TObject);
     procedure Btn_OpenClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -138,6 +192,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure DataSource2DataChange(Sender: TObject; Field: TField);
     procedure Button4Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -164,6 +220,14 @@ procedure TForm1.Btn_OpenClick(Sender: TObject);
 begin
   Cds_PTEst.Active := false;
   Cds_PTEst.Active := true;
+
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  ClientDataSet4.Active := true;
+  ClientDataSet5.Active := true;
+  ClientDataSet6.Active := true;
 
 end;
 
@@ -196,8 +260,7 @@ begin
     ClientDataSet3.MasterFields.Empty;
     ClientDataSet3.IndexFieldNames.Empty;
     ClientDataSet3.CommandText := '';
-  }
-  { ClientDataSet3.Params.AddParameter;
+    ClientDataSet3.Params.AddParameter;
     ClientDataSet3.Params[0].Name := 'fk_value';
     ClientDataSet3.Params[0].DataType := ftInteger;
     ClientDataSet3.Params[0].ParamType := ptInput;
@@ -214,21 +277,18 @@ begin
   cds_param := False;
 end;
 
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+  ClientDataSet3.Active := false;
+  ClientDataSet2.Active := false;
+  ClientDataSet1.Active := false;
+
+end;
+
 procedure TForm1.DataSource2DataChange(Sender: TObject; Field: TField);
 begin
   if cds_param then
   begin
-    {
-      ClientDataSet3.Active := false;
-      ClientDataSet3.CommandText :=
-      'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT where fk_param_progetto_detail = :fk_value';
-      ClientDataSet3.ParamByName('fk_value').AsInteger :=
-      ClientDataSet2PK_PROGRESSIVO.Value;
-      ClientDataSet3.CommandText :=
-      'select * from TS1_RICLASSIFICA_PROGETTO_DETT_ALLERT where fk_param_progetto_detail = ' + inttostr(ClientDataSet2PK_PROGRESSIVO.Value);
-      ClientDataSet3.Active := true;
-
-    }
 
     ClientDataSet3_NoDs.Active := false;
     ClientDataSet3_NoDs.ParamByName('fk_value').AsInteger :=

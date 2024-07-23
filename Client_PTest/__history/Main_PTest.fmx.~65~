@@ -234,14 +234,14 @@ object Form1: TForm1
       object ComboBox1: TComboBox
         Position.X = 8.000000000000000000
         Position.Y = 224.000000000000000000
-        Size.Width = 325.000000000000000000
+        Size.Width = 321.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
       end
       object ComboBox2: TComboBox
         Position.X = 8.000000000000000000
-        Position.Y = 352.000000000000000000
+        Position.Y = 288.000000000000000000
         Size.Width = 321.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
@@ -249,7 +249,7 @@ object Form1: TForm1
       end
       object ComboBox3: TComboBox
         Position.X = 8.000000000000000000
-        Position.Y = 576.000000000000000000
+        Position.Y = 352.000000000000000000
         Size.Width = 321.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
@@ -270,7 +270,9 @@ object Form1: TForm1
           Size.PlatformDefault = False
           TextSettings.Font.Size = 14.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
-          Text = 'Loss of synchronization and display of incorrect data'
+          Text = 
+            'Key Violation issue using Master / Detail connected with DataSou' +
+            'rce in case of missing records in a detail table'
           TabOrder = 0
         end
       end
@@ -314,37 +316,13 @@ object Form1: TForm1
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 6
         Position.X = 8.000000000000000000
-        Position.Y = 322.000000000000000000
+        Position.Y = 258.000000000000000000
       end
       object Edit3: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 7
         Position.X = 8.000000000000000000
-        Position.Y = 546.000000000000000000
-      end
-      object ComboBox4: TComboBox
-        Position.X = 8.000000000000000000
-        Position.Y = 80.000000000000000000
-        Size.Width = 325.000000000000000000
-        Size.Height = 22.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 8
-      end
-      object ComboBox5: TComboBox
-        Position.X = 8.000000000000000000
-        Position.Y = 120.000000000000000000
-        Size.Width = 325.000000000000000000
-        Size.Height = 22.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 9
-      end
-      object ComboBox6: TComboBox
-        Position.X = 8.000000000000000000
-        Position.Y = 164.000000000000000000
-        Size.Width = 325.000000000000000000
-        Size.Height = 22.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 10
+        Position.Y = 322.000000000000000000
       end
     end
     object Splitter3: TSplitter
@@ -368,6 +346,7 @@ object Form1: TForm1
   end
   object DSP_PTest: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 560
     Top = 232
@@ -776,33 +755,6 @@ object Form1: TForm1
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end
-    object LinkListControlToField1: TLinkListControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB7
-      FieldName = 'PK_PROGRESSIVO'
-      Control = ComboBox6
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField2: TLinkListControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB5
-      FieldName = 'DEFINIZIONE_RICLASSIFICATO'
-      Control = ComboBox4
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField3: TLinkListControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB6
-      FieldName = 'PK_PROGRESSIVO'
-      Control = ComboBox5
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
   end
   object ClientDataSet1: TClientDataSet
     Aggregates = <>
@@ -1017,18 +969,21 @@ object Form1: TForm1
   end
   object DSProviderConnection1: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 592
     Top = 336
   end
   object DSProviderConnection2: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 592
     Top = 408
   end
   object DSProviderConnection3: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 608
     Top = 496
@@ -1127,13 +1082,13 @@ object Form1: TForm1
     DataSet = ClientDataSet5
     ScopeMappings = <>
     Left = 176
-    Top = 320
+    Top = 296
   end
   object BindSourceDB7: TBindSourceDB
     DataSet = ClientDataSet6
     ScopeMappings = <>
-    Left = 184
-    Top = 400
+    Left = 192
+    Top = 384
   end
   object ClientDataSet4: TClientDataSet
     Aggregates = <>
@@ -1313,6 +1268,7 @@ object Form1: TForm1
   end
   object DSProviderConnection4: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 571
     Top = 577
@@ -1341,7 +1297,7 @@ object Form1: TForm1
   object BindSourceDB8: TBindSourceDB
     DataSet = ClientDataSet7
     ScopeMappings = <>
-    Left = 112
-    Top = 576
+    Left = 640
+    Top = 368
   end
 end

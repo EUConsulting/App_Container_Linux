@@ -13,7 +13,7 @@ uses
   FMX.Bind.Grid, System.Bindings.Outputs, FMX.Bind.Editors,
   Data.Bind.Components, Data.Bind.Grid, Data.Bind.DBScope, FMX.ScrollBox,
   FMX.Grid, FMX.DateTimeCtrls, Data.Bind.Controls, FMX.Layouts,
-  FMX.Bind.Navigator, FMX.Memo.Types, FMX.Memo, FMX.Edit;
+  FMX.Bind.Navigator, FMX.Memo.Types, FMX.Memo, FMX.Edit, FMX.ListBox;
 
 type
   TForm1 = class(TForm)
@@ -120,7 +120,6 @@ type
     BindSourceDB4_NoDs: TBindSourceDB;
     Button4: TButton;
     Panel3: TPanel;
-    Splitter2: TSplitter;
     ToolBar2: TToolBar;
     ToolBar3: TToolBar;
     StatusBar1: TStatusBar;
@@ -128,6 +127,77 @@ type
     Label1: TLabel;
     Label2: TLabel;
     BindNavigator2: TBindNavigator;
+    Panel4: TPanel;
+    Splitter3: TSplitter;
+    Splitter2: TSplitter;
+    ComboBox1: TComboBox;
+    ComboBox2: TComboBox;
+    ComboBox3: TComboBox;
+    StatusBar3: TStatusBar;
+    ToolBar1: TToolBar;
+    Button1: TButton;
+    Button5: TButton;
+    BindSourceDB5: TBindSourceDB;
+    BindSourceDB6: TBindSourceDB;
+    BindSourceDB7: TBindSourceDB;
+    ClientDataSet4: TClientDataSet;
+    ClientDataSet5: TClientDataSet;
+    ClientDataSet6: TClientDataSet;
+    DataSource3: TDataSource;
+    DataSource4: TDataSource;
+    ClientDataSet4PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet4FK_MACROGRUPPO: TIntegerField;
+    ClientDataSet4FLAG_ATTIVO: TStringField;
+    ClientDataSet4NOTE: TStringField;
+    ClientDataSet4DEFINIZIONE_RICLASSIFICATO: TStringField;
+    ClientDataSet4NSAL_UFFICIALI: TSmallintField;
+    ClientDataSet4NSAL_INTERNI: TSmallintField;
+    ClientDataSet5PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet5FK_PARAM_PROGETTO: TIntegerField;
+    ClientDataSet5FK_TIPO_COSTO: TIntegerField;
+    ClientDataSet5FLAG_ATTIVO: TStringField;
+    ClientDataSet5DATA_IN: TDateField;
+    ClientDataSet5DATA_FI: TDateField;
+    ClientDataSet5BUDGET: TFloatField;
+    ClientDataSet5BUDGET_UTILIZZATO: TFloatField;
+    ClientDataSet5QUOTA_DETRAIBILE: TSingleField;
+    ClientDataSet5BUDGET_TMP_CALCOLI: TFloatField;
+    ClientDataSet5GG_TMP: TIntegerField;
+    ClientDataSet5BUDGET_GG_TMP: TFloatField;
+    ClientDataSet5DATA_IN_TMP: TDateField;
+    ClientDataSet5FK_ANAG: TIntegerField;
+    ClientDataSet6PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet6FK_PARAM_PROGETTO_DETAIL: TIntegerField;
+    ClientDataSet6FLAG_ATTIVO: TStringField;
+    ClientDataSet6DATA_IN: TDateField;
+    ClientDataSet6DATA_FI: TDateField;
+    ClientDataSet6BUDGET: TFloatField;
+    ClientDataSet6BUDGET_UTILIZZATO: TFloatField;
+    ClientDataSet6FK_ANAG: TIntegerField;
+    ClientDataSet6FLAG_EMAIL: TStringField;
+    ClientDataSet6GG_ALLERT: TSmallintField;
+    Label3: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    LinkFillControlToField: TLinkFillControlToField;
+    DSProviderConnection4: TDSProviderConnection;
+    ClientDataSet7: TClientDataSet;
+    ClientDataSet7PK_1: TIntegerField;
+    ClientDataSet7PK_2: TIntegerField;
+    ClientDataSet7PK_3: TIntegerField;
+    BindSourceDB8: TBindSourceDB;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkFillControlToField2: TLinkFillControlToField;
+    LinkFillControlToField3: TLinkFillControlToField;
+    ComboBox4: TComboBox;
+    ComboBox5: TComboBox;
+    ComboBox6: TComboBox;
+    LinkListControlToField1: TLinkListControlToField;
+    LinkListControlToField2: TLinkListControlToField;
+    LinkListControlToField3: TLinkListControlToField;
     procedure Btn_CloseClick(Sender: TObject);
     procedure Btn_OpenClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -141,6 +211,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure DataSource2DataChange(Sender: TObject; Field: TField);
     procedure Button4Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -170,8 +242,25 @@ begin
 
 end;
 
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  ClientDataSet1.Active := false;
+  ClientDataSet2.Active := false;
+  ClientDataSet3.Active := false;
+  ClientDataSet4.Active := true;
+  ClientDataSet5.Active := true;
+  ClientDataSet6.Active := true;
+  ClientDataSet7.Active := true;
+  ClientDataSet7.insert;
+end;
+
 procedure TForm1.Button2Click(Sender: TObject);
 begin
+  ClientDataSet4.Active := false;
+  ClientDataSet5.Active := false;
+  ClientDataSet6.Active := false;
+  ClientDataSet7.Active := false;
+
   ClientDataSet1.Active := true;
   ClientDataSet2.Active := true;
 
@@ -214,6 +303,14 @@ begin
   ClientDataSet1.Active := false;
   LinkGridToDataSourceBindSourceDB4.DataSource := BindSourceDB4;
   cds_param := False;
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+  ClientDataSet4.Active := false;
+  ClientDataSet5.Active := false;
+  ClientDataSet6.Active := false;
+
 end;
 
 procedure TForm1.DataSource2DataChange(Sender: TObject; Field: TField);

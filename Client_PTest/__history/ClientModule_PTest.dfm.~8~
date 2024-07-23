@@ -26,6 +26,7 @@ object ClientModule1: TClientModule1
         'ntDriverLoader,Borland.Data.DbxClientDriver,Version=24.0.0.0,Cul' +
         'ture=neutral,PublicKeyToken=91d62ebb5b0d1b1b,Filters={}'
       'BufferKBSize=32')
+    Connected = True
     Left = 48
     Top = 40
   end

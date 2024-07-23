@@ -269,24 +269,6 @@ object ServerMethods1: TServerMethods1
       'select * from combobox_test')
     Left = 472
     Top = 344
-    object FDQuery5PK_1: TIntegerField
-      FieldName = 'PK_1'
-      Origin = 'PK_1'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object FDQuery5PK_2: TIntegerField
-      FieldName = 'PK_2'
-      Origin = 'PK_2'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object FDQuery5PK_3: TIntegerField
-      FieldName = 'PK_3'
-      Origin = 'PK_3'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
   end
   object DataSetProvider5: TDataSetProvider
     DataSet = FDQuery5

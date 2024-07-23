@@ -57,11 +57,6 @@ type
     FDQuery4FK_ANAG: TIntegerField;
     FDQuery4FLAG_EMAIL: TStringField;
     FDQuery4GG_ALLERT: TSmallintField;
-    FDQuery5: TFDQuery;
-    DataSetProvider5: TDataSetProvider;
-    FDQuery5PK_1: TIntegerField;
-    FDQuery5PK_2: TIntegerField;
-    FDQuery5PK_3: TIntegerField;
     procedure DSServerModuleCreate(Sender: TObject);
     procedure FDQuery1Error(ASender, AInitiator: TObject;
       var AException: Exception);
@@ -93,7 +88,6 @@ begin
   FDQuery2.Connection := DM_Connection.FDConn_Sql;
   FDQuery3.Connection := DM_Connection.FDConn_Sql;
   FDQuery4.Connection := DM_Connection.FDConn_Sql;
-  FDQuery5.Connection := DM_Connection.FDConn_Sql;
 
 end;
 

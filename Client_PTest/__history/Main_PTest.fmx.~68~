@@ -234,14 +234,14 @@ object Form1: TForm1
       object ComboBox1: TComboBox
         Position.X = 8.000000000000000000
         Position.Y = 224.000000000000000000
-        Size.Width = 325.000000000000000000
+        Size.Width = 321.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
       end
       object ComboBox2: TComboBox
         Position.X = 8.000000000000000000
-        Position.Y = 352.000000000000000000
+        Position.Y = 288.000000000000000000
         Size.Width = 321.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
@@ -249,7 +249,7 @@ object Form1: TForm1
       end
       object ComboBox3: TComboBox
         Position.X = 8.000000000000000000
-        Position.Y = 576.000000000000000000
+        Position.Y = 352.000000000000000000
         Size.Width = 321.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
@@ -270,7 +270,9 @@ object Form1: TForm1
           Size.PlatformDefault = False
           TextSettings.Font.Size = 14.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
-          Text = 'Loss of synchronization and display of incorrect data'
+          Text = 
+            'Key Violation issue using Master / Detail connected with DataSou' +
+            'rce in case of missing records in a detail table'
           TabOrder = 0
         end
       end
@@ -314,37 +316,13 @@ object Form1: TForm1
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 6
         Position.X = 8.000000000000000000
-        Position.Y = 322.000000000000000000
+        Position.Y = 258.000000000000000000
       end
       object Edit3: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 7
         Position.X = 8.000000000000000000
-        Position.Y = 546.000000000000000000
-      end
-      object ComboBox4: TComboBox
-        Position.X = 8.000000000000000000
-        Position.Y = 80.000000000000000000
-        Size.Width = 325.000000000000000000
-        Size.Height = 22.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 8
-      end
-      object ComboBox5: TComboBox
-        Position.X = 8.000000000000000000
-        Position.Y = 120.000000000000000000
-        Size.Width = 325.000000000000000000
-        Size.Height = 22.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 9
-      end
-      object ComboBox6: TComboBox
-        Position.X = 8.000000000000000000
-        Position.Y = 164.000000000000000000
-        Size.Width = 325.000000000000000000
-        Size.Height = 22.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 10
+        Position.Y = 322.000000000000000000
       end
     end
     object Splitter3: TSplitter
@@ -772,33 +750,6 @@ object Form1: TForm1
       FillValueFieldName = 'PK_PROGRESSIVO'
       FillDisplayFieldName = 'PK_PROGRESSIVO'
       AutoFill = True
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField1: TLinkListControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB7
-      FieldName = 'PK_PROGRESSIVO'
-      Control = ComboBox6
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField2: TLinkListControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB5
-      FieldName = 'DEFINIZIONE_RICLASSIFICATO'
-      Control = ComboBox4
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkListControlToField3: TLinkListControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB6
-      FieldName = 'PK_PROGRESSIVO'
-      Control = ComboBox5
       FillExpressions = <>
       FillHeaderExpressions = <>
       FillBreakGroups = <>
@@ -1341,7 +1292,7 @@ object Form1: TForm1
   object BindSourceDB8: TBindSourceDB
     DataSet = ClientDataSet7
     ScopeMappings = <>
-    Left = 112
-    Top = 576
+    Left = 640
+    Top = 368
   end
 end
