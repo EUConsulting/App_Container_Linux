@@ -332,13 +332,14 @@ Coordinates=1127,1367,55,33
 
 [ComboBox2]
 Coordinates=182,127,84,123
+Visible=True
 
 [ComboBox3]
 Coordinates=182,772,84,123
 Visible=True
 
 [ComboBox1]
-Coordinates=182,589,84,123
+Coordinates=210,550,84,123
 Visible=True
 
 [StatusBar3]
@@ -358,6 +359,7 @@ Coordinates=546,1367,58,33
 
 [BindSourceDB6]
 Coordinates=346,10,126,357
+Visible=True
 
 [Button5]
 Coordinates=903,1053,53,51
@@ -505,12 +507,6 @@ Coordinates=603,1388,112,33
 [BindSourceDB8]
 Coordinates=10,506,92,177
 
-[BindNavigator2]
-Coordinates=251,1053,90,51
-
-[BindNavigator1]
-Coordinates=934,10,90,51
-
 [ComboBox4]
 Coordinates=587,589,84,123
 Visible=True
@@ -521,4 +517,10 @@ Coordinates=552,127,84,123
 [ComboBox6]
 Coordinates=593,772,84,123
 Visible=True
+
+[BindNavigator2]
+Coordinates=0,0,90,51
+
+[BindNavigator1]
+Coordinates=109,1,90,51
 

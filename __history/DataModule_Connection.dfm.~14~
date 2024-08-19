@@ -16,6 +16,8 @@ object DM_Connection: TDM_Connection
     Top = 120
   end
   object FDManager1: TFDManager
+    DriverDefFileName = 'FDDrivers.ini'
+    ConnectionDefFileName = 'FDConnectionDefs.ini'
     WaitCursor = gcrHourGlass
     FormatOptions.AssignedValues = [fvMapRules, fvDataSnapCompatibility]
     FormatOptions.OwnMapRules = True
@@ -50,6 +52,7 @@ object DM_Connection: TDM_Connection
     ResourceOptions.AssignedValues = [rvAutoReconnect]
     ResourceOptions.AutoReconnect = True
     TxOptions.Isolation = xiReadCommitted
+    Connected = True
     LoginPrompt = False
     OnError = FDConn_SqlError
     Left = 104
