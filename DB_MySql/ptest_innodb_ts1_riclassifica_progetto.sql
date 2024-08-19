@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `ptest_innodb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `ptest_innodb`;
 -- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ptest_innodb
@@ -41,7 +43,7 @@ CREATE TABLE `ts1_riclassifica_progetto` (
 
 LOCK TABLES `ts1_riclassifica_progetto` WRITE;
 /*!40000 ALTER TABLE `ts1_riclassifica_progetto` DISABLE KEYS */;
-INSERT INTO `ts1_riclassifica_progetto` VALUES (3,1,'S','Progetto finanziato con DM. XX/yy','Rendicontazione PNR Ecosistema Marino e Costiero',8,12),(4,6,'S','Finanziamento XY','Riclassificazione progetto CanCovid',4,8);
+INSERT INTO `ts1_riclassifica_progetto` VALUES (3,1,'S','Progetto finanziato con DM. XX/yy','MYSQL Rendicontazione PNR Ecosistema Marino e Costiero',8,12),(4,6,'S','Finanziamento XY','MYSQL Riclassificazione progetto CanCovid',4,8);
 /*!40000 ALTER TABLE `ts1_riclassifica_progetto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-08-19 13:03:50
+-- Dump completed on 2024-08-19 13:18:08
