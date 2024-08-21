@@ -1,0 +1,28 @@
+object FMainMenu: TFMainMenu
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object MainMenu1: TMainMenu
+    Left = 184
+    Top = 40
+    object MenuItem1: TMenuItem
+      Text = 'Case '
+      object MenuItem2: TMenuItem
+        Locked = True
+        Text = 'Cuncurrence'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Locked = True
+        Text = 'Master Detail'
+        OnClick = MenuItem3Click
+      end
+    end
+  end
+end

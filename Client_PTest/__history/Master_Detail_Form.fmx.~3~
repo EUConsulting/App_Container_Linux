@@ -1,0 +1,217 @@
+object FMasterDetail: TFMasterDetail
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Size.Width = 640.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Button1: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 10.000000000000000000
+        TabOrder = 0
+        Text = 'Open Table'
+        TextSettings.Trimming = None
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        Position.X = 128.000000000000000000
+        Position.Y = 10.000000000000000000
+        TabOrder = 1
+        Text = 'Close Table'
+        TextSettings.Trimming = None
+        OnClick = Button2Click
+      end
+    end
+    object Panel2: TPanel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 200.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object StringGrid3: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 640.000000000000000000
+        Size.Height = 200.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 636.000000000000000000
+        Viewport.Height = 175.000000000000000000
+      end
+    end
+    object Panel3: TPanel
+      Align = Bottom
+      Position.Y = 240.000000000000000000
+      Size.Width = 640.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Splitter1: TSplitter
+        Align = Top
+        Cursor = crVSplit
+        MinSize = 20.000000000000000000
+        Size.Width = 640.000000000000000000
+        Size.Height = 7.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object StringGrid2: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 640.000000000000000000
+        Size.Height = 113.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 636.000000000000000000
+        Viewport.Height = 88.000000000000000000
+      end
+    end
+    object Panel4: TPanel
+      Align = Bottom
+      Position.Y = 360.000000000000000000
+      Size.Width = 640.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object Splitter2: TSplitter
+        Align = Top
+        Cursor = crVSplit
+        MinSize = 20.000000000000000000
+        Size.Width = 640.000000000000000000
+        Size.Height = 7.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object StringGrid1: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 640.000000000000000000
+        Size.Height = 113.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 636.000000000000000000
+        Viewport.Height = 88.000000000000000000
+      end
+    end
+  end
+  object DSP_Detail2: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = ClientModule1.SQLConnection1
+    Left = 428
+    Top = 406
+  end
+  object Cds_Detail2: TClientDataSet
+    Aggregates = <>
+    IndexFieldNames = 'FK_PRIMARY_KEY_DETAIL1'
+    MasterFields = 'PK_PRIMARY_KEY'
+    MasterSource = DS_Detail1
+    PacketRecords = 0
+    Params = <>
+    ProviderName = 'DSP_Detail2'
+    RemoteServer = DSP_Detail2
+    Left = 428
+    Top = 342
+  end
+  object DSP_Detail1: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = ClientModule1.SQLConnection1
+    Left = 428
+    Top = 270
+  end
+  object DS_Detail1: TDataSource
+    DataSet = Cds_Detail1
+    Left = 428
+    Top = 254
+  end
+  object Cds_Detail1: TClientDataSet
+    Aggregates = <>
+    IndexFieldNames = 'FK_PRIMARY_KEY'
+    MasterFields = 'PK_PRIMARY_KEY'
+    MasterSource = DS_Master
+    PacketRecords = 0
+    Params = <>
+    ProviderName = 'DSP_Detail1'
+    RemoteServer = DSP_Detail1
+    Left = 428
+    Top = 214
+  end
+  object DSP_Master: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = ClientModule1.SQLConnection1
+    Left = 428
+    Top = 137
+  end
+  object DS_Master: TDataSource
+    DataSet = Cds_Master
+    Left = 428
+    Top = 121
+  end
+  object Cds_Master: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DSP_Master'
+    RemoteServer = DSP_Master
+    Left = 428
+    Top = 81
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = Cds_Master
+    ScopeMappings = <>
+    Left = 304
+    Top = 224
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid3
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      GridControl = StringGrid2
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB3
+      GridControl = StringGrid1
+      Columns = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = Cds_Detail1
+    ScopeMappings = <>
+    Left = 312
+    Top = 232
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = Cds_Detail2
+    ScopeMappings = <>
+    Left = 320
+    Top = 240
+  end
+end

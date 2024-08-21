@@ -27,7 +27,6 @@ type
     Btn_Close: TButton;
     Panel1: TPanel;
     BindNavigator1: TBindNavigator;
-    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
     Cds_PTEstPK_PROGRESSIVO: TIntegerField;
     Cds_PTEstK_TIPO_PRATICA: TSmallintField;
     Cds_PTEstKEY_ANNO: TSmallintField;
@@ -99,11 +98,9 @@ type
     ClientDataSet3FLAG_EMAIL: TStringField;
     ClientDataSet3GG_ALLERT: TSmallintField;
     BindSourceDB2: TBindSourceDB;
-    LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
     BindSourceDB3: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource;
     BindSourceDB4: TBindSourceDB;
-    LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource;
     Button2: TButton;
     Button3: TButton;
     ClientDataSet3_NoDs: TClientDataSet;
@@ -133,9 +130,6 @@ type
     ComboBox1: TComboBox;
     ComboBox2: TComboBox;
     ComboBox3: TComboBox;
-    LinkListControlToField1: TLinkListControlToField;
-    LinkListControlToField2: TLinkListControlToField;
-    LinkListControlToField3: TLinkListControlToField;
     StatusBar3: TStatusBar;
     ToolBar1: TToolBar;
     Button1: TButton;
@@ -179,6 +173,41 @@ type
     ClientDataSet6FK_ANAG: TIntegerField;
     ClientDataSet6FLAG_EMAIL: TStringField;
     ClientDataSet6GG_ALLERT: TSmallintField;
+    Label3: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    LinkFillControlToField: TLinkFillControlToField;
+    DSProviderConnection4: TDSProviderConnection;
+    ClientDataSet7: TClientDataSet;
+    ClientDataSet7PK_1: TIntegerField;
+    ClientDataSet7PK_2: TIntegerField;
+    ClientDataSet7PK_3: TIntegerField;
+    BindSourceDB8: TBindSourceDB;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkFillControlToField2: TLinkFillControlToField;
+    LinkFillControlToField3: TLinkFillControlToField;
+    ComboBox4: TComboBox;
+    ComboBox5: TComboBox;
+    ComboBox6: TComboBox;
+    LinkListControlToField1: TLinkListControlToField;
+    LinkListControlToField2: TLinkListControlToField;
+    LinkListControlToField3: TLinkListControlToField;
+    Cds_Master: TClientDataSet;
+    DSP_Master: TDSProviderConnection;
+    Cds_Detail1: TClientDataSet;
+    DSP_Detail1: TDSProviderConnection;
+    Cds_Detail2: TClientDataSet;
+    DSP_Detail2: TDSProviderConnection;
+    DS_Master: TDataSource;
+    DS_Detail1: TDataSource;
+    BindSourceDB9: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB9: TLinkGridToDataSource;
+    BindSourceDB10: TBindSourceDB;
+    BindSourceDB11: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB11: TLinkGridToDataSource;
     procedure Btn_CloseClick(Sender: TObject);
     procedure Btn_OpenClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -225,14 +254,33 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
+  ClientDataSet1.Active := false;
+  ClientDataSet2.Active := false;
+  ClientDataSet3.Active := false;
   ClientDataSet4.Active := true;
   ClientDataSet5.Active := true;
   ClientDataSet6.Active := true;
-
+  ClientDataSet7.Active := true;
+  ClientDataSet7.insert;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
+
+  Cds_Master.Active := False;
+  Cds_Detail1.Active := False;
+  Cds_Detail2.Active := False;
+  Cds_Master.Active := True;
+  Cds_Detail1.Active := True;
+  Cds_Detail2.Active := True;
+
+
+
+  ClientDataSet4.Active := false;
+  ClientDataSet5.Active := false;
+  ClientDataSet6.Active := false;
+  ClientDataSet7.Active := false;
+
   ClientDataSet1.Active := true;
   ClientDataSet2.Active := true;
 
@@ -254,7 +302,7 @@ begin
   ClientDataSet3.Active := false;
   ClientDataSet2.Active := false;
   ClientDataSet1.Active := false;
-  LinkGridToDataSourceBindSourceDB4.DataSource := BindSourceDB4_NoDs;
+//  LinkGridToDataSourceBindSourceDB4.DataSource := BindSourceDB4_NoDs;
   {
     ClientDataSet3.MasterSource := nil;
     ClientDataSet3.MasterFields.Empty;
@@ -273,15 +321,15 @@ begin
   ClientDataSet3.Active := false;
   ClientDataSet2.Active := false;
   ClientDataSet1.Active := false;
-  LinkGridToDataSourceBindSourceDB4.DataSource := BindSourceDB4;
+//  LinkGridToDataSourceBindSourceDB4.DataSource := BindSourceDB4;
   cds_param := False;
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);
 begin
-  ClientDataSet3.Active := false;
-  ClientDataSet2.Active := false;
-  ClientDataSet1.Active := false;
+  ClientDataSet4.Active := false;
+  ClientDataSet5.Active := false;
+  ClientDataSet6.Active := false;
 
 end;
 

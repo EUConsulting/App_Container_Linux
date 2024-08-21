@@ -114,7 +114,6 @@ object Form1: TForm1
           Size.Height = 25.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 42
-          DataSource = BindSourceDB2
           VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
           xRadius = 4.000000000000000000
           yRadius = 4.000000000000000000
@@ -234,14 +233,14 @@ object Form1: TForm1
       object ComboBox1: TComboBox
         Position.X = 8.000000000000000000
         Position.Y = 224.000000000000000000
-        Size.Width = 321.000000000000000000
+        Size.Width = 325.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
       end
       object ComboBox2: TComboBox
         Position.X = 8.000000000000000000
-        Position.Y = 288.000000000000000000
+        Position.Y = 352.000000000000000000
         Size.Width = 321.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
@@ -249,7 +248,7 @@ object Form1: TForm1
       end
       object ComboBox3: TComboBox
         Position.X = 8.000000000000000000
-        Position.Y = 352.000000000000000000
+        Position.Y = 576.000000000000000000
         Size.Width = 321.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
@@ -270,9 +269,7 @@ object Form1: TForm1
           Size.PlatformDefault = False
           TextSettings.Font.Size = 14.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
-          Text = 
-            'Key Violation issue using Master / Detail connected with DataSou' +
-            'rce in case of missing records in a detail table'
+          Text = 'Loss of synchronization and display of incorrect data'
           TabOrder = 0
         end
       end
@@ -316,13 +313,37 @@ object Form1: TForm1
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 6
         Position.X = 8.000000000000000000
-        Position.Y = 258.000000000000000000
+        Position.Y = 322.000000000000000000
       end
       object Edit3: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 7
         Position.X = 8.000000000000000000
-        Position.Y = 322.000000000000000000
+        Position.Y = 546.000000000000000000
+      end
+      object ComboBox4: TComboBox
+        Position.X = 8.000000000000000000
+        Position.Y = 80.000000000000000000
+        Size.Width = 325.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 8
+      end
+      object ComboBox5: TComboBox
+        Position.X = 8.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 325.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 9
+      end
+      object ComboBox6: TComboBox
+        Position.X = 8.000000000000000000
+        Position.Y = 164.000000000000000000
+        Size.Width = 325.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 10
       end
     end
     object Splitter3: TSplitter
@@ -346,6 +367,7 @@ object Form1: TForm1
   end
   object DSP_PTest: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 560
     Top = 232
@@ -517,180 +539,6 @@ object Form1: TForm1
     OutputConverters = <>
     Left = 452
     Top = 629
-    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      GridControl = StringGrid1
-      Columns = <
-        item
-          MemberName = 'PK_PROGRESSIVO'
-        end
-        item
-          MemberName = 'K_TIPO_PRATICA'
-        end
-        item
-          MemberName = 'KEY_ANNO'
-        end
-        item
-          MemberName = 'KEY_PROGRESSIVO'
-        end
-        item
-          MemberName = 'DATA_OP'
-        end
-        item
-          MemberName = 'UTENTE'
-        end
-        item
-          MemberName = 'FIRMA_UTENTE'
-        end
-        item
-          MemberName = 'FIRMA_DIRIGENTE'
-        end
-        item
-          MemberName = 'FIRMA_SUPERVISORE'
-        end
-        item
-          MemberName = 'FK_UTENTE_RILEVATORE'
-        end
-        item
-          MemberName = 'DATA_FIRMA_UTENTE'
-        end
-        item
-          MemberName = 'DATA_FIRMA_DIRIGENTE'
-        end
-        item
-          MemberName = 'DATA_FIRMA_SUPERVISORE'
-        end
-        item
-          MemberName = 'QUALIFICA_TABELLA_VIEW'
-        end
-        item
-          MemberName = 'FK_MOTIVI_NC'
-        end
-        item
-          MemberName = 'FK_SMASTER'
-        end
-        item
-          MemberName = 'FK_UOC'
-        end
-        item
-          MemberName = 'FK_UOS'
-        end
-        item
-          MemberName = 'FK_STATO_NC'
-        end
-        item
-          MemberName = 'FK_DIRIGENTE_RESP'
-        end
-        item
-          MemberName = 'FK_SUPERVISORE'
-        end
-        item
-          MemberName = 'FK_REFQUAL'
-        end
-        item
-          MemberName = 'FIRMA_REFQUAL'
-        end
-        item
-          MemberName = 'DATA_FIRMA_REFQUAL'
-        end
-        item
-          MemberName = 'TIPO_PRATICA'
-        end
-        item
-          MemberName = 'DESCRIZIONE'
-        end
-        item
-          MemberName = 'TOTALE_PROROGHE'
-        end>
-    end
-    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB2
-      GridControl = StringGrid2
-      Columns = <
-        item
-          MemberName = 'PK_PROGRESSIVO'
-        end
-        item
-          MemberName = 'FK_MACROGRUPPO'
-        end
-        item
-          MemberName = 'FLAG_ATTIVO'
-          Visible = False
-        end
-        item
-          MemberName = 'DEFINIZIONE_RICLASSIFICATO'
-          TextWidth = 100
-        end
-        item
-          MemberName = 'NOTE'
-          TextWidth = 100
-        end
-        item
-          MemberName = 'NSAL_UFFICIALI'
-        end
-        item
-          MemberName = 'NSAL_INTERNI'
-        end>
-      OnEvalError = LinkGridToDataSourceBindSourceDB2EvalError
-    end
-    object LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB3
-      GridControl = StringGrid3
-      Columns = <
-        item
-          MemberName = 'PK_PROGRESSIVO'
-        end
-        item
-          MemberName = 'FK_PARAM_PROGETTO'
-        end
-        item
-          MemberName = 'FK_TIPO_COSTO'
-        end
-        item
-          MemberName = 'FLAG_ATTIVO'
-        end
-        item
-          MemberName = 'DATA_IN'
-        end
-        item
-          MemberName = 'DATA_FI'
-        end
-        item
-          MemberName = 'BUDGET'
-        end
-        item
-          MemberName = 'BUDGET_UTILIZZATO'
-        end
-        item
-          MemberName = 'QUOTA_DETRAIBILE'
-        end
-        item
-          MemberName = 'BUDGET_TMP_CALCOLI'
-        end
-        item
-          MemberName = 'GG_TMP'
-        end
-        item
-          MemberName = 'BUDGET_GG_TMP'
-        end
-        item
-          MemberName = 'DATA_IN_TMP'
-        end
-        item
-          MemberName = 'FK_ANAG'
-        end>
-      OnEvalError = LinkGridToDataSourceBindSourceDB3EvalError
-    end
-    object LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB4
-      GridControl = StringGrid4
-      Columns = <>
-      OnEvalError = LinkGridToDataSourceBindSourceDB4EvalError
-    end
     object LinkFillControlToField: TLinkFillControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB8
@@ -754,6 +602,51 @@ object Form1: TForm1
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB7
+      FieldName = 'PK_PROGRESSIVO'
+      Control = ComboBox6
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField2: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB5
+      FieldName = 'DEFINIZIONE_RICLASSIFICATO'
+      Control = ComboBox4
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField3: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'PK_PROGRESSIVO'
+      Control = ComboBox5
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkGridToDataSourceBindSourceDB9: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB9
+      GridControl = StringGrid2
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB11: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB11
+      GridControl = StringGrid4
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB10: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB10
+      GridControl = StringGrid3
+      Columns = <>
+    end
   end
   object ClientDataSet1: TClientDataSet
     Aggregates = <>
@@ -761,8 +654,8 @@ object Form1: TForm1
     Params = <>
     ProviderName = 'DataSetProvider2'
     RemoteServer = DSProviderConnection1
-    Left = 872
-    Top = 88
+    Left = 432
+    Top = 240
     object ClientDataSet1PK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
       Origin = 'PK_PROGRESSIVO'
@@ -813,8 +706,8 @@ object Form1: TForm1
     Params = <>
     ProviderName = 'DataSetProvider3'
     RemoteServer = DSProviderConnection2
-    Left = 872
-    Top = 232
+    Left = 424
+    Top = 472
     object ClientDataSet2PK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
       Origin = 'PK_PROGRESSIVO'
@@ -897,8 +790,8 @@ object Form1: TForm1
     Params = <>
     ProviderName = 'DataSetProvider4'
     RemoteServer = DSProviderConnection3
-    Left = 888
-    Top = 464
+    Left = 744
+    Top = 320
     object ClientDataSet3PK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
       Origin = 'PK_PROGRESSIVO'
@@ -957,29 +850,32 @@ object Form1: TForm1
   end
   object DataSource1: TDataSource
     DataSet = ClientDataSet1
-    Left = 976
-    Top = 120
+    Left = 416
+    Top = 328
   end
   object DataSource2: TDataSource
     DataSet = ClientDataSet2
     OnDataChange = DataSource2DataChange
-    Left = 976
-    Top = 256
+    Left = 416
+    Top = 536
   end
   object DSProviderConnection1: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 592
     Top = 336
   end
   object DSProviderConnection2: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 592
     Top = 408
   end
   object DSProviderConnection3: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 608
     Top = 496
@@ -987,20 +883,20 @@ object Form1: TForm1
   object BindSourceDB2: TBindSourceDB
     DataSet = ClientDataSet1
     ScopeMappings = <>
-    Left = 1056
-    Top = 104
+    Left = 432
+    Top = 392
   end
   object BindSourceDB3: TBindSourceDB
     DataSet = ClientDataSet2
     ScopeMappings = <>
-    Left = 984
-    Top = 328
+    Left = 408
+    Top = 592
   end
   object BindSourceDB4: TBindSourceDB
     DataSet = ClientDataSet3
     ScopeMappings = <>
-    Left = 896
-    Top = 520
+    Left = 736
+    Top = 400
   end
   object ClientDataSet3_NoDs: TClientDataSet
     Aggregates = <>
@@ -1015,8 +911,8 @@ object Form1: TForm1
       end>
     ProviderName = 'DataSetProvider4'
     RemoteServer = DSProviderConnection3
-    Left = 904
-    Top = 584
+    Left = 724
+    Top = 480
     object ClientDataSet3_NoDsPK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
       Required = True
@@ -1065,19 +961,19 @@ object Form1: TForm1
   object BindSourceDB4_NoDs: TBindSourceDB
     DataSet = ClientDataSet3_NoDs
     ScopeMappings = <>
-    Left = 904
-    Top = 640
+    Left = 712
+    Top = 568
   end
   object BindSourceDB5: TBindSourceDB
     DataSet = ClientDataSet4
     ScopeMappings = <>
     Left = 176
-    Top = 216
+    Top = 256
   end
   object BindSourceDB6: TBindSourceDB
     DataSet = ClientDataSet5
     ScopeMappings = <>
-    Left = 176
+    Left = 168
     Top = 320
   end
   object BindSourceDB7: TBindSourceDB
@@ -1264,6 +1160,7 @@ object Form1: TForm1
   end
   object DSProviderConnection4: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 571
     Top = 577
@@ -1292,7 +1189,88 @@ object Form1: TForm1
   object BindSourceDB8: TBindSourceDB
     DataSet = ClientDataSet7
     ScopeMappings = <>
+    Left = 112
+    Top = 576
+  end
+  object Cds_Master: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DSP_Master'
+    RemoteServer = DSP_Master
+    Left = 911
+    Top = 97
+  end
+  object DSP_Master: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = ClientModule1.SQLConnection1
+    Left = 919
+    Top = 153
+  end
+  object Cds_Detail1: TClientDataSet
+    Aggregates = <>
+    IndexFieldNames = 'FK_PRIMARY_KEY'
+    MasterFields = 'PK_PRIMARY_KEY'
+    MasterSource = DS_Master
+    PacketRecords = 0
+    Params = <>
+    ProviderName = 'DSP_Detail1'
+    RemoteServer = DSP_Detail1
+    Left = 919
+    Top = 230
+  end
+  object DSP_Detail1: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = ClientModule1.SQLConnection1
+    Left = 911
+    Top = 286
+  end
+  object Cds_Detail2: TClientDataSet
+    Aggregates = <>
+    IndexFieldNames = 'FK_PRIMARY_KEY_DETAIL1'
+    MasterFields = 'PK_PRIMARY_KEY'
+    MasterSource = DS_Detail1
+    PacketRecords = 0
+    Params = <>
+    ProviderName = 'DSP_Detail2'
+    RemoteServer = DSP_Detail2
+    Left = 959
+    Top = 358
+  end
+  object DSP_Detail2: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = ClientModule1.SQLConnection1
+    Left = 927
+    Top = 422
+  end
+  object DS_Master: TDataSource
+    DataSet = Cds_Master
+    Left = 1015
+    Top = 137
+  end
+  object DS_Detail1: TDataSource
+    DataSet = Cds_Detail1
+    Left = 1031
+    Top = 270
+  end
+  object BindSourceDB9: TBindSourceDB
+    DataSet = Cds_Master
+    ScopeMappings = <>
     Left = 640
     Top = 368
+  end
+  object BindSourceDB10: TBindSourceDB
+    DataSet = Cds_Detail1
+    ScopeMappings = <>
+    Left = 648
+    Top = 376
+  end
+  object BindSourceDB11: TBindSourceDB
+    DataSet = Cds_Detail2
+    ScopeMappings = <>
+    Left = 656
+    Top = 384
   end
 end

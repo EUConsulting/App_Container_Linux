@@ -3,7 +3,7 @@ Visible=False
 Coordinates=594,826,68,33
 
 [StringGrid4]
-Coordinates=807,1152,70,51
+Coordinates=916,1258,70,51
 Visible=True
 
 [Cds_PTEstFK_UOC]
@@ -19,7 +19,7 @@ Coordinates=564,1,117,33
 Coordinates=564,56,162,33
 
 [Splitter1]
-Coordinates=714,1367,55,33
+Coordinates=98,1577,55,33
 
 [ClientDataSet1]
 Coordinates=404,734,87,33
@@ -42,7 +42,7 @@ Coordinates=564,166,144,33
 Coordinates=564,221,164,33
 
 [Panel2]
-Coordinates=473,1367,47,33
+Coordinates=870,1493,47,33
 
 [Cds_PTEstFIRMA_UTENTE]
 Coordinates=564,276,148,33
@@ -72,30 +72,30 @@ Coordinates=564,551,156,33
 Coordinates=672,984,77,33
 
 [Btn_Open]
-Coordinates=10,1367,63,51
+Coordinates=444,1493,63,51
 
 [Cds_PTEstFIRMA_SUPERVISORE]
 Coordinates=564,606,181,33
 
 [StringGrid1]
-Coordinates=944,121,70,537
+Coordinates=1670,110,70,51
 
 [Cds_PTEstKEY_ANNO]
 Coordinates=564,661,125,33
 
 [StringGrid2]
-Coordinates=261,1164,70,177
+Coordinates=1290,1310,70,51
 Visible=True
 
 [StringGrid3]
-Coordinates=1256,19,70,303
+Coordinates=1404,21,70,51
 Visible=True
 
 [Cds_PTEstDATA_FIRMA_REFQUAL]
 Coordinates=564,716,191,33
 
 [BindSourceDB1]
-Coordinates=703,56,151,555
+Coordinates=783,58,151,555
 
 [Cds_PTEstTOTALE_PROROGHE]
 Coordinates=564,771,175,33
@@ -120,7 +120,7 @@ Coordinates=829,56,137,33
 Coordinates=829,111,215,33
 
 [Panel1]
-Coordinates=1054,1367,47,33
+Coordinates=1218,1493,47,33
 
 [Cds_PTEstK_TIPO_PRATICA]
 Coordinates=829,166,157,33
@@ -129,7 +129,7 @@ Coordinates=829,166,157,33
 Coordinates=829,221,197,33
 
 [Btn_Close]
-Coordinates=1061,1053,65,51
+Coordinates=95,1493,65,51
 
 [Cds_PTEstFK_DIRIGENTE_RESP]
 Coordinates=829,276,178,33
@@ -243,19 +243,19 @@ Coordinates=1126,936,130,33
 Coordinates=1107,974,136,33
 
 [BindSourceDB2]
-Coordinates=10,1099,161,195
+Coordinates=10,1185,161,195
 
 [BindSourceDB3]
-Coordinates=1050,10,126,321
+Coordinates=1173,10,126,321
 
 [BindSourceDB4]
-Coordinates=560,1053,167,249
+Coordinates=637,1137,167,249
 
 [Button2]
-Coordinates=1152,1053,53,51
+Coordinates=274,1493,53,51
 
 [Button3]
-Coordinates=982,1053,53,51
+Coordinates=359,1493,53,51
 
 [ClientDataSet3_NoDs]
 Coordinates=180,211,119,33
@@ -292,77 +292,77 @@ Coordinates=180,558,164,33
 Coordinates=161,602,185,33
 
 [BindSourceDB4_NoDs]
-Coordinates=367,1053,167,249
+Coordinates=412,1137,167,249
 
 [Button4]
-Coordinates=99,1367,53,51
+Coordinates=706,1493,53,51
 
 []
 Coordinates=656,1050,55,33
 
 [StatusBar1]
-Coordinates=1354,1367,68,33
+Coordinates=1769,1493,68,33
 
 [ToolBar3]
-Coordinates=889,1367,58,33
+Coordinates=951,1493,58,33
 
 [ToolBar2]
-Coordinates=630,1367,58,33
+Coordinates=1299,1493,58,33
 
 [Label2]
-Coordinates=250,1367,46,51
+Coordinates=542,1493,46,51
 
 [StatusBar2]
-Coordinates=1448,1367,68,33
+Coordinates=1665,1493,68,33
 
 [Label1]
-Coordinates=401,1367,46,51
+Coordinates=791,1493,46,51
 
 [Panel3]
-Coordinates=1208,1367,47,33
+Coordinates=1044,1493,47,33
 
 [Splitter3]
-Coordinates=973,1367,55,33
+Coordinates=1473,1493,55,33
 
 [Panel4]
-Coordinates=1281,1367,47,33
+Coordinates=1392,1493,47,33
 
 [Splitter2]
-Coordinates=1127,1367,55,33
+Coordinates=10,1577,55,33
 
 [ComboBox2]
-Coordinates=182,127,84,123
+Coordinates=196,147,84,123
 Visible=True
 
 [ComboBox3]
-Coordinates=182,772,84,123
+Coordinates=196,872,84,123
 Visible=True
 
 [ComboBox1]
-Coordinates=210,550,84,123
+Coordinates=196,430,84,123
 Visible=True
 
 [StatusBar3]
-Coordinates=795,1367,68,33
+Coordinates=1561,1493,68,33
 
 [BindSourceDB7]
-Coordinates=346,691,167,285
+Coordinates=377,779,167,285
 
 [BindSourceDB5]
-Coordinates=350,420,161,213
+Coordinates=377,379,161,213
 
 [Button1]
-Coordinates=322,1367,53,51
+Coordinates=621,1493,53,51
 
 [ToolBar1]
-Coordinates=546,1367,58,33
+Coordinates=1125,1493,58,33
 
 [BindSourceDB6]
-Coordinates=346,10,126,357
+Coordinates=377,10,126,357
 Visible=True
 
 [Button5]
-Coordinates=903,1053,53,51
+Coordinates=10,1493,53,51
 
 [ClientDataSet4]
 Visible=False
@@ -410,7 +410,7 @@ Coordinates=1108,1154,170,33
 Coordinates=1408,157,196,33
 
 [Label3]
-Coordinates=178,1367,46,51
+Coordinates=195,1493,46,51
 
 [ClientDataSet5QUOTA_DETRAIBILE]
 Coordinates=1408,209,191,33
@@ -422,11 +422,11 @@ Coordinates=1108,1206,130,33
 Coordinates=1408,261,207,33
 
 [Edit1]
-Coordinates=204,478,40,51
+Coordinates=224,29,40,51
 Visible=True
 
 [Edit3]
-Coordinates=204,367,40,51
+Coordinates=224,754,40,51
 
 [DataSource4]
 Coordinates=742,1325,77,33
@@ -453,7 +453,7 @@ Coordinates=265,1325,158,33
 Coordinates=126,1325,130,33
 
 [Edit2]
-Coordinates=204,976,40,51
+Coordinates=224,636,40,51
 
 [ClientDataSet4DEFINIZIONE_RICLASSIFICATO]
 Coordinates=1408,365,244,33
@@ -505,22 +505,58 @@ Coordinates=947,1179,112,33
 Coordinates=603,1388,112,33
 
 [BindSourceDB8]
-Coordinates=10,506,92,177
+Coordinates=10,468,92,177
 
 [ComboBox4]
-Coordinates=587,589,84,123
+Coordinates=650,430,84,123
 Visible=True
 
 [ComboBox5]
-Coordinates=552,127,84,123
+Coordinates=608,147,84,123
 
 [ComboBox6]
-Coordinates=593,772,84,123
+Coordinates=656,872,84,123
 Visible=True
 
+[DSP_Detail2]
+Coordinates=91,361,75,33
+
+[Cds_Detail2]
+Coordinates=1022,1137,73,33
+Visible=False
+
+[DSP_Master]
+Coordinates=0,325,74,33
+
+[DS_Detail1]
+Coordinates=33,78,68,33
+
+[DS_Master]
+Coordinates=61,221,67,33
+
+[Cds_Master]
+Coordinates=1396,1137,72,33
+Visible=False
+
+[DSP_Detail1]
+Coordinates=91,468,75,33
+
+[Cds_Detail1]
+Coordinates=1222,1137,73,33
+Visible=False
+
+[BindSourceDB9]
+Coordinates=1396,1137,92,69
+
+[BindSourceDB10]
+Coordinates=1222,1137,98,69
+
+[BindSourceDB11]
+Coordinates=1022,1137,98,69
+
 [BindNavigator2]
-Coordinates=0,0,90,51
+Coordinates=131,1,90,51
 
 [BindNavigator1]
-Coordinates=109,1,90,51
+Coordinates=81,167,90,51
 

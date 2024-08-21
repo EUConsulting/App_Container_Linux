@@ -241,7 +241,7 @@ object Form1: TForm1
       end
       object ComboBox2: TComboBox
         Position.X = 8.000000000000000000
-        Position.Y = 288.000000000000000000
+        Position.Y = 352.000000000000000000
         Size.Width = 321.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
@@ -249,7 +249,7 @@ object Form1: TForm1
       end
       object ComboBox3: TComboBox
         Position.X = 8.000000000000000000
-        Position.Y = 352.000000000000000000
+        Position.Y = 576.000000000000000000
         Size.Width = 321.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
@@ -270,9 +270,7 @@ object Form1: TForm1
           Size.PlatformDefault = False
           TextSettings.Font.Size = 14.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
-          Text = 
-            'Key Violation issue using Master / Detail connected with DataSou' +
-            'rce in case of missing records in a detail table'
+          Text = 'Loss of synchronization and display of incorrect data'
           TabOrder = 0
         end
       end
@@ -316,13 +314,13 @@ object Form1: TForm1
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 6
         Position.X = 8.000000000000000000
-        Position.Y = 258.000000000000000000
+        Position.Y = 322.000000000000000000
       end
       object Edit3: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         TabOrder = 7
         Position.X = 8.000000000000000000
-        Position.Y = 322.000000000000000000
+        Position.Y = 546.000000000000000000
       end
       object ComboBox4: TComboBox
         Position.X = 8.000000000000000000
@@ -330,7 +328,7 @@ object Form1: TForm1
         Size.Width = 325.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 9
+        TabOrder = 8
       end
       object ComboBox5: TComboBox
         Position.X = 8.000000000000000000
@@ -338,7 +336,7 @@ object Form1: TForm1
         Size.Width = 325.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 10
+        TabOrder = 9
       end
       object ComboBox6: TComboBox
         Position.X = 8.000000000000000000
@@ -346,7 +344,7 @@ object Form1: TForm1
         Size.Width = 325.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 11
+        TabOrder = 10
       end
     end
     object Splitter3: TSplitter
@@ -370,6 +368,7 @@ object Form1: TForm1
   end
   object DSP_PTest: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 560
     Top = 232
@@ -780,7 +779,7 @@ object Form1: TForm1
     end
     object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
-      DataSource = BindSourceDB6
+      DataSource = BindSourceDB7
       FieldName = 'PK_PROGRESSIVO'
       Control = ComboBox6
       FillExpressions = <>
@@ -1019,18 +1018,21 @@ object Form1: TForm1
   end
   object DSProviderConnection1: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 592
     Top = 336
   end
   object DSProviderConnection2: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 592
     Top = 408
   end
   object DSProviderConnection3: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 608
     Top = 496
@@ -1066,8 +1068,8 @@ object Form1: TForm1
       end>
     ProviderName = 'DataSetProvider4'
     RemoteServer = DSProviderConnection3
-    Left = 904
-    Top = 584
+    Left = 1012
+    Top = 464
     object ClientDataSet3_NoDsPK_PROGRESSIVO: TIntegerField
       FieldName = 'PK_PROGRESSIVO'
       Required = True
@@ -1116,19 +1118,19 @@ object Form1: TForm1
   object BindSourceDB4_NoDs: TBindSourceDB
     DataSet = ClientDataSet3_NoDs
     ScopeMappings = <>
-    Left = 904
-    Top = 640
+    Left = 1016
+    Top = 520
   end
   object BindSourceDB5: TBindSourceDB
     DataSet = ClientDataSet4
     ScopeMappings = <>
     Left = 176
-    Top = 216
+    Top = 256
   end
   object BindSourceDB6: TBindSourceDB
     DataSet = ClientDataSet5
     ScopeMappings = <>
-    Left = 176
+    Left = 168
     Top = 320
   end
   object BindSourceDB7: TBindSourceDB
@@ -1315,6 +1317,7 @@ object Form1: TForm1
   end
   object DSProviderConnection4: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
+    Connected = True
     SQLConnection = ClientModule1.SQLConnection1
     Left = 571
     Top = 577
@@ -1343,7 +1346,7 @@ object Form1: TForm1
   object BindSourceDB8: TBindSourceDB
     DataSet = ClientDataSet7
     ScopeMappings = <>
-    Left = 640
-    Top = 368
+    Left = 112
+    Top = 576
   end
 end

@@ -62,6 +62,20 @@ type
     FDQuery5PK_1: TIntegerField;
     FDQuery5PK_2: TIntegerField;
     FDQuery5PK_3: TIntegerField;
+    FDQ_Master: TFDQuery;
+    DSP_Master: TDataSetProvider;
+    FDQ_Detail1: TFDQuery;
+    DSP_Detail1: TDataSetProvider;
+    FDQ_Detail2: TFDQuery;
+    DSP_Detail2: TDataSetProvider;
+    FDQ_MasterPK_PRIMARY_KEY: TIntegerField;
+    FDQ_MasterDESCRIPTION: TStringField;
+    FDQ_Detail1PK_PRIMARY_KEY: TIntegerField;
+    FDQ_Detail1FK_PRIMARY_KEY: TIntegerField;
+    FDQ_Detail1DESCRIPTION_DETAIL1: TStringField;
+    FDQ_Detail2PK_PRIMARY_KEY: TIntegerField;
+    FDQ_Detail2FK_PRIMARY_KEY_DETAIL1: TIntegerField;
+    FDQ_Detail2DESCRIPTION_DETAIL2: TStringField;
     procedure DSServerModuleCreate(Sender: TObject);
     procedure FDQuery1Error(ASender, AInitiator: TObject;
       var AException: Exception);
@@ -94,6 +108,9 @@ begin
   FDQuery3.Connection := DM_Connection.FDConn_Sql;
   FDQuery4.Connection := DM_Connection.FDConn_Sql;
   FDQuery5.Connection := DM_Connection.FDConn_Sql;
+  FDQ_Master.Connection := DM_Connection.FDConn_Sql;
+  FDQ_Detail1.Connection := DM_Connection.FDConn_Sql;
+  FDQ_Detail2.Connection := DM_Connection.FDConn_Sql;
 
 end;
 

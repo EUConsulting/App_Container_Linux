@@ -27,7 +27,6 @@ type
     Btn_Close: TButton;
     Panel1: TPanel;
     BindNavigator1: TBindNavigator;
-    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
     Cds_PTEstPK_PROGRESSIVO: TIntegerField;
     Cds_PTEstK_TIPO_PRATICA: TSmallintField;
     Cds_PTEstKEY_ANNO: TSmallintField;
@@ -99,11 +98,9 @@ type
     ClientDataSet3FLAG_EMAIL: TStringField;
     ClientDataSet3GG_ALLERT: TSmallintField;
     BindSourceDB2: TBindSourceDB;
-    LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
     BindSourceDB3: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource;
     BindSourceDB4: TBindSourceDB;
-    LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource;
     Button2: TButton;
     Button3: TButton;
     ClientDataSet3_NoDs: TClientDataSet;
@@ -133,9 +130,6 @@ type
     ComboBox1: TComboBox;
     ComboBox2: TComboBox;
     ComboBox3: TComboBox;
-    LinkListControlToField1: TLinkListControlToField;
-    LinkListControlToField2: TLinkListControlToField;
-    LinkListControlToField3: TLinkListControlToField;
     StatusBar3: TStatusBar;
     ToolBar1: TToolBar;
     Button1: TButton;
@@ -143,6 +137,78 @@ type
     BindSourceDB5: TBindSourceDB;
     BindSourceDB6: TBindSourceDB;
     BindSourceDB7: TBindSourceDB;
+    ClientDataSet4: TClientDataSet;
+    ClientDataSet5: TClientDataSet;
+    ClientDataSet6: TClientDataSet;
+    DataSource3: TDataSource;
+    DataSource4: TDataSource;
+    ClientDataSet4PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet4FK_MACROGRUPPO: TIntegerField;
+    ClientDataSet4FLAG_ATTIVO: TStringField;
+    ClientDataSet4NOTE: TStringField;
+    ClientDataSet4DEFINIZIONE_RICLASSIFICATO: TStringField;
+    ClientDataSet4NSAL_UFFICIALI: TSmallintField;
+    ClientDataSet4NSAL_INTERNI: TSmallintField;
+    ClientDataSet5PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet5FK_PARAM_PROGETTO: TIntegerField;
+    ClientDataSet5FK_TIPO_COSTO: TIntegerField;
+    ClientDataSet5FLAG_ATTIVO: TStringField;
+    ClientDataSet5DATA_IN: TDateField;
+    ClientDataSet5DATA_FI: TDateField;
+    ClientDataSet5BUDGET: TFloatField;
+    ClientDataSet5BUDGET_UTILIZZATO: TFloatField;
+    ClientDataSet5QUOTA_DETRAIBILE: TSingleField;
+    ClientDataSet5BUDGET_TMP_CALCOLI: TFloatField;
+    ClientDataSet5GG_TMP: TIntegerField;
+    ClientDataSet5BUDGET_GG_TMP: TFloatField;
+    ClientDataSet5DATA_IN_TMP: TDateField;
+    ClientDataSet5FK_ANAG: TIntegerField;
+    ClientDataSet6PK_PROGRESSIVO: TIntegerField;
+    ClientDataSet6FK_PARAM_PROGETTO_DETAIL: TIntegerField;
+    ClientDataSet6FLAG_ATTIVO: TStringField;
+    ClientDataSet6DATA_IN: TDateField;
+    ClientDataSet6DATA_FI: TDateField;
+    ClientDataSet6BUDGET: TFloatField;
+    ClientDataSet6BUDGET_UTILIZZATO: TFloatField;
+    ClientDataSet6FK_ANAG: TIntegerField;
+    ClientDataSet6FLAG_EMAIL: TStringField;
+    ClientDataSet6GG_ALLERT: TSmallintField;
+    Label3: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    LinkFillControlToField: TLinkFillControlToField;
+    DSProviderConnection4: TDSProviderConnection;
+    ClientDataSet7: TClientDataSet;
+    ClientDataSet7PK_1: TIntegerField;
+    ClientDataSet7PK_2: TIntegerField;
+    ClientDataSet7PK_3: TIntegerField;
+    BindSourceDB8: TBindSourceDB;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkFillControlToField2: TLinkFillControlToField;
+    LinkFillControlToField3: TLinkFillControlToField;
+    ComboBox4: TComboBox;
+    ComboBox5: TComboBox;
+    ComboBox6: TComboBox;
+    LinkListControlToField1: TLinkListControlToField;
+    LinkListControlToField2: TLinkListControlToField;
+    LinkListControlToField3: TLinkListControlToField;
+    Cds_Master: TClientDataSet;
+    DSP_Master: TDSProviderConnection;
+    Cds_Detail1: TClientDataSet;
+    DSP_Detail1: TDSProviderConnection;
+    Cds_Detail2: TClientDataSet;
+    DSP_Detail2: TDSProviderConnection;
+    DS_Master: TDataSource;
+    DS_Detail1: TDataSource;
+    BindSourceDB9: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB9: TLinkGridToDataSource;
+    BindSourceDB10: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB10: TLinkGridToDataSource;
+    BindSourceDB11: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB11: TLinkGridToDataSource;
     procedure Btn_CloseClick(Sender: TObject);
     procedure Btn_OpenClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -189,18 +255,33 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  LinkGridToDataSourceBindSourceDB2.GridControl := nil;
-  LinkGridToDataSourceBindSourceDB3.GridControl := nil;
-  LinkGridToDataSourceBindSourceDB4.GridControl := nil;
-
-  ClientDataSet1.Active := true;
-  ClientDataSet2.Active := true;
-  ClientDataSet3.Active := true;
-
+  ClientDataSet1.Active := false;
+  ClientDataSet2.Active := false;
+  ClientDataSet3.Active := false;
+  ClientDataSet4.Active := true;
+  ClientDataSet5.Active := true;
+  ClientDataSet6.Active := true;
+  ClientDataSet7.Active := true;
+  ClientDataSet7.insert;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
+
+  Cds_Master.Active := False;
+  Cds_Detail1.Active := False;
+  Cds_Detail2.Active := False;
+  Cds_Master.Active := True;
+  Cds_Detail1.Active := True;
+  Cds_Detail2.Active := True;
+
+
+
+  ClientDataSet4.Active := false;
+  ClientDataSet5.Active := false;
+  ClientDataSet6.Active := false;
+  ClientDataSet7.Active := false;
+
   ClientDataSet1.Active := true;
   ClientDataSet2.Active := true;
 
@@ -222,7 +303,7 @@ begin
   ClientDataSet3.Active := false;
   ClientDataSet2.Active := false;
   ClientDataSet1.Active := false;
-  LinkGridToDataSourceBindSourceDB4.DataSource := BindSourceDB4_NoDs;
+//  LinkGridToDataSourceBindSourceDB4.DataSource := BindSourceDB4_NoDs;
   {
     ClientDataSet3.MasterSource := nil;
     ClientDataSet3.MasterFields.Empty;
@@ -247,9 +328,9 @@ end;
 
 procedure TForm1.Button5Click(Sender: TObject);
 begin
-  ClientDataSet3.Active := false;
-  ClientDataSet2.Active := false;
-  ClientDataSet1.Active := false;
+  ClientDataSet4.Active := false;
+  ClientDataSet5.Active := false;
+  ClientDataSet6.Active := false;
 
 end;
 

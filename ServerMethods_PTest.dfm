@@ -1,7 +1,7 @@
 object ServerMethods1: TServerMethods1
   OnCreate = DSServerModuleCreate
-  Height = 480
-  Width = 640
+  Height = 690
+  Width = 899
   object DataSetProvider1: TDataSetProvider
     DataSet = FDQuery1
     Options = [poAllowCommandText, poUseQuoteChar]
@@ -294,5 +294,90 @@ object ServerMethods1: TServerMethods1
     UpdateMode = upWhereKeyOnly
     Left = 480
     Top = 424
+  end
+  object FDQ_Master: TFDQuery
+    Connection = DM_Connection.FDConn_Sql
+    SQL.Strings = (
+      'select * from tmaster')
+    Left = 800
+    Top = 40
+    object FDQ_MasterPK_PRIMARY_KEY: TIntegerField
+      FieldName = 'PK_PRIMARY_KEY'
+      Origin = 'PK_PRIMARY_KEY'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQ_MasterDESCRIPTION: TStringField
+      FieldName = 'DESCRIPTION'
+      Origin = 'DESCRIPTION'
+      Required = True
+      Size = 250
+    end
+  end
+  object DSP_Master: TDataSetProvider
+    DataSet = FDQ_Master
+    Options = [poAllowCommandText, poUseQuoteChar]
+    Left = 800
+    Top = 112
+  end
+  object FDQ_Detail1: TFDQuery
+    Connection = DM_Connection.FDConn_Sql
+    SQL.Strings = (
+      'select * from tdetail_level1')
+    Left = 776
+    Top = 216
+    object FDQ_Detail1PK_PRIMARY_KEY: TIntegerField
+      FieldName = 'PK_PRIMARY_KEY'
+      Origin = 'PK_PRIMARY_KEY'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQ_Detail1FK_PRIMARY_KEY: TIntegerField
+      FieldName = 'FK_PRIMARY_KEY'
+      Origin = 'FK_PRIMARY_KEY'
+      Required = True
+    end
+    object FDQ_Detail1DESCRIPTION_DETAIL1: TStringField
+      FieldName = 'DESCRIPTION_DETAIL1'
+      Origin = 'DESCRIPTION_DETAIL1'
+      Required = True
+      Size = 250
+    end
+  end
+  object DSP_Detail1: TDataSetProvider
+    DataSet = FDQ_Detail1
+    Options = [poAllowCommandText, poUseQuoteChar]
+    Left = 776
+    Top = 288
+  end
+  object FDQ_Detail2: TFDQuery
+    Connection = DM_Connection.FDConn_Sql
+    SQL.Strings = (
+      'select * from tdetail_level2')
+    Left = 792
+    Top = 384
+    object FDQ_Detail2PK_PRIMARY_KEY: TIntegerField
+      FieldName = 'PK_PRIMARY_KEY'
+      Origin = 'PK_PRIMARY_KEY'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDQ_Detail2FK_PRIMARY_KEY_DETAIL1: TIntegerField
+      FieldName = 'FK_PRIMARY_KEY_DETAIL1'
+      Origin = 'FK_PRIMARY_KEY_DETAIL1'
+      Required = True
+    end
+    object FDQ_Detail2DESCRIPTION_DETAIL2: TStringField
+      FieldName = 'DESCRIPTION_DETAIL2'
+      Origin = 'DESCRIPTION_DETAIL2'
+      Required = True
+      Size = 250
+    end
+  end
+  object DSP_Detail2: TDataSetProvider
+    DataSet = FDQ_Detail2
+    Options = [poAllowCommandText, poUseQuoteChar]
+    Left = 792
+    Top = 456
   end
 end
