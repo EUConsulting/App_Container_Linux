@@ -3,19 +3,19 @@ object FMasterDetail: TFMasterDetail
   Top = 0
   Caption = 'Form2'
   ClientHeight = 480
-  ClientWidth = 676
+  ClientWidth = 640
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
   object Panel1: TPanel
     Align = Client
-    Size.Width = 676.000000000000000000
+    Size.Width = 640.000000000000000000
     Size.Height = 480.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object ToolBar1: TToolBar
-      Size.Width = 676.000000000000000000
+      Size.Width = 640.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -38,7 +38,7 @@ object FMasterDetail: TFMasterDetail
     end
     object Panel2: TPanel
       Align = Client
-      Size.Width = 676.000000000000000000
+      Size.Width = 640.000000000000000000
       Size.Height = 200.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
@@ -46,19 +46,19 @@ object FMasterDetail: TFMasterDetail
         Align = Client
         CanFocus = True
         ClipChildren = True
-        Size.Width = 676.000000000000000000
+        Size.Width = 640.000000000000000000
         Size.Height = 200.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         RowCount = 0
-        Viewport.Width = 672.000000000000000000
+        Viewport.Width = 636.000000000000000000
         Viewport.Height = 175.000000000000000000
       end
     end
     object Panel3: TPanel
       Align = Bottom
       Position.Y = 240.000000000000000000
-      Size.Width = 676.000000000000000000
+      Size.Width = 640.000000000000000000
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
@@ -66,7 +66,7 @@ object FMasterDetail: TFMasterDetail
         Align = Top
         Cursor = crVSplit
         MinSize = 20.000000000000000000
-        Size.Width = 676.000000000000000000
+        Size.Width = 640.000000000000000000
         Size.Height = 7.000000000000000000
         Size.PlatformDefault = False
       end
@@ -74,19 +74,19 @@ object FMasterDetail: TFMasterDetail
         Align = Client
         CanFocus = True
         ClipChildren = True
-        Size.Width = 676.000000000000000000
+        Size.Width = 640.000000000000000000
         Size.Height = 113.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         RowCount = 0
-        Viewport.Width = 672.000000000000000000
+        Viewport.Width = 636.000000000000000000
         Viewport.Height = 88.000000000000000000
       end
     end
     object Panel4: TPanel
       Align = Bottom
       Position.Y = 360.000000000000000000
-      Size.Width = 676.000000000000000000
+      Size.Width = 640.000000000000000000
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
@@ -94,7 +94,7 @@ object FMasterDetail: TFMasterDetail
         Align = Top
         Cursor = crVSplit
         MinSize = 20.000000000000000000
-        Size.Width = 676.000000000000000000
+        Size.Width = 640.000000000000000000
         Size.Height = 7.000000000000000000
         Size.PlatformDefault = False
       end
@@ -102,12 +102,12 @@ object FMasterDetail: TFMasterDetail
         Align = Client
         CanFocus = True
         ClipChildren = True
-        Size.Width = 676.000000000000000000
+        Size.Width = 640.000000000000000000
         Size.Height = 113.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         RowCount = 0
-        Viewport.Width = 672.000000000000000000
+        Viewport.Width = 636.000000000000000000
         Viewport.Height = 88.000000000000000000
       end
     end

@@ -8,10 +8,10 @@ Coordinates=78,77,68,33
 Coordinates=10,192,47,33
 
 [Panel4]
-Coordinates=260,230,47,33
+Coordinates=296,146,47,33
 
 [StringGrid3]
-Coordinates=570,10,70,51
+Coordinates=268,10,70,51
 Visible=True
 
 [DSP_Detail1]
@@ -24,13 +24,13 @@ Coordinates=224,146,55,33
 Coordinates=0,0,67,33
 
 [StringGrid2]
-Coordinates=370,110,70,51
+Coordinates=264,78,70,51
 
 [StringGrid1]
-Coordinates=30,10,70,51
+Coordinates=10,78,70,51
 
 [Button1]
-Coordinates=160,220,53,51
+Coordinates=199,10,53,51
 
 [Panel1]
 Coordinates=159,146,47,33
@@ -47,6 +47,10 @@ Coordinates=22,269,74,33
 [DSP_Detail2]
 Coordinates=464,1,75,33
 
+[Cds_Master]
+Coordinates=105,10,72,33
+Visible=False
+
 [Cds_Detail2]
 Coordinates=10,10,73,33
 Visible=False
@@ -59,22 +63,17 @@ Visible=False
 Coordinates=10,146,58,33
 
 []
-Coordinates=105,10,72,33
-Visible=False
+Coordinates=239,269,91,36
 
 [BindSourceDB1]
-Coordinates=400,0,92,69
+Coordinates=105,10,92,69
 
 [BindingsList1]
 Coordinates=389,1,82,33
 
 [BindSourceDB2]
-Coordinates=560,100,92,69
+Coordinates=169,78,92,69
 
 [BindSourceDB3]
-Coordinates=210,0,92,69
-Visible=True
-
-[Cds_Master]
-Visible=False
+Coordinates=10,10,92,69
 

@@ -3,19 +3,19 @@ object FMasterDetail: TFMasterDetail
   Top = 0
   Caption = 'Form2'
   ClientHeight = 480
-  ClientWidth = 676
+  ClientWidth = 640
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
   object Panel1: TPanel
     Align = Client
-    Size.Width = 676.000000000000000000
+    Size.Width = 640.000000000000000000
     Size.Height = 480.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object ToolBar1: TToolBar
-      Size.Width = 676.000000000000000000
+      Size.Width = 640.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -38,7 +38,7 @@ object FMasterDetail: TFMasterDetail
     end
     object Panel2: TPanel
       Align = Client
-      Size.Width = 676.000000000000000000
+      Size.Width = 640.000000000000000000
       Size.Height = 200.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
@@ -46,19 +46,18 @@ object FMasterDetail: TFMasterDetail
         Align = Client
         CanFocus = True
         ClipChildren = True
-        Size.Width = 676.000000000000000000
+        Size.Width = 640.000000000000000000
         Size.Height = 200.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
-        RowCount = 0
-        Viewport.Width = 672.000000000000000000
-        Viewport.Height = 175.000000000000000000
+        Viewport.Width = 640.000000000000000000
+        Viewport.Height = 200.000000000000000000
       end
     end
     object Panel3: TPanel
       Align = Bottom
       Position.Y = 240.000000000000000000
-      Size.Width = 676.000000000000000000
+      Size.Width = 640.000000000000000000
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
@@ -66,7 +65,7 @@ object FMasterDetail: TFMasterDetail
         Align = Top
         Cursor = crVSplit
         MinSize = 20.000000000000000000
-        Size.Width = 676.000000000000000000
+        Size.Width = 640.000000000000000000
         Size.Height = 7.000000000000000000
         Size.PlatformDefault = False
       end
@@ -74,19 +73,18 @@ object FMasterDetail: TFMasterDetail
         Align = Client
         CanFocus = True
         ClipChildren = True
-        Size.Width = 676.000000000000000000
+        Size.Width = 640.000000000000000000
         Size.Height = 113.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
-        RowCount = 0
-        Viewport.Width = 672.000000000000000000
-        Viewport.Height = 88.000000000000000000
+        Viewport.Width = 640.000000000000000000
+        Viewport.Height = 113.000000000000000000
       end
     end
     object Panel4: TPanel
       Align = Bottom
       Position.Y = 360.000000000000000000
-      Size.Width = 676.000000000000000000
+      Size.Width = 640.000000000000000000
       Size.Height = 120.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
@@ -94,7 +92,7 @@ object FMasterDetail: TFMasterDetail
         Align = Top
         Cursor = crVSplit
         MinSize = 20.000000000000000000
-        Size.Width = 676.000000000000000000
+        Size.Width = 640.000000000000000000
         Size.Height = 7.000000000000000000
         Size.PlatformDefault = False
       end
@@ -102,13 +100,12 @@ object FMasterDetail: TFMasterDetail
         Align = Client
         CanFocus = True
         ClipChildren = True
-        Size.Width = 676.000000000000000000
+        Size.Width = 640.000000000000000000
         Size.Height = 113.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
-        RowCount = 0
-        Viewport.Width = 672.000000000000000000
-        Viewport.Height = 88.000000000000000000
+        Viewport.Width = 640.000000000000000000
+        Viewport.Height = 113.000000000000000000
       end
     end
   end
@@ -116,110 +113,70 @@ object FMasterDetail: TFMasterDetail
     ServerClassName = 'TServerMethods1'
     Connected = True
     SQLConnection = ClientModule1.SQLConnection1
-    Left = 540
-    Top = 342
+    Left = 428
+    Top = 406
   end
   object Cds_Detail2: TClientDataSet
     Aggregates = <>
-    DataSetField = Cds_Detail1FDQ_Detail1_2
+    IndexFieldNames = 'FK_PRIMARY_KEY_DETAIL1'
+    MasterFields = 'PK_PRIMARY_KEY'
+    MasterSource = DS_Detail1
+    PacketRecords = 0
     Params = <>
+    ProviderName = 'DSP_Detail2'
+    RemoteServer = DSP_Detail2
     Left = 428
     Top = 342
-    object Cds_Detail2PK_PRIMARY_KEY: TIntegerField
-      FieldName = 'PK_PRIMARY_KEY'
-      Origin = 'PK_PRIMARY_KEY'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object Cds_Detail2FK_PRIMARY_KEY_DETAIL1: TIntegerField
-      FieldName = 'FK_PRIMARY_KEY_DETAIL1'
-      Origin = 'FK_PRIMARY_KEY_DETAIL1'
-      Required = True
-    end
-    object Cds_Detail2DESCRIPTION_DETAIL2: TStringField
-      FieldName = 'DESCRIPTION_DETAIL2'
-      Origin = 'DESCRIPTION_DETAIL2'
-      Required = True
-      Size = 250
-    end
   end
   object DSP_Detail1: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
     Connected = True
     SQLConnection = ClientModule1.SQLConnection1
-    Left = 596
-    Top = 246
+    Left = 428
+    Top = 270
   end
   object DS_Detail1: TDataSource
-    Left = 516
-    Top = 238
+    DataSet = Cds_Detail1
+    Left = 428
+    Top = 254
   end
   object Cds_Detail1: TClientDataSet
     Aggregates = <>
-    DataSetField = Cds_MasterFDQ_Detail1_1
+    IndexFieldNames = 'FK_PRIMARY_KEY'
+    MasterFields = 'PK_PRIMARY_KEY'
+    MasterSource = DS_Master
+    PacketRecords = 0
     Params = <>
+    ProviderName = 'DSP_Detail1'
+    RemoteServer = DSP_Detail1
     Left = 428
-    Top = 238
-    object Cds_Detail1PK_PRIMARY_KEY: TIntegerField
-      FieldName = 'PK_PRIMARY_KEY'
-      Origin = 'PK_PRIMARY_KEY'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object Cds_Detail1FK_PRIMARY_KEY: TIntegerField
-      FieldName = 'FK_PRIMARY_KEY'
-      Origin = 'FK_PRIMARY_KEY'
-      Required = True
-    end
-    object Cds_Detail1DESCRIPTION_DETAIL1: TStringField
-      FieldName = 'DESCRIPTION_DETAIL1'
-      Origin = 'DESCRIPTION_DETAIL1'
-      Required = True
-      Size = 250
-    end
-    object Cds_Detail1FDQ_Detail1_2: TDataSetField
-      FieldName = 'FDQ_Detail1_2'
-    end
+    Top = 214
   end
   object DSP_Master: TDSProviderConnection
     ServerClassName = 'TServerMethods1'
     Connected = True
     SQLConnection = ClientModule1.SQLConnection1
-    Left = 588
-    Top = 89
+    Left = 428
+    Top = 137
   end
   object DS_Master: TDataSource
-    Left = 500
-    Top = 81
+    DataSet = Cds_Master
+    Left = 428
+    Top = 121
   end
   object Cds_Master: TClientDataSet
     Aggregates = <>
     Params = <>
-    ProviderName = 'DSP_Master1'
+    ProviderName = 'DSP_Master'
     RemoteServer = DSP_Master
-    Left = 436
+    Left = 428
     Top = 81
-    object Cds_MasterPK_PRIMARY_KEY: TIntegerField
-      FieldName = 'PK_PRIMARY_KEY'
-      Origin = 'PK_PRIMARY_KEY'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object Cds_MasterDESCRIPTION: TStringField
-      FieldName = 'DESCRIPTION'
-      Origin = 'DESCRIPTION'
-      Required = True
-      Size = 250
-    end
-    object Cds_MasterFDQ_Detail1_1: TDataSetField
-      FieldName = 'FDQ_Detail1_1'
-    end
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = Cds_Master
     ScopeMappings = <>
-    Left = 296
-    Top = 80
+    Left = 304
+    Top = 224
   end
   object BindingsList1: TBindingsList
     Methods = <>
@@ -248,13 +205,13 @@ object FMasterDetail: TFMasterDetail
   object BindSourceDB2: TBindSourceDB
     DataSet = Cds_Detail1
     ScopeMappings = <>
-    Left = 272
+    Left = 312
     Top = 232
   end
   object BindSourceDB3: TBindSourceDB
     DataSet = Cds_Detail2
     ScopeMappings = <>
-    Left = 280
-    Top = 352
+    Left = 320
+    Top = 240
   end
 end

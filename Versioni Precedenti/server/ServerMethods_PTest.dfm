@@ -1,7 +1,7 @@
 object ServerMethods1: TServerMethods1
   OnCreate = DSServerModuleCreate
   Height = 690
-  Width = 1066
+  Width = 899
   object DataSetProvider1: TDataSetProvider
     DataSet = FDQuery1
     Options = [poAllowCommandText, poUseQuoteChar]
@@ -299,7 +299,7 @@ object ServerMethods1: TServerMethods1
     Connection = DM_Connection.FDConn_Sql
     SQL.Strings = (
       'select * from tmaster')
-    Left = 768
+    Left = 800
     Top = 40
     object FDQ_MasterPK_PRIMARY_KEY: TIntegerField
       FieldName = 'PK_PRIMARY_KEY'
@@ -317,14 +317,14 @@ object ServerMethods1: TServerMethods1
   object DSP_Master: TDataSetProvider
     DataSet = FDQ_Master
     Options = [poAllowCommandText, poUseQuoteChar]
-    Left = 768
+    Left = 800
     Top = 112
   end
   object FDQ_Detail1: TFDQuery
     Connection = DM_Connection.FDConn_Sql
     SQL.Strings = (
       'select * from tdetail_level1')
-    Left = 744
+    Left = 776
     Top = 216
     object FDQ_Detail1PK_PRIMARY_KEY: TIntegerField
       FieldName = 'PK_PRIMARY_KEY'
@@ -347,14 +347,14 @@ object ServerMethods1: TServerMethods1
   object DSP_Detail1: TDataSetProvider
     DataSet = FDQ_Detail1
     Options = [poAllowCommandText, poUseQuoteChar]
-    Left = 744
+    Left = 776
     Top = 288
   end
   object FDQ_Detail2: TFDQuery
     Connection = DM_Connection.FDConn_Sql
     SQL.Strings = (
       'select * from tdetail_level2')
-    Left = 760
+    Left = 792
     Top = 384
     object FDQ_Detail2PK_PRIMARY_KEY: TIntegerField
       FieldName = 'PK_PRIMARY_KEY'
@@ -377,117 +377,7 @@ object ServerMethods1: TServerMethods1
   object DSP_Detail2: TDataSetProvider
     DataSet = FDQ_Detail2
     Options = [poAllowCommandText, poUseQuoteChar]
-    Left = 760
+    Left = 792
     Top = 456
-  end
-  object FDQ_Master1: TFDQuery
-    Connection = DM_Connection.FDConn_Sql
-    SQL.Strings = (
-      'select * from tmaster')
-    Left = 920
-    Top = 48
-    object IntegerField1: TIntegerField
-      FieldName = 'PK_PRIMARY_KEY'
-      Origin = 'PK_PRIMARY_KEY'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object StringField1: TStringField
-      FieldName = 'DESCRIPTION'
-      Origin = 'DESCRIPTION'
-      Required = True
-      Size = 250
-    end
-  end
-  object DSP_Master1: TDataSetProvider
-    DataSet = FDQ_Master1
-    Left = 920
-    Top = 104
-  end
-  object FDQ_Detail1_1: TFDQuery
-    IndexFieldNames = 'FK_PRIMARY_KEY'
-    MasterSource = DataSource1
-    MasterFields = 'PK_PRIMARY_KEY'
-    DetailFields = 'FK_PRIMARY_KEY'
-    Connection = DM_Connection.FDConn_Sql
-    FetchOptions.AssignedValues = [evItems, evCache]
-    SQL.Strings = (
-      
-        'select * from tdetail_level1 where FK_PRIMARY_KEY = :PK_PRIMARY_' +
-        'KEY')
-    Left = 912
-    Top = 192
-    ParamData = <
-      item
-        Name = 'PK_PRIMARY_KEY'
-        DataType = ftInteger
-        ParamType = ptInput
-        Value = 3
-      end>
-    object IntegerField2: TIntegerField
-      FieldName = 'PK_PRIMARY_KEY'
-      Origin = 'PK_PRIMARY_KEY'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object IntegerField3: TIntegerField
-      FieldName = 'FK_PRIMARY_KEY'
-      Origin = 'FK_PRIMARY_KEY'
-      Required = True
-    end
-    object StringField2: TStringField
-      FieldName = 'DESCRIPTION_DETAIL1'
-      Origin = 'DESCRIPTION_DETAIL1'
-      Required = True
-      Size = 250
-    end
-  end
-  object FDQ_Detail1_2: TFDQuery
-    IndexFieldNames = 'PK_PRIMARY_KEY'
-    MasterSource = DataSource2
-    MasterFields = 'PK_PRIMARY_KEY'
-    DetailFields = 'PK_PRIMARY_KEY'
-    Connection = DM_Connection.FDConn_Sql
-    FetchOptions.AssignedValues = [evItems, evCache]
-    SQL.Strings = (
-      
-        'select * from tdetail_level2 where FK_PRIMARY_KEY_DETAIL1 = :PK_' +
-        'PRIMARY_KEY')
-    Left = 912
-    Top = 272
-    ParamData = <
-      item
-        Name = 'PK_PRIMARY_KEY'
-        DataType = ftInteger
-        ParamType = ptInput
-        Value = 3
-      end>
-    object IntegerField4: TIntegerField
-      FieldName = 'PK_PRIMARY_KEY'
-      Origin = 'PK_PRIMARY_KEY'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object IntegerField5: TIntegerField
-      FieldName = 'FK_PRIMARY_KEY_DETAIL1'
-      Origin = 'FK_PRIMARY_KEY_DETAIL1'
-      Required = True
-    end
-    object StringField3: TStringField
-      FieldName = 'DESCRIPTION_DETAIL2'
-      Origin = 'DESCRIPTION_DETAIL2'
-      Required = True
-      Size = 250
-    end
-  end
-  object DataSource1: TDataSource
-    DataSet = FDQ_Master1
-    Left = 992
-    Top = 64
-  end
-  object DataSource2: TDataSource
-    DataSet = FDQ_Detail1_1
-    Left = 1000
-    Top = 192
   end
 end

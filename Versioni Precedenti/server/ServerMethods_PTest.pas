@@ -76,20 +76,6 @@ type
     FDQ_Detail2PK_PRIMARY_KEY: TIntegerField;
     FDQ_Detail2FK_PRIMARY_KEY_DETAIL1: TIntegerField;
     FDQ_Detail2DESCRIPTION_DETAIL2: TStringField;
-    FDQ_Master1: TFDQuery;
-    IntegerField1: TIntegerField;
-    StringField1: TStringField;
-    DSP_Master1: TDataSetProvider;
-    FDQ_Detail1_1: TFDQuery;
-    IntegerField2: TIntegerField;
-    IntegerField3: TIntegerField;
-    StringField2: TStringField;
-    FDQ_Detail1_2: TFDQuery;
-    IntegerField4: TIntegerField;
-    IntegerField5: TIntegerField;
-    StringField3: TStringField;
-    DataSource1: TDataSource;
-    DataSource2: TDataSource;
     procedure DSServerModuleCreate(Sender: TObject);
     procedure FDQuery1Error(ASender, AInitiator: TObject;
       var AException: Exception);
@@ -125,9 +111,7 @@ begin
   FDQ_Master.Connection := DM_Connection.FDConn_Sql;
   FDQ_Detail1.Connection := DM_Connection.FDConn_Sql;
   FDQ_Detail2.Connection := DM_Connection.FDConn_Sql;
-  FDQ_Master1.Connection := DM_Connection.FDConn_Sql;
-  FDQ_Detail1_1.Connection := DM_Connection.FDConn_Sql;
-  FDQ_Detail1_2.Connection := DM_Connection.FDConn_Sql;
+
 end;
 
 function TServerMethods1.EchoString(Value: string): string;

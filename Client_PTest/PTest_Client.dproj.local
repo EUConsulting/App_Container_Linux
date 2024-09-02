@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2024/08/21 13:42:58.917,=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.pas</Transaction>
-    <Transaction>2024/08/21 13:45:37.279,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Master_Detail_Form.fmx=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.fmx</Transaction>
-    <Transaction>2024/08/21 13:45:37.279,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Master_Detail_Form.pas=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.pas</Transaction>
-    <Transaction>2024/08/21 13:50:22.865,=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.pas</Transaction>
-    <Transaction>2024/08/21 13:51:16.303,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Cuncurrence_Form.fmx=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.fmx</Transaction>
-    <Transaction>2024/08/21 13:51:16.303,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Cuncurrence_Form.pas=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.pas</Transaction>
-    <Transaction>2024/08/21 13:53:56.014,=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit3.pas</Transaction>
-    <Transaction>2024/08/21 13:54:09.618,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Main_Menu_PTest.pas=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit3.pas</Transaction>
-    <Transaction>2024/08/21 13:54:09.618,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Main_Menu_PTest.fmx=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit3.fmx</Transaction>
+	<Transactions>
+    <Transaction>2024/08/21 13:42:58.000.917,=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.pas</Transaction>
+    <Transaction>2024/08/21 13:45:37.000.279,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.pas=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Master_Detail_Form.pas</Transaction>
+    <Transaction>2024/08/21 13:45:37.000.279,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.fmx=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Master_Detail_Form.fmx</Transaction>
+    <Transaction>2024/08/21 13:50:22.000.865,=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.pas</Transaction>
+    <Transaction>2024/08/21 13:51:16.000.303,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.pas=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Cuncurrence_Form.pas</Transaction>
+    <Transaction>2024/08/21 13:51:16.000.303,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit2.fmx=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Cuncurrence_Form.fmx</Transaction>
+    <Transaction>2024/08/21 13:53:56.000.014,=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit3.pas</Transaction>
+    <Transaction>2024/08/21 13:54:09.000.618,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit3.fmx=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Main_Menu_PTest.fmx</Transaction>
+    <Transaction>2024/08/21 13:54:09.000.618,Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Unit3.pas=Z:\Sviluppo\Linux_Test_Project\Params_Test\Client_PTest\Main_Menu_PTest.pas</Transaction>
   </Transactions>
 </BorlandProject>

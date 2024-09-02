@@ -31,6 +31,7 @@ type
     Cds_Detail1: TClientDataSet;
     DSP_Master: TDSProviderConnection;
     DS_Master: TDataSource;
+    Cds_Master: TClientDataSet;
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
     LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
@@ -38,17 +39,6 @@ type
     LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
     BindSourceDB3: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource;
-    Cds_MasterPK_PRIMARY_KEY: TIntegerField;
-    Cds_MasterDESCRIPTION: TStringField;
-    Cds_MasterFDQ_Detail1_1: TDataSetField;
-    Cds_Detail1PK_PRIMARY_KEY: TIntegerField;
-    Cds_Detail1FK_PRIMARY_KEY: TIntegerField;
-    Cds_Detail1DESCRIPTION_DETAIL1: TStringField;
-    Cds_Detail1FDQ_Detail1_2: TDataSetField;
-    Cds_Master: TClientDataSet;
-    Cds_Detail2PK_PRIMARY_KEY: TIntegerField;
-    Cds_Detail2FK_PRIMARY_KEY_DETAIL1: TIntegerField;
-    Cds_Detail2DESCRIPTION_DETAIL2: TStringField;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
